@@ -1,0 +1,10 @@
+C:\EOH\Unbundle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\EOH\Unbundle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\EOH\Unbundle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\EOH\Unbundle\WindowsFormsApp1\obj\Debug\UnbundeTool.csprojAssemblyReference.cache
+C:\EOH\Unbundle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Lookup_ISU_Vault.resources
+C:\EOH\Unbundle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\EOH\Unbundle\WindowsFormsApp1\obj\Debug\UnbundeTool.csproj.GenerateResource.cache
+C:\EOH\Unbundle\WindowsFormsApp1\obj\Debug\UnbundeTool.csproj.CoreCompileInputs.cache
+C:\EOH\Unbundle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\EOH\Unbundle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
