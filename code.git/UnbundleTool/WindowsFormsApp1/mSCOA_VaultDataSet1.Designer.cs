@@ -2687,11 +2687,20 @@ namespace WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT RATE_CAT, [DESC], Division, Name, Code, MainCode, Mains, SubCode, Sub, Doc_Type, Div__FiCa, FiCa_Mains, Subs_FiCa, DbtCnt_GL, Revenue_GL, SAP_Code, SAP_Description, Non_Fin_Group_Code, Non_Fin_Group_Description, Non_Fin_Sub_Group_Code, Non_Fin_Sub_Group_Description, Project_Guid, Project_Description, Function_Guid, Function_Description, Fund_Guid, Fund_Description, Region_Guid, Region_Description, Costing_Guid, Costing_Description, Recommended_Invoice_Guid, Recommended_Invoice_Description, Recommended_Receipt_Guid, Recommended_Receipt_Description, Id_ISU_Vault FROM dbo.Lookup_ISU_Vault";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "UPDATE       Lookup_ISU_Vault\r\nSET                Recommended_Invoice_Guid = @Rec" +
+                "ommended_Invoice_Guid, Recommended_Receipt_Guid = @Recommended_Receipt_Guid\r\nWHE" +
+                "RE        (Id_ISU_Vault = @Original_Id_ISU_Vault);  \r\n";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Recommended_Invoice_Guid", global::System.Data.SqlDbType.NVarChar, 36, global::System.Data.ParameterDirection.Input, 0, 0, "Recommended_Invoice_Guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Recommended_Receipt_Guid", global::System.Data.SqlDbType.NVarChar, 36, global::System.Data.ParameterDirection.Input, 0, 0, "Recommended_Receipt_Guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_ISU_Vault", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_ISU_Vault", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4013,6 +4022,42 @@ namespace WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters {
                     string Original_Recommended_Receipt_Description, 
                     int Original_Id_ISU_Vault) {
             return this.Update(RATE_CAT, DESC, Division, Name, Code, MainCode, Mains, SubCode, Sub, Doc_Type, Div__FiCa, FiCa_Mains, Subs_FiCa, DbtCnt_GL, Revenue_GL, SAP_Code, SAP_Description, Non_Fin_Group_Code, Non_Fin_Group_Description, Non_Fin_Sub_Group_Code, Non_Fin_Sub_Group_Description, Project_Guid, Project_Description, Function_Guid, Function_Description, Fund_Guid, Fund_Description, Region_Guid, Region_Description, Costing_Guid, Costing_Description, Recommended_Invoice_Guid, Recommended_Invoice_Description, Recommended_Receipt_Guid, Recommended_Receipt_Description, Original_RATE_CAT, Original_DESC, Original_Division, Original_Name, Original_Code, Original_MainCode, Original_Mains, Original_SubCode, Original_Sub, Original_Doc_Type, Original_Div__FiCa, Original_FiCa_Mains, Original_Subs_FiCa, Original_DbtCnt_GL, Original_Revenue_GL, Original_SAP_Code, Original_SAP_Description, Original_Non_Fin_Group_Code, Original_Non_Fin_Group_Description, Original_Non_Fin_Sub_Group_Code, Original_Non_Fin_Sub_Group_Description, Original_Project_Guid, Original_Project_Description, Original_Function_Guid, Original_Function_Description, Original_Fund_Guid, Original_Fund_Description, Original_Region_Guid, Original_Region_Description, Original_Costing_Guid, Original_Costing_Description, Original_Recommended_Invoice_Guid, Original_Recommended_Invoice_Description, Original_Recommended_Receipt_Guid, Original_Recommended_Receipt_Description, Original_Id_ISU_Vault, Original_Id_ISU_Vault);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateQuery(string Recommended_Invoice_Guid, string Recommended_Receipt_Guid, int Original_Id_ISU_Vault) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((Recommended_Invoice_Guid == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Recommended_Invoice_Guid));
+            }
+            if ((Recommended_Receipt_Guid == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Recommended_Receipt_Guid));
+            }
+            command.Parameters[2].Value = ((int)(Original_Id_ISU_Vault));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

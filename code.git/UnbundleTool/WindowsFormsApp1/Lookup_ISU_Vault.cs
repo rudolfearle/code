@@ -39,6 +39,7 @@ namespace WindowsFormsApp1
          
         }
 
+
         private void LoadData()
         {
             if (workerLoad.IsBusy)
@@ -76,6 +77,7 @@ namespace WindowsFormsApp1
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int nPos = e.RowIndex;
+            
             SetLabels(true);
 
         }
@@ -84,8 +86,11 @@ namespace WindowsFormsApp1
         private void RefreshGrid()
         {
             this.lookup_ISU_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet1.Lookup_ISU_Vault);
-            dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_ISU_Vault;
-            dataGridView1.Refresh();
+            BeginInvoke((MethodInvoker)delegate
+            {
+                dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_ISU_Vault;
+                dataGridView1.Refresh();
+            });
         }
 
         private void SetLabels(bool value)
@@ -101,7 +106,7 @@ namespace WindowsFormsApp1
         private void LoadDirect()
         {
             //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
-            this.cons_VaultTableAdapter.FillByDirect(this.mSCOA_VaultDataSet.Cons_Vault);
+            cons_VaultTableAdapter.FillByDirect(this.mSCOA_VaultDataSet.Cons_Vault);
             cboDirect.DataSource = this.mSCOA_VaultDataSet.Cons_Vault;
             BeginInvoke((MethodInvoker)delegate
             {
@@ -115,7 +120,7 @@ namespace WindowsFormsApp1
         private void LoadContra()
         {
             //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
-            this.cons_VaultTableAdapter.FillByContra(this.mSCOA_VaultDataSet.Cons_Vault);
+            cons_VaultTableAdapter.FillByContra(this.mSCOA_VaultDataSet.Cons_Vault);
             cboContra.DataSource = this.mSCOA_VaultDataSet.Cons_Vault;
             BeginInvoke((MethodInvoker)delegate
             {
@@ -127,9 +132,31 @@ namespace WindowsFormsApp1
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (cboDirect.SelectedIndex > 0 && cboContra.SelectedIndex > 0)
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    // do something with the row..
+                    if (row.Selected == true)
+                    {
+                        int nID = Convert.ToInt32(row.Cells["Id_ISU_Vault"].Value);
+                        string sDirectGUID = cboDirect.SelectedValue.ToString();
+                        string sContraGUID = cboContra.SelectedValue.ToString();
+                        lookup_ISU_VaultTableAdapter.UpdateQuery(sDirectGUID, sContraGUID, nID);
+                       
+                    }
+                }
+                LoadData();
+            }
+            else
+            {
+                MessageBox.Show("Please select a value first in dropdown", "Update Item", MessageBoxButtons.OK);
+            }
+        }
 
-            LoadData();
-
+        private void Lookup_ISU_Vault_Resize(object sender, EventArgs e)
+        {
+            dataGridView1.Size = new Size(this.Width - 10, dataGridView1.Height);
         }
     }
 }
