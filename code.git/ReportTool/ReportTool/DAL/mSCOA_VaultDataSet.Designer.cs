@@ -34,6 +34,8 @@ namespace ReportTool.DAL {
         
         private gen_ADStringDataTable tablegen_ADString;
         
+        private GetMuncde_OSA_ccyy_MnnDataTable tableGetMuncde_OSA_ccyy_Mnn;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -76,6 +78,9 @@ namespace ReportTool.DAL {
                 }
                 if ((ds.Tables["gen_ADString"] != null)) {
                     base.Tables.Add(new gen_ADStringDataTable(ds.Tables["gen_ADString"]));
+                }
+                if ((ds.Tables["GetMuncde_OSA_ccyy_Mnn"] != null)) {
+                    base.Tables.Add(new GetMuncde_OSA_ccyy_MnnDataTable(ds.Tables["GetMuncde_OSA_ccyy_Mnn"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -142,6 +147,16 @@ namespace ReportTool.DAL {
         public gen_ADStringDataTable gen_ADString {
             get {
                 return this.tablegen_ADString;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public GetMuncde_OSA_ccyy_MnnDataTable GetMuncde_OSA_ccyy_Mnn {
+            get {
+                return this.tableGetMuncde_OSA_ccyy_Mnn;
             }
         }
         
@@ -227,6 +242,9 @@ namespace ReportTool.DAL {
                 if ((ds.Tables["gen_ADString"] != null)) {
                     base.Tables.Add(new gen_ADStringDataTable(ds.Tables["gen_ADString"]));
                 }
+                if ((ds.Tables["GetMuncde_OSA_ccyy_Mnn"] != null)) {
+                    base.Tables.Add(new GetMuncde_OSA_ccyy_MnnDataTable(ds.Tables["GetMuncde_OSA_ccyy_Mnn"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -290,6 +308,12 @@ namespace ReportTool.DAL {
                     this.tablegen_ADString.InitVars();
                 }
             }
+            this.tableGetMuncde_OSA_ccyy_Mnn = ((GetMuncde_OSA_ccyy_MnnDataTable)(base.Tables["GetMuncde_OSA_ccyy_Mnn"]));
+            if ((initTable == true)) {
+                if ((this.tableGetMuncde_OSA_ccyy_Mnn != null)) {
+                    this.tableGetMuncde_OSA_ccyy_Mnn.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -310,6 +334,8 @@ namespace ReportTool.DAL {
             base.Tables.Add(this.tablegen_ACString);
             this.tablegen_ADString = new gen_ADStringDataTable();
             base.Tables.Add(this.tablegen_ADString);
+            this.tableGetMuncde_OSA_ccyy_Mnn = new GetMuncde_OSA_ccyy_MnnDataTable();
+            base.Tables.Add(this.tableGetMuncde_OSA_ccyy_Mnn);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -339,6 +365,12 @@ namespace ReportTool.DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializegen_ADString() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializeGetMuncde_OSA_ccyy_Mnn() {
             return false;
         }
         
@@ -411,6 +443,9 @@ namespace ReportTool.DAL {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void gen_ADStringRowChangeEventHandler(object sender, gen_ADStringRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void GetMuncde_OSA_ccyy_MnnRowChangeEventHandler(object sender, GetMuncde_OSA_ccyy_MnnRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5602,6 +5637,435 @@ namespace ReportTool.DAL {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "gen_ADStringDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class GetMuncde_OSA_ccyy_MnnDataTable : global::System.Data.TypedTableBase<GetMuncde_OSA_ccyy_MnnRow> {
+            
+            private global::System.Data.DataColumn columncode;
+            
+            private global::System.Data.DataColumn columnM01;
+            
+            private global::System.Data.DataColumn columnM02;
+            
+            private global::System.Data.DataColumn columnM03;
+            
+            private global::System.Data.DataColumn columnM04;
+            
+            private global::System.Data.DataColumn columnM05;
+            
+            private global::System.Data.DataColumn columnM06;
+            
+            private global::System.Data.DataColumn columnM07;
+            
+            private global::System.Data.DataColumn columnM08;
+            
+            private global::System.Data.DataColumn columnM09;
+            
+            private global::System.Data.DataColumn columnM10;
+            
+            private global::System.Data.DataColumn columnM11;
+            
+            private global::System.Data.DataColumn columnM12;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public GetMuncde_OSA_ccyy_MnnDataTable() {
+                this.TableName = "GetMuncde_OSA_ccyy_Mnn";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal GetMuncde_OSA_ccyy_MnnDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected GetMuncde_OSA_ccyy_MnnDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn codeColumn {
+                get {
+                    return this.columncode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn M01Column {
+                get {
+                    return this.columnM01;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn M02Column {
+                get {
+                    return this.columnM02;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn M03Column {
+                get {
+                    return this.columnM03;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn M04Column {
+                get {
+                    return this.columnM04;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn M05Column {
+                get {
+                    return this.columnM05;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn M06Column {
+                get {
+                    return this.columnM06;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn M07Column {
+                get {
+                    return this.columnM07;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn M08Column {
+                get {
+                    return this.columnM08;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn M09Column {
+                get {
+                    return this.columnM09;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn M10Column {
+                get {
+                    return this.columnM10;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn M11Column {
+                get {
+                    return this.columnM11;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn M12Column {
+                get {
+                    return this.columnM12;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public GetMuncde_OSA_ccyy_MnnRow this[int index] {
+                get {
+                    return ((GetMuncde_OSA_ccyy_MnnRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event GetMuncde_OSA_ccyy_MnnRowChangeEventHandler GetMuncde_OSA_ccyy_MnnRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event GetMuncde_OSA_ccyy_MnnRowChangeEventHandler GetMuncde_OSA_ccyy_MnnRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event GetMuncde_OSA_ccyy_MnnRowChangeEventHandler GetMuncde_OSA_ccyy_MnnRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event GetMuncde_OSA_ccyy_MnnRowChangeEventHandler GetMuncde_OSA_ccyy_MnnRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddGetMuncde_OSA_ccyy_MnnRow(GetMuncde_OSA_ccyy_MnnRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public GetMuncde_OSA_ccyy_MnnRow AddGetMuncde_OSA_ccyy_MnnRow(string code, decimal M01, decimal M02, decimal M03, decimal M04, decimal M05, decimal M06, decimal M07, decimal M08, decimal M09, decimal M10, decimal M11, decimal M12) {
+                GetMuncde_OSA_ccyy_MnnRow rowGetMuncde_OSA_ccyy_MnnRow = ((GetMuncde_OSA_ccyy_MnnRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        code,
+                        M01,
+                        M02,
+                        M03,
+                        M04,
+                        M05,
+                        M06,
+                        M07,
+                        M08,
+                        M09,
+                        M10,
+                        M11,
+                        M12};
+                rowGetMuncde_OSA_ccyy_MnnRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGetMuncde_OSA_ccyy_MnnRow);
+                return rowGetMuncde_OSA_ccyy_MnnRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                GetMuncde_OSA_ccyy_MnnDataTable cln = ((GetMuncde_OSA_ccyy_MnnDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new GetMuncde_OSA_ccyy_MnnDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columncode = base.Columns["code"];
+                this.columnM01 = base.Columns["M01"];
+                this.columnM02 = base.Columns["M02"];
+                this.columnM03 = base.Columns["M03"];
+                this.columnM04 = base.Columns["M04"];
+                this.columnM05 = base.Columns["M05"];
+                this.columnM06 = base.Columns["M06"];
+                this.columnM07 = base.Columns["M07"];
+                this.columnM08 = base.Columns["M08"];
+                this.columnM09 = base.Columns["M09"];
+                this.columnM10 = base.Columns["M10"];
+                this.columnM11 = base.Columns["M11"];
+                this.columnM12 = base.Columns["M12"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columncode = new global::System.Data.DataColumn("code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncode);
+                this.columnM01 = new global::System.Data.DataColumn("M01", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM01);
+                this.columnM02 = new global::System.Data.DataColumn("M02", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM02);
+                this.columnM03 = new global::System.Data.DataColumn("M03", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM03);
+                this.columnM04 = new global::System.Data.DataColumn("M04", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM04);
+                this.columnM05 = new global::System.Data.DataColumn("M05", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM05);
+                this.columnM06 = new global::System.Data.DataColumn("M06", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM06);
+                this.columnM07 = new global::System.Data.DataColumn("M07", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM07);
+                this.columnM08 = new global::System.Data.DataColumn("M08", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM08);
+                this.columnM09 = new global::System.Data.DataColumn("M09", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM09);
+                this.columnM10 = new global::System.Data.DataColumn("M10", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM10);
+                this.columnM11 = new global::System.Data.DataColumn("M11", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM11);
+                this.columnM12 = new global::System.Data.DataColumn("M12", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM12);
+                this.columncode.ReadOnly = true;
+                this.columncode.MaxLength = 8;
+                this.columnM01.ReadOnly = true;
+                this.columnM02.ReadOnly = true;
+                this.columnM03.ReadOnly = true;
+                this.columnM04.ReadOnly = true;
+                this.columnM05.ReadOnly = true;
+                this.columnM06.ReadOnly = true;
+                this.columnM07.ReadOnly = true;
+                this.columnM08.ReadOnly = true;
+                this.columnM09.ReadOnly = true;
+                this.columnM10.ReadOnly = true;
+                this.columnM11.ReadOnly = true;
+                this.columnM12.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public GetMuncde_OSA_ccyy_MnnRow NewGetMuncde_OSA_ccyy_MnnRow() {
+                return ((GetMuncde_OSA_ccyy_MnnRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new GetMuncde_OSA_ccyy_MnnRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(GetMuncde_OSA_ccyy_MnnRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.GetMuncde_OSA_ccyy_MnnRowChanged != null)) {
+                    this.GetMuncde_OSA_ccyy_MnnRowChanged(this, new GetMuncde_OSA_ccyy_MnnRowChangeEvent(((GetMuncde_OSA_ccyy_MnnRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.GetMuncde_OSA_ccyy_MnnRowChanging != null)) {
+                    this.GetMuncde_OSA_ccyy_MnnRowChanging(this, new GetMuncde_OSA_ccyy_MnnRowChangeEvent(((GetMuncde_OSA_ccyy_MnnRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.GetMuncde_OSA_ccyy_MnnRowDeleted != null)) {
+                    this.GetMuncde_OSA_ccyy_MnnRowDeleted(this, new GetMuncde_OSA_ccyy_MnnRowChangeEvent(((GetMuncde_OSA_ccyy_MnnRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.GetMuncde_OSA_ccyy_MnnRowDeleting != null)) {
+                    this.GetMuncde_OSA_ccyy_MnnRowDeleting(this, new GetMuncde_OSA_ccyy_MnnRowChangeEvent(((GetMuncde_OSA_ccyy_MnnRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveGetMuncde_OSA_ccyy_MnnRow(GetMuncde_OSA_ccyy_MnnRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                mSCOA_VaultDataSet ds = new mSCOA_VaultDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "GetMuncde_OSA_ccyy_MnnDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -12993,6 +13457,385 @@ namespace ReportTool.DAL {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class GetMuncde_OSA_ccyy_MnnRow : global::System.Data.DataRow {
+            
+            private GetMuncde_OSA_ccyy_MnnDataTable tableGetMuncde_OSA_ccyy_Mnn;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal GetMuncde_OSA_ccyy_MnnRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableGetMuncde_OSA_ccyy_Mnn = ((GetMuncde_OSA_ccyy_MnnDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string code {
+                get {
+                    try {
+                        return ((string)(this[this.tableGetMuncde_OSA_ccyy_Mnn.codeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'code\' in table \'GetMuncde_OSA_ccyy_Mnn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetMuncde_OSA_ccyy_Mnn.codeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal M01 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetMuncde_OSA_ccyy_Mnn.M01Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'M01\' in table \'GetMuncde_OSA_ccyy_Mnn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetMuncde_OSA_ccyy_Mnn.M01Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal M02 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetMuncde_OSA_ccyy_Mnn.M02Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'M02\' in table \'GetMuncde_OSA_ccyy_Mnn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetMuncde_OSA_ccyy_Mnn.M02Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal M03 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetMuncde_OSA_ccyy_Mnn.M03Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'M03\' in table \'GetMuncde_OSA_ccyy_Mnn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetMuncde_OSA_ccyy_Mnn.M03Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal M04 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetMuncde_OSA_ccyy_Mnn.M04Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'M04\' in table \'GetMuncde_OSA_ccyy_Mnn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetMuncde_OSA_ccyy_Mnn.M04Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal M05 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetMuncde_OSA_ccyy_Mnn.M05Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'M05\' in table \'GetMuncde_OSA_ccyy_Mnn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetMuncde_OSA_ccyy_Mnn.M05Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal M06 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetMuncde_OSA_ccyy_Mnn.M06Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'M06\' in table \'GetMuncde_OSA_ccyy_Mnn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetMuncde_OSA_ccyy_Mnn.M06Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal M07 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetMuncde_OSA_ccyy_Mnn.M07Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'M07\' in table \'GetMuncde_OSA_ccyy_Mnn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetMuncde_OSA_ccyy_Mnn.M07Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal M08 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetMuncde_OSA_ccyy_Mnn.M08Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'M08\' in table \'GetMuncde_OSA_ccyy_Mnn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetMuncde_OSA_ccyy_Mnn.M08Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal M09 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetMuncde_OSA_ccyy_Mnn.M09Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'M09\' in table \'GetMuncde_OSA_ccyy_Mnn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetMuncde_OSA_ccyy_Mnn.M09Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal M10 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetMuncde_OSA_ccyy_Mnn.M10Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'M10\' in table \'GetMuncde_OSA_ccyy_Mnn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetMuncde_OSA_ccyy_Mnn.M10Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal M11 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetMuncde_OSA_ccyy_Mnn.M11Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'M11\' in table \'GetMuncde_OSA_ccyy_Mnn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetMuncde_OSA_ccyy_Mnn.M11Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal M12 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetMuncde_OSA_ccyy_Mnn.M12Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'M12\' in table \'GetMuncde_OSA_ccyy_Mnn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetMuncde_OSA_ccyy_Mnn.M12Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IscodeNull() {
+                return this.IsNull(this.tableGetMuncde_OSA_ccyy_Mnn.codeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetcodeNull() {
+                this[this.tableGetMuncde_OSA_ccyy_Mnn.codeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsM01Null() {
+                return this.IsNull(this.tableGetMuncde_OSA_ccyy_Mnn.M01Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetM01Null() {
+                this[this.tableGetMuncde_OSA_ccyy_Mnn.M01Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsM02Null() {
+                return this.IsNull(this.tableGetMuncde_OSA_ccyy_Mnn.M02Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetM02Null() {
+                this[this.tableGetMuncde_OSA_ccyy_Mnn.M02Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsM03Null() {
+                return this.IsNull(this.tableGetMuncde_OSA_ccyy_Mnn.M03Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetM03Null() {
+                this[this.tableGetMuncde_OSA_ccyy_Mnn.M03Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsM04Null() {
+                return this.IsNull(this.tableGetMuncde_OSA_ccyy_Mnn.M04Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetM04Null() {
+                this[this.tableGetMuncde_OSA_ccyy_Mnn.M04Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsM05Null() {
+                return this.IsNull(this.tableGetMuncde_OSA_ccyy_Mnn.M05Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetM05Null() {
+                this[this.tableGetMuncde_OSA_ccyy_Mnn.M05Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsM06Null() {
+                return this.IsNull(this.tableGetMuncde_OSA_ccyy_Mnn.M06Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetM06Null() {
+                this[this.tableGetMuncde_OSA_ccyy_Mnn.M06Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsM07Null() {
+                return this.IsNull(this.tableGetMuncde_OSA_ccyy_Mnn.M07Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetM07Null() {
+                this[this.tableGetMuncde_OSA_ccyy_Mnn.M07Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsM08Null() {
+                return this.IsNull(this.tableGetMuncde_OSA_ccyy_Mnn.M08Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetM08Null() {
+                this[this.tableGetMuncde_OSA_ccyy_Mnn.M08Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsM09Null() {
+                return this.IsNull(this.tableGetMuncde_OSA_ccyy_Mnn.M09Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetM09Null() {
+                this[this.tableGetMuncde_OSA_ccyy_Mnn.M09Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsM10Null() {
+                return this.IsNull(this.tableGetMuncde_OSA_ccyy_Mnn.M10Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetM10Null() {
+                this[this.tableGetMuncde_OSA_ccyy_Mnn.M10Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsM11Null() {
+                return this.IsNull(this.tableGetMuncde_OSA_ccyy_Mnn.M11Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetM11Null() {
+                this[this.tableGetMuncde_OSA_ccyy_Mnn.M11Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsM12Null() {
+                return this.IsNull(this.tableGetMuncde_OSA_ccyy_Mnn.M12Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetM12Null() {
+                this[this.tableGetMuncde_OSA_ccyy_Mnn.M12Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -13148,6 +13991,40 @@ namespace ReportTool.DAL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public gen_ADStringRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class GetMuncde_OSA_ccyy_MnnRowChangeEvent : global::System.EventArgs {
+            
+            private GetMuncde_OSA_ccyy_MnnRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public GetMuncde_OSA_ccyy_MnnRowChangeEvent(GetMuncde_OSA_ccyy_MnnRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public GetMuncde_OSA_ccyy_MnnRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -16319,6 +17196,186 @@ namespace ReportTool.DAL.mSCOA_VaultDataSetTableAdapters {
                 this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Period));
             }
             mSCOA_VaultDataSet.gen_ADStringDataTable dataTable = new mSCOA_VaultDataSet.gen_ADStringDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class GetMuncde_OSA_ccyy_MnnTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public GetMuncde_OSA_ccyy_MnnTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "GetMuncde_OSA_ccyy_Mnn";
+            tableMapping.ColumnMappings.Add("code", "code");
+            tableMapping.ColumnMappings.Add("M01", "M01");
+            tableMapping.ColumnMappings.Add("M02", "M02");
+            tableMapping.ColumnMappings.Add("M03", "M03");
+            tableMapping.ColumnMappings.Add("M04", "M04");
+            tableMapping.ColumnMappings.Add("M05", "M05");
+            tableMapping.ColumnMappings.Add("M06", "M06");
+            tableMapping.ColumnMappings.Add("M07", "M07");
+            tableMapping.ColumnMappings.Add("M08", "M08");
+            tableMapping.ColumnMappings.Add("M09", "M09");
+            tableMapping.ColumnMappings.Add("M10", "M10");
+            tableMapping.ColumnMappings.Add("M11", "M11");
+            tableMapping.ColumnMappings.Add("M12", "M12");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::ReportTool.Properties.Settings.Default.mSCOA_VaultConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.GetMuncde_OSA_ccyy_Mnn";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(mSCOA_VaultDataSet.GetMuncde_OSA_ccyy_MnnDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual mSCOA_VaultDataSet.GetMuncde_OSA_ccyy_MnnDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            mSCOA_VaultDataSet.GetMuncde_OSA_ccyy_MnnDataTable dataTable = new mSCOA_VaultDataSet.GetMuncde_OSA_ccyy_MnnDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

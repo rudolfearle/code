@@ -31,7 +31,12 @@ namespace ReportTool
                     MessageBox.Show("Coming Soon!");
                     break;
                 case 2: //c schedule
-                    MessageBox.Show("Coming Soon!");
+                    GenerateCSchedule objC = new GenerateCSchedule();
+                    objC.TopLevel = false;
+                    splitContainer1.Panel2.Controls.Add(objC);
+                    objC.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                    objC.Dock = DockStyle.Fill;
+                    objC.Show();
                     break;
                 case 3: //strings
                     GenerateStrings obj3 = new GenerateStrings();
@@ -40,6 +45,9 @@ namespace ReportTool
                     obj3.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                     obj3.Dock = DockStyle.Fill;
                     obj3.Show();
+                    break;
+                case 4: //demarcation reporting
+
                     break;
             }
         }
