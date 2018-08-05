@@ -208,8 +208,7 @@ namespace WindowsFormsApp1
                         string sDirectGUID = cboDirect.SelectedValue.ToString();
                         string sContraGUID = cboContra.SelectedValue.ToString();
                         string sFunctionGUID = cboFunction.SelectedValue.ToString();
-                        lookup_ISU_VaultTableAdapter.UpdateQuery(sDirectGUID, sContraGUID, nID);
-                       
+                        lookup_ISU_VaultTableAdapter.UpdateQuery(sDirectGUID, sContraGUID, sFunctionGUID, nID);
                     }
                 }
                 LoadData();
