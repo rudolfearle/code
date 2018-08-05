@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnbundeTool", "WindowsFormsApp1\UnbundeTool.csproj", "{023E403B-FCA8-479E-B48E-688D370CB6DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportTool", "..\ReportTool\ReportTool\ReportTool.csproj", "{C59120B8-1F14-4C38-8078-D17650A56665}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{023E403B-FCA8-479E-B48E-688D370CB6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{023E403B-FCA8-479E-B48E-688D370CB6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{023E403B-FCA8-479E-B48E-688D370CB6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C59120B8-1F14-4C38-8078-D17650A56665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C59120B8-1F14-4C38-8078-D17650A56665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C59120B8-1F14-4C38-8078-D17650A56665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C59120B8-1F14-4C38-8078-D17650A56665}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
