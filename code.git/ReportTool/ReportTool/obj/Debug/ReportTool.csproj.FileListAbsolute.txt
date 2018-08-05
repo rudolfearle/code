@@ -1,0 +1,12 @@
+C:\EOH\code\code.git\ReportTool\ReportTool\bin\Debug\ReportTool.exe.config
+C:\EOH\code\code.git\ReportTool\ReportTool\bin\Debug\ReportTool.exe
+C:\EOH\code\code.git\ReportTool\ReportTool\bin\Debug\ReportTool.pdb
+C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.csprojAssemblyReference.cache
+C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.MainApp.resources
+C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.Properties.Resources.resources
+C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.ReportTypes.GenerateCSchedule.resources
+C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.ReportTypes.GenerateStrings.resources
+C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.csproj.GenerateResource.cache
+C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.csproj.CoreCompileInputs.cache
+C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.exe
+C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.pdb
