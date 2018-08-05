@@ -106,50 +106,75 @@ namespace ReportTool.ReportTypes
                         }
                     }
                         break;
-                case 2: //Ad
+                case 2: //Ad Save File as : Muncde_AD_ccyy_Mnn.XLS (e.g.: GT411_AD_2005_M10)															
+                    using (DAL.mSCOA_VaultDataSetTableAdapters.gen_ADStringTableAdapter TA = new DAL.mSCOA_VaultDataSetTableAdapters.gen_ADStringTableAdapter())
+                    {
+                        DAL.mSCOA_VaultDataSet.gen_ADStringDataTable tblAD = new DAL.mSCOA_VaultDataSet.gen_ADStringDataTable();
+                        TA.Fill(tblAD, Munic, Period);
+                        dataGridView1.DataSource = tblAD;
+                        dataGridView1.Refresh();
+                        if (tblAD.Rows.Count > 0)
+                        {
+                            btnExport.Enabled = true;
+                        }
+                    }
 
                     break;
-                case 3: //Ac
+                case 3: //Ac Save File as : Muncde_AC_ccyy_Mnn.XLS (e.g.: GT411_AC_2005_M10)													
+                    using (DAL.mSCOA_VaultDataSetTableAdapters.gen_ACStringTableAdapter TA = new DAL.mSCOA_VaultDataSetTableAdapters.gen_ACStringTableAdapter())
+                    {
+                        DAL.mSCOA_VaultDataSet.gen_ACStringDataTable tblAC = new DAL.mSCOA_VaultDataSet.gen_ACStringDataTable();
+                        TA.Fill(tblAC, Munic, Period);
+                        dataGridView1.DataSource = tblAC;
+                        dataGridView1.Refresh();
+                        if (tblAC.Rows.Count > 0)
+                        {
+                            btnExport.Enabled = true;
+                        }
+                    }
 
-                    break;
+                        break;
 
             }
         }
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            switch (nSelection)
-            {
-                case 1: //cString
-
-                    ExportCString();
-                    break;
-                case 2: //Ad
-
-                    break;
-                case 3: //Ac
-
-                    break;
-
-            }
-        }
-
-        private void ExportCString()
-        {
-            string typeName = cboMonth.SelectedValue.ToString() ;
-
+            string sFileName = string.Empty;
             //Get date parts to use in file name
+            string typeName = cboMonth.SelectedValue.ToString();
             string sYear = DateTime.Now.Year.ToString();
             string sMonth = DateTime.Now.Month.ToString();
             string sDay = DateTime.Now.Day.ToString();
             if (sMonth.Length < 2) sMonth = "0" + sMonth; //Add Zero padding
             if (sDay.Length < 2) sDay = "0" + sDay; //Add Zero padding
 
+            switch (nSelection)
+            {
+                case 1: //cString
+                    sFileName  = string.Format("{0}_2019_" + typeName + "_G_{1}{2}{3}", txtMuniciplaIdentifier.Text, sYear, sMonth, sDay);
+                    ExportString(sFileName);
+                    break;
+                case 2: //Ad Muncde_AD_ccyy_Mnn
+                    sFileName = string.Format("{0}_AD_2019_{1}", txtMuniciplaIdentifier.Text, typeName);
+                    ExportString(sFileName);
+                    break;
+                case 3: //Ac Muncde_AC_ccyy_Mnn
+                    sFileName = string.Format("{0}_AC_2019_{1}", txtMuniciplaIdentifier.Text, typeName);
+                    ExportString(sFileName);
+                    break;
+
+            }
+        }
+
+        private void ExportString(string sfileName)
+        {
            
+            
             SaveFileDialog dlg = new SaveFileDialog();
             dlg.Filter = "Text File (*.txt)|*.txt|All files (*.*)|*.*";
             dlg.DefaultExt = "txt";
-            dlg.FileName = string.Format("{0}_2019_" + typeName + "_G_{1}{2}{3}",txtMuniciplaIdentifier.Text, sYear, sMonth, sDay);
+            dlg.FileName = sfileName;
             DialogResult res = dlg.ShowDialog();
             if (res == System.Windows.Forms.DialogResult.OK)
             {
