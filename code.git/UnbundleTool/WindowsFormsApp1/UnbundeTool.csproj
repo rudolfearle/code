@@ -7,7 +7,7 @@
     <ProjectGuid>{023E403B-FCA8-479E-B48E-688D370CB6DC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>WindowsFormsApp1</RootNamespace>
-    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <AssemblyName>UnbundeTool</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,11 +45,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lookup_Assets_Vault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lookup_Assets_Vault.Designer.cs">
+      <DependentUpon>Lookup_Assets_Vault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup_HCM_Vault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lookup_HCM_Vault.Designer.cs">
+      <DependentUpon>Lookup_HCM_Vault.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lookup_ISU_Vault.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Lookup_ISU_Vault.Designer.cs">
       <DependentUpon>Lookup_ISU_Vault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup_Vault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lookup_Vault.Designer.cs">
+      <DependentUpon>Lookup_Vault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainApp.Designer.cs">
+      <DependentUpon>MainApp.cs</DependentUpon>
     </Compile>
     <Compile Include="mSCOA_VaultDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -65,6 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Lookup_ISU_Vault.resx">
       <DependentUpon>Lookup_ISU_Vault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainApp.resx">
+      <DependentUpon>MainApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

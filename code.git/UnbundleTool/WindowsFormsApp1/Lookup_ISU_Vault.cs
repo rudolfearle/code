@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WindowsFormsApp1
 {
     public partial class Lookup_ISU_Vault : Form
@@ -15,6 +16,10 @@ namespace WindowsFormsApp1
 
         private BackgroundWorker workerLoad;
         private bool LoadOnce;
+        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableDirect;
+        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableContra;
+        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableFunction;
+        private ToolTip toolTip1;
 
         public Lookup_ISU_Vault()
         {
@@ -63,15 +68,35 @@ namespace WindowsFormsApp1
             RefreshGrid();
             if (LoadOnce == false)
             {
-                LoadDirect();
                 LoadContra();
-                LoadOnce = true;
+                LoadDirect();
+                
             }
         }
 
         void workerLoad_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            //
+
+            if (LoadOnce == false)
+            {
+                cboDirect.DataSource = objTableDirect;
+                cboDirect.ValueMember = "GUID";
+                cboDirect.DisplayMember = "Account_Name";
+                cboDirect.Refresh();
+
+                cboContra.DataSource = objTableContra;
+                cboContra.ValueMember = "GUID";
+                cboContra.DisplayMember = "Account_Name";
+                cboContra.Refresh();
+
+                cboFunction.DataSource = objTableFunction;
+                cboFunction.ValueMember = "GUID";
+                cboFunction.DisplayMember = "Account_Name";
+                cboFunction.Refresh();
+              
+                LoadOnce = true;
+            }
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -85,49 +110,89 @@ namespace WindowsFormsApp1
         
         private void RefreshGrid()
         {
-            this.lookup_ISU_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet1.Lookup_ISU_Vault);
-            BeginInvoke((MethodInvoker)delegate
+            try
             {
-                dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_ISU_Vault;
-                dataGridView1.Refresh();
-            });
+                this.lookup_ISU_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet1.Lookup_ISU_Vault);
+                BeginInvoke((MethodInvoker)delegate
+                {
+                    dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_ISU_Vault;
+                    dataGridView1.Refresh();
+                });
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void SetLabels(bool value)
         {
             label1.Enabled = value;
             label2.Enabled = value;
+            label3.Enabled = value;
             cboContra.Enabled = value;
             cboDirect.Enabled = value;
+            cboFunction.Enabled = value;
             btnUpdate.Enabled = value;
+
         }
 
 
         private void LoadDirect()
         {
-            //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
-            cons_VaultTableAdapter.FillByDirect(this.mSCOA_VaultDataSet.Cons_Vault);
-            cboDirect.DataSource = this.mSCOA_VaultDataSet.Cons_Vault;
-            BeginInvoke((MethodInvoker)delegate
+            try
             {
-                cboDirect.ValueMember = "GUID";
-                cboDirect.DisplayMember = "Account_Name";
-                cboDirect.Refresh();
-            });
+                //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
+                using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
+                {
+                    mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
+                    ta.FillByDirect(Tbl);
+                    objTableDirect = Tbl;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+
+            }
             
         }
 
         private void LoadContra()
         {
-            //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
-            cons_VaultTableAdapter.FillByContra(this.mSCOA_VaultDataSet.Cons_Vault);
-            cboContra.DataSource = this.mSCOA_VaultDataSet.Cons_Vault;
-            BeginInvoke((MethodInvoker)delegate
+
+            try
             {
-                cboContra.ValueMember = "GUID";
-                cboContra.DisplayMember = "Account_Name";
-                cboContra.Refresh();
-            });
+                //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
+                using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
+                {
+                    mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
+                    ta.FillByContra(Tbl);
+                    objTableContra = Tbl;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void LoadFunction()
+        {
+            try
+            {
+                //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
+                using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
+                {
+                    mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
+                    ta.FillByFunction(Tbl);
+                    objTableFunction = Tbl;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -142,8 +207,8 @@ namespace WindowsFormsApp1
                         int nID = Convert.ToInt32(row.Cells["Id_ISU_Vault"].Value);
                         string sDirectGUID = cboDirect.SelectedValue.ToString();
                         string sContraGUID = cboContra.SelectedValue.ToString();
-                        lookup_ISU_VaultTableAdapter.UpdateQuery(sDirectGUID, sContraGUID, nID);
-                       
+                        string sFunctionGUID = cboFunction.SelectedValue.ToString();
+                        lookup_ISU_VaultTableAdapter.UpdateQuery(sDirectGUID, sContraGUID, sFunctionGUID, nID);
                     }
                 }
                 LoadData();
@@ -157,6 +222,23 @@ namespace WindowsFormsApp1
         private void Lookup_ISU_Vault_Resize(object sender, EventArgs e)
         {
             dataGridView1.Size = new Size(this.Width - 10, dataGridView1.Height);
+        }
+
+        private void cboDirect_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(cboDirect);
+        }
+
+        private void cboDirect_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; } 
+            string text = cboDirect.GetItemText(cboDirect.Items[e.Index]);
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(text, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(text, cboDirect, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
         }
     }
 }

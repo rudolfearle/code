@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Lookup_ISU_Vault());
+            Application.Run(new MainApp());
         }
     }
 }
