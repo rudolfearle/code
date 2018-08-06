@@ -16,3 +16,18 @@ GROUP BY dbo.Lookup_HCM_EMPGroup.PERSG, dbo.Lookup_HCM_EMPGroup.PTEXT, dbo.Looku
                          dbo.Lookup_FI_MSC.Cost_Center, dbo.Lookup_FI_MSC.Description, dbo.Lookup_FI_MSC.[Function], dbo.Lookup_FI_MSC.Function_Guid, dbo.Lookup_FI_MSC.Function_Lcode, dbo.Lookup_FI_MSC.Function_Scode, 
                          dbo.Lookup_FI_MSC.Region, dbo.Lookup_FI_MSC.Region_Guid, dbo.Lookup_FI_MSC.Region_LCode, dbo.Lookup_FI_MSC.Region_SCode
 ORDER BY dbo.Lookup_FI_GL.G_L_acct, dbo.Lookup_FI_MSC.Cost_Center
+
+
+
+Alter Table [Lookup_Vault_HCM]
+Add Id_Vault_HCM Int Identity(1, 1)
+Go
+
+
+
+/****** Object:  Index [PK_Lookup_ISU_Vault]    Script Date: 2018/08/06 17:41:18 ******/
+ALTER TABLE [dbo].[Lookup_Vault_HCM] ADD  CONSTRAINT [PK_Lookup_Vault_HCM] PRIMARY KEY CLUSTERED 
+(
+	[Id_Vault_HCM] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
