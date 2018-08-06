@@ -75,13 +75,21 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.lookupISUVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lookup_ISU_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters.Lookup_ISU_VaultTableAdapter();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboFunction = new System.Windows.Forms.ComboBox();
             this.mSCOA_VaultDataSet = new WindowsFormsApp1.mSCOA_VaultDataSet();
             this.consVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cons_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter();
             this.consVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cboFunction = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cboCosting = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboRegion = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cboFund = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cboProject = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).BeginInit();
@@ -409,7 +417,7 @@
             // cboContra
             // 
             this.cboContra.FormattingEnabled = true;
-            this.cboContra.Location = new System.Drawing.Point(71, 385);
+            this.cboContra.Location = new System.Drawing.Point(71, 370);
             this.cboContra.Name = "cboContra";
             this.cboContra.Size = new System.Drawing.Size(796, 21);
             this.cboContra.TabIndex = 1;
@@ -436,7 +444,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 393);
+            this.label2.Location = new System.Drawing.Point(11, 378);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 4;
@@ -444,7 +452,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(355, 456);
+            this.btnUpdate.Location = new System.Drawing.Point(377, 568);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 5;
@@ -460,6 +468,33 @@
             // lookup_ISU_VaultTableAdapter
             // 
             this.lookup_ISU_VaultTableAdapter.ClearBeforeFill = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(12, 311);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(246, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Hold CTRL key down to select multiple rows in grid";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 411);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Function";
+            // 
+            // cboFunction
+            // 
+            this.cboFunction.FormattingEnabled = true;
+            this.cboFunction.Location = new System.Drawing.Point(71, 403);
+            this.cboFunction.Name = "cboFunction";
+            this.cboFunction.Size = new System.Drawing.Size(796, 21);
+            this.cboFunction.TabIndex = 7;
             // 
             // mSCOA_VaultDataSet
             // 
@@ -480,38 +515,87 @@
             this.consVaultBindingSource1.DataMember = "Cons_Vault";
             this.consVaultBindingSource1.DataSource = this.mSCOA_VaultDataSet;
             // 
-            // label3
+            // label5
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(12, 311);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(246, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Hold CTRL key down to select multiple rows in grid";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 444);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Costing";
             // 
-            // label4
+            // cboCosting
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 437);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Function";
+            this.cboCosting.FormattingEnabled = true;
+            this.cboCosting.Location = new System.Drawing.Point(71, 436);
+            this.cboCosting.Name = "cboCosting";
+            this.cboCosting.Size = new System.Drawing.Size(796, 21);
+            this.cboCosting.TabIndex = 9;
             // 
-            // cboFunction
+            // label6
             // 
-            this.cboFunction.FormattingEnabled = true;
-            this.cboFunction.Location = new System.Drawing.Point(71, 429);
-            this.cboFunction.Name = "cboFunction";
-            this.cboFunction.Size = new System.Drawing.Size(796, 21);
-            this.cboFunction.TabIndex = 7;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(11, 475);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Region";
+            // 
+            // cboRegion
+            // 
+            this.cboRegion.FormattingEnabled = true;
+            this.cboRegion.Location = new System.Drawing.Point(71, 467);
+            this.cboRegion.Name = "cboRegion";
+            this.cboRegion.Size = new System.Drawing.Size(796, 21);
+            this.cboRegion.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(11, 502);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Fund";
+            // 
+            // cboFund
+            // 
+            this.cboFund.FormattingEnabled = true;
+            this.cboFund.Location = new System.Drawing.Point(71, 494);
+            this.cboFund.Name = "cboFund";
+            this.cboFund.Size = new System.Drawing.Size(796, 21);
+            this.cboFund.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(11, 529);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Project";
+            // 
+            // cboProject
+            // 
+            this.cboProject.FormattingEnabled = true;
+            this.cboProject.Location = new System.Drawing.Point(71, 521);
+            this.cboProject.Name = "cboProject";
+            this.cboProject.Size = new System.Drawing.Size(796, 21);
+            this.cboProject.TabIndex = 15;
             // 
             // Lookup_ISU_Vault
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(938, 585);
+            this.ClientSize = new System.Drawing.Size(938, 603);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cboProject);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cboFund);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cboRegion);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cboCosting);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cboFunction);
             this.Controls.Add(this.label3);
@@ -592,6 +676,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboFunction;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cboCosting;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cboRegion;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cboFund;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cboProject;
     }
 }
 

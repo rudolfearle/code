@@ -16,9 +16,22 @@ namespace WindowsFormsApp1
 
         private BackgroundWorker workerLoad;
         private bool LoadOnce;
+        //ITEM
+        //COSTING
+        //REGIONAL
+        //FUND
+        //FUNCTION
+        //PROJECT
         private mSCOA_VaultDataSet.Cons_VaultDataTable objTableDirect;
         private mSCOA_VaultDataSet.Cons_VaultDataTable objTableContra;
         private mSCOA_VaultDataSet.Cons_VaultDataTable objTableFunction;
+
+        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableCosting;
+        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableRegional;
+        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableFund;
+        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableProject;
+
+
         private ToolTip toolTip1;
 
         public Lookup_ISU_Vault()
@@ -79,21 +92,16 @@ namespace WindowsFormsApp1
 
             if (LoadOnce == false)
             {
-                cboDirect.DataSource = objTableDirect;
-                cboDirect.ValueMember = "GUID";
-                cboDirect.DisplayMember = "Account_Name";
-                cboDirect.Refresh();
+               
+                General.Utilities.LoadSCOACombobox(cboDirect, objTableDirect);
+                General.Utilities.LoadSCOACombobox(cboContra, objTableContra);
+                General.Utilities.LoadSCOACombobox(cboFunction, objTableFunction);
 
-                cboContra.DataSource = objTableContra;
-                cboContra.ValueMember = "GUID";
-                cboContra.DisplayMember = "Account_Name";
-                cboContra.Refresh();
+                General.Utilities.LoadSCOACombobox(cboCosting, objTableCosting);
+                General.Utilities.LoadSCOACombobox(cboRegion, objTableRegional);
+                General.Utilities.LoadSCOACombobox(cboFund, objTableFund);
+                General.Utilities.LoadSCOACombobox(cboProject, objTableProject);
 
-                cboFunction.DataSource = objTableFunction;
-                cboFunction.ValueMember = "GUID";
-                cboFunction.DisplayMember = "Account_Name";
-                cboFunction.Refresh();
-              
                 LoadOnce = true;
             }
 
@@ -130,9 +138,21 @@ namespace WindowsFormsApp1
             label1.Enabled = value;
             label2.Enabled = value;
             label4.Enabled = value;
+
+            label5.Enabled = value;
+            label6.Enabled = value;
+            label7.Enabled = value;
+            label8.Enabled = value;
+
             cboContra.Enabled = value;
             cboDirect.Enabled = value;
             cboFunction.Enabled = value;
+
+            cboCosting.Enabled = value;
+            cboFund.Enabled = value;
+            cboRegion.Enabled = value;
+            cboProject.Enabled = value;
+
             btnUpdate.Enabled = value;
 
         }
@@ -194,6 +214,80 @@ namespace WindowsFormsApp1
 
             }
         }
+      
+        private void LoadCosting()
+        {
+            try
+            {
+                //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
+                using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
+                {
+                    mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
+                    ta.FillByCosting(Tbl);
+                    objTableCosting = Tbl;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void LoadRegion()
+        {
+            try
+            {
+                //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
+                using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
+                {
+                    mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
+                    ta.FillByRegion(Tbl);
+                    objTableRegional = Tbl;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+
+        private void LoadFund()
+        {
+            try
+            {
+                //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
+                using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
+                {
+                    mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
+                    ta.FillByFund(Tbl);
+                    objTableFund = Tbl;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void LoadProject()
+        {
+            try
+            {
+                //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
+                using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
+                {
+                    mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
+                    ta.FillByProject(Tbl);
+                    objTableProject = Tbl;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {

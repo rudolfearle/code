@@ -9482,7 +9482,7 @@ namespace WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[8];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Account_Number_LongCode, GUID, Posting_Allowed, Account_Name FROM dbo.Cons" +
@@ -9496,16 +9496,40 @@ namespace WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters {
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT distinct  Account_Number_LongCode, GUID, Posting_Allowed, Account_Name FRO" +
-                "M [mSCOA_Vault].[dbo].[Cons_Vault]\r\n  where  substring(Account_Number_LongCode,1" +
-                ",2) in (\'IR\') and Posting_Allowed = \'Y\'\r\n  order by Account_Name";
+            this._commandCollection[2].CommandText = "SELECT distinct Account_Number_LongCode, GUID, Posting_Allowed, Account_Name FROM" +
+                " [mSCOA_Vault].[dbo].[Cons_Vault]\r\n  where [mSCOA_Table] =\'COSTING\' and Posting_" +
+                "Allowed = \'Y\'\r\n   order by Account_Name";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = " SELECT distinct Account_Number_LongCode, GUID, Posting_Allowed, Account_Name FRO" +
+            this._commandCollection[3].CommandText = "SELECT distinct  Account_Number_LongCode, GUID, Posting_Allowed, Account_Name FRO" +
+                "M [mSCOA_Vault].[dbo].[Cons_Vault]\r\n  where  substring(Account_Number_LongCode,1" +
+                ",2) in (\'IR\') and Posting_Allowed = \'Y\'\r\n  order by Account_Name";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = " SELECT distinct Account_Number_LongCode, GUID, Posting_Allowed, Account_Name FRO" +
                 "M [mSCOA_Vault].[dbo].[Cons_Vault]\r\n  where [mSCOA_Table] =\'Function\' and Postin" +
                 "g_Allowed = \'Y\'\r\n   order by Account_Name";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = " SELECT distinct Account_Number_LongCode, GUID, Posting_Allowed, Account_Name FRO" +
+                "M [mSCOA_Vault].[dbo].[Cons_Vault]\r\n  where [mSCOA_Table] =\'FUND\' and Posting_Al" +
+                "lowed = \'Y\'\r\n   order by Account_Name";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = " SELECT distinct Account_Number_LongCode, GUID, Posting_Allowed, Account_Name FRO" +
+                "M [mSCOA_Vault].[dbo].[Cons_Vault]\r\n  where [mSCOA_Table] =\'PROJECT\' and Posting" +
+                "_Allowed = \'Y\'\r\n   order by Account_Name\r\n";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[7].Connection = this.Connection;
+            this._commandCollection[7].CommandText = " SELECT distinct Account_Number_LongCode, GUID, Posting_Allowed, Account_Name FRO" +
+                "M [mSCOA_Vault].[dbo].[Cons_Vault]\r\n  where [mSCOA_Table] =\'REGIONAL\' and Postin" +
+                "g_Allowed = \'Y\'\r\n   order by Account_Name";
+            this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9560,8 +9584,32 @@ namespace WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByDirect(mSCOA_VaultDataSet.Cons_VaultDataTable dataTable) {
+        public virtual int FillByCosting(mSCOA_VaultDataSet.Cons_VaultDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual mSCOA_VaultDataSet.Cons_VaultDataTable GetDataByCosting() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            mSCOA_VaultDataSet.Cons_VaultDataTable dataTable = new mSCOA_VaultDataSet.Cons_VaultDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByDirect(mSCOA_VaultDataSet.Cons_VaultDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -9574,7 +9622,7 @@ namespace WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual mSCOA_VaultDataSet.Cons_VaultDataTable GetDataByDirect() {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             mSCOA_VaultDataSet.Cons_VaultDataTable dataTable = new mSCOA_VaultDataSet.Cons_VaultDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -9585,7 +9633,7 @@ namespace WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByFunction(mSCOA_VaultDataSet.Cons_VaultDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -9598,7 +9646,79 @@ namespace WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual mSCOA_VaultDataSet.Cons_VaultDataTable GetDataByFunction() {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            mSCOA_VaultDataSet.Cons_VaultDataTable dataTable = new mSCOA_VaultDataSet.Cons_VaultDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByFund(mSCOA_VaultDataSet.Cons_VaultDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual mSCOA_VaultDataSet.Cons_VaultDataTable GetDataByFund() {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
+            mSCOA_VaultDataSet.Cons_VaultDataTable dataTable = new mSCOA_VaultDataSet.Cons_VaultDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByProject(mSCOA_VaultDataSet.Cons_VaultDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[6];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual mSCOA_VaultDataSet.Cons_VaultDataTable GetDataByProject() {
+            this.Adapter.SelectCommand = this.CommandCollection[6];
+            mSCOA_VaultDataSet.Cons_VaultDataTable dataTable = new mSCOA_VaultDataSet.Cons_VaultDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByRegion(mSCOA_VaultDataSet.Cons_VaultDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[7];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual mSCOA_VaultDataSet.Cons_VaultDataTable GetDataByRegion() {
+            this.Adapter.SelectCommand = this.CommandCollection[7];
             mSCOA_VaultDataSet.Cons_VaultDataTable dataTable = new mSCOA_VaultDataSet.Cons_VaultDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

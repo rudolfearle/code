@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="General\Utilities.cs" />
     <Compile Include="Lookup_Assets_Vault.cs">
       <SubType>Form</SubType>
     </Compile>
