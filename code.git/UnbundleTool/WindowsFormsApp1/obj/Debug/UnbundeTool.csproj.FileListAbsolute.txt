@@ -19,3 +19,6 @@ C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\bin\Debug\UnbundeTool.pdb
 C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainApp.resources
 C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\obj\Debug\UnbundeTool.exe
 C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\obj\Debug\UnbundeTool.pdb
+C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Lookup_Assets_Vault.resources
+C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Lookup_HCM_Vault.resources
+C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Lookup_Vault.resources

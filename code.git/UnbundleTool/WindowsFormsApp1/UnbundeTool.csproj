@@ -88,8 +88,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Lookup_Assets_Vault.resx">
+      <DependentUpon>Lookup_Assets_Vault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lookup_HCM_Vault.resx">
+      <DependentUpon>Lookup_HCM_Vault.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lookup_ISU_Vault.resx">
       <DependentUpon>Lookup_ISU_Vault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lookup_Vault.resx">
+      <DependentUpon>Lookup_Vault.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainApp.resx">
       <DependentUpon>MainApp.cs</DependentUpon>
