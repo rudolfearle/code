@@ -409,17 +409,17 @@
             // cboContra
             // 
             this.cboContra.FormattingEnabled = true;
-            this.cboContra.Location = new System.Drawing.Point(109, 385);
+            this.cboContra.Location = new System.Drawing.Point(71, 385);
             this.cboContra.Name = "cboContra";
-            this.cboContra.Size = new System.Drawing.Size(741, 21);
+            this.cboContra.Size = new System.Drawing.Size(796, 21);
             this.cboContra.TabIndex = 1;
             // 
             // cboDirect
             // 
             this.cboDirect.FormattingEnabled = true;
-            this.cboDirect.Location = new System.Drawing.Point(109, 340);
+            this.cboDirect.Location = new System.Drawing.Point(71, 340);
             this.cboDirect.Name = "cboDirect";
-            this.cboDirect.Size = new System.Drawing.Size(741, 21);
+            this.cboDirect.Size = new System.Drawing.Size(796, 21);
             this.cboDirect.TabIndex = 2;
             this.cboDirect.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cboDirect_DrawItem);
             this.cboDirect.DropDownClosed += new System.EventHandler(this.cboDirect_DropDownClosed);
@@ -427,7 +427,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 340);
+            this.label1.Location = new System.Drawing.Point(11, 340);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 3;
@@ -436,7 +436,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 393);
+            this.label2.Location = new System.Drawing.Point(11, 393);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 4;
@@ -493,7 +493,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 437);
+            this.label4.Location = new System.Drawing.Point(11, 437);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 8;
@@ -502,16 +502,16 @@
             // cboFunction
             // 
             this.cboFunction.FormattingEnabled = true;
-            this.cboFunction.Location = new System.Drawing.Point(109, 429);
+            this.cboFunction.Location = new System.Drawing.Point(71, 429);
             this.cboFunction.Name = "cboFunction";
-            this.cboFunction.Size = new System.Drawing.Size(741, 21);
+            this.cboFunction.Size = new System.Drawing.Size(796, 21);
             this.cboFunction.TabIndex = 7;
             // 
             // Lookup_ISU_Vault
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 585);
+            this.ClientSize = new System.Drawing.Size(938, 585);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cboFunction);
             this.Controls.Add(this.label3);

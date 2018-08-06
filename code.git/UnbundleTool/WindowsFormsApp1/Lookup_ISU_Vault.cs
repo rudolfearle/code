@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadOnce = false;
-
+            toolTip1 = new ToolTip();
             // TODO: This line of code loads data into the 'mSCOA_VaultDataSet1.Lookup_ISU_Vault' table. You can move, or remove it, as needed.
             SetLabels(false);
             InitializeWorkers();
@@ -129,7 +129,7 @@ namespace WindowsFormsApp1
         {
             label1.Enabled = value;
             label2.Enabled = value;
-            label3.Enabled = value;
+            label4.Enabled = value;
             cboContra.Enabled = value;
             cboDirect.Enabled = value;
             cboFunction.Enabled = value;
