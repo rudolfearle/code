@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters;
 
 namespace WindowsFormsApp1
 {
@@ -120,10 +121,12 @@ namespace WindowsFormsApp1
         {
             try
             {
-                this.lookup_ISU_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet1.Lookup_ISU_Vault);
+
+                Lookup_Vault_HCMTableAdapter ta = new Lookup_Vault_HCMTableAdapter();
+                ta.Fill(this.mSCOA_VaultDataSet1.Lookup_Vault_HCM);
                 BeginInvoke((MethodInvoker)delegate
                 {
-                    dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_ISU_Vault;
+                    dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_Vault_HCM;
                     dataGridView1.Refresh();
                 });
             }
@@ -298,11 +301,20 @@ namespace WindowsFormsApp1
                     // do something with the row..
                     if (row.Selected == true)
                     {
-                        int nID = Convert.ToInt32(row.Cells["Id_ISU_Vault"].Value);
+                        int nID = Convert.ToInt32(row.Cells["Id_Vault_HCM"].Value);
                         string sDirectGUID = cboDirect.SelectedValue.ToString();
                         string sContraGUID = cboContra.SelectedValue.ToString();
                         string sFunctionGUID = cboFunction.SelectedValue.ToString();
-                        lookup_ISU_VaultTableAdapter.UpdateQuery(sDirectGUID, sContraGUID, sFunctionGUID, nID);
+                        string sCostingGUID = cboCosting.SelectedValue.ToString();
+                        string sFundGUID = cboFund.SelectedValue.ToString();
+                        string sProjectGUID = cboProject.SelectedValue.ToString();
+                        string sRegionGUID = cboRegion.SelectedValue.ToString();
+
+
+                        using (Lookup_Vault_HCMTableAdapter ta = new Lookup_Vault_HCMTableAdapter())
+                        {
+                            ta.UpdateQuery(sProjectGUID,sFundGUID,sDirectGUID, sContraGUID,sRegionGUID, sFunctionGUID, nID);
+                        }
                     }
                 }
                 LoadData();

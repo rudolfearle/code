@@ -302,7 +302,12 @@ namespace WindowsFormsApp1
                         string sDirectGUID = cboDirect.SelectedValue.ToString();
                         string sContraGUID = cboContra.SelectedValue.ToString();
                         string sFunctionGUID = cboFunction.SelectedValue.ToString();
-                        lookup_ISU_VaultTableAdapter.UpdateQuery(sDirectGUID, sContraGUID, sFunctionGUID, nID);
+                        string sCostingGUID = cboCosting.SelectedValue.ToString();
+                        string sFundGUID = cboFund.SelectedValue.ToString();
+                        string sProjectGUID = cboProject.SelectedValue.ToString();
+                        string sRegionGUID = cboRegion.SelectedValue.ToString();
+
+                        lookup_ISU_VaultTableAdapter.UpdateQuery(sDirectGUID, sContraGUID, sFunctionGUID,sProjectGUID,sFundGUID,sRegionGUID , nID);
                     }
                 }
                 LoadData();

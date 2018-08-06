@@ -29,37 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label8 = new System.Windows.Forms.Label();
-            this.recommendedInvoiceGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recommendedReceiptGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recommendedReceiptDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idISUVaultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lookupISUVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.mSCOA_VaultDataSet1 = new WindowsFormsApp1.mSCOA_VaultDataSet1();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cboDirect = new System.Windows.Forms.ComboBox();
-            this.cboContra = new System.Windows.Forms.ComboBox();
-            this.lookupISUVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lookup_ISU_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters.Lookup_ISU_VaultTableAdapter();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cboFunction = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.mSCOA_VaultDataSet = new WindowsFormsApp1.mSCOA_VaultDataSet();
             this.consVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cons_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter();
             this.consVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label7 = new System.Windows.Forms.Label();
-            this.cboFund = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cboRegion = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cboCosting = new System.Windows.Forms.ComboBox();
-            this.costingDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cboProject = new System.Windows.Forms.ComboBox();
-            this.costingGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.rATECATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dESCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,92 +67,39 @@
             this.fundDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.regionGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.regionDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).BeginInit();
+            this.costingGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costingDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recommendedInvoiceGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recommendedReceiptGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recommendedReceiptDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idISUVaultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lookupISUVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mSCOA_VaultDataSet1 = new WindowsFormsApp1.mSCOA_VaultDataSet1();
+            this.lookupISUVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lookup_ISU_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters.Lookup_ISU_VaultTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(-23, 458);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Project";
-            // 
-            // recommendedInvoiceGuidDataGridViewTextBoxColumn
-            // 
-            this.recommendedInvoiceGuidDataGridViewTextBoxColumn.DataPropertyName = "Recommended_Invoice_Guid";
-            this.recommendedInvoiceGuidDataGridViewTextBoxColumn.HeaderText = "Recommended_Invoice_Guid";
-            this.recommendedInvoiceGuidDataGridViewTextBoxColumn.Name = "recommendedInvoiceGuidDataGridViewTextBoxColumn";
-            this.recommendedInvoiceGuidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // recommendedInvoiceDescriptionDataGridViewTextBoxColumn
-            // 
-            this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Recommended_Invoice_Description";
-            this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn.HeaderText = "Recommended_Invoice_Description";
-            this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn.Name = "recommendedInvoiceDescriptionDataGridViewTextBoxColumn";
-            this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // recommendedReceiptGuidDataGridViewTextBoxColumn
-            // 
-            this.recommendedReceiptGuidDataGridViewTextBoxColumn.DataPropertyName = "Recommended_Receipt_Guid";
-            this.recommendedReceiptGuidDataGridViewTextBoxColumn.HeaderText = "Recommended_Receipt_Guid";
-            this.recommendedReceiptGuidDataGridViewTextBoxColumn.Name = "recommendedReceiptGuidDataGridViewTextBoxColumn";
-            this.recommendedReceiptGuidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // recommendedReceiptDescriptionDataGridViewTextBoxColumn
-            // 
-            this.recommendedReceiptDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Recommended_Receipt_Description";
-            this.recommendedReceiptDescriptionDataGridViewTextBoxColumn.HeaderText = "Recommended_Receipt_Description";
-            this.recommendedReceiptDescriptionDataGridViewTextBoxColumn.Name = "recommendedReceiptDescriptionDataGridViewTextBoxColumn";
-            this.recommendedReceiptDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idISUVaultDataGridViewTextBoxColumn
-            // 
-            this.idISUVaultDataGridViewTextBoxColumn.DataPropertyName = "Id_ISU_Vault";
-            this.idISUVaultDataGridViewTextBoxColumn.HeaderText = "Id_ISU_Vault";
-            this.idISUVaultDataGridViewTextBoxColumn.Name = "idISUVaultDataGridViewTextBoxColumn";
-            this.idISUVaultDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idISUVaultDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // lookupISUVaultBindingSource1
-            // 
-            this.lookupISUVaultBindingSource1.DataMember = "Lookup_ISU_Vault";
-            this.lookupISUVaultBindingSource1.DataSource = this.mSCOA_VaultDataSet1;
-            // 
-            // mSCOA_VaultDataSet1
-            // 
-            this.mSCOA_VaultDataSet1.DataSetName = "mSCOA_VaultDataSet1";
-            this.mSCOA_VaultDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(343, 497);
+            this.btnUpdate.Location = new System.Drawing.Point(357, 310);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 22;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(-23, 307);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Contra";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-23, 269);
+            this.label1.Location = new System.Drawing.Point(5, 269);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 20;
@@ -184,50 +108,16 @@
             // cboDirect
             // 
             this.cboDirect.FormattingEnabled = true;
-            this.cboDirect.Location = new System.Drawing.Point(37, 269);
+            this.cboDirect.Location = new System.Drawing.Point(65, 269);
             this.cboDirect.Name = "cboDirect";
             this.cboDirect.Size = new System.Drawing.Size(796, 21);
             this.cboDirect.TabIndex = 19;
-            // 
-            // cboContra
-            // 
-            this.cboContra.FormattingEnabled = true;
-            this.cboContra.Location = new System.Drawing.Point(37, 299);
-            this.cboContra.Name = "cboContra";
-            this.cboContra.Size = new System.Drawing.Size(796, 21);
-            this.cboContra.TabIndex = 18;
-            // 
-            // lookupISUVaultBindingSource
-            // 
-            this.lookupISUVaultBindingSource.DataMember = "Lookup_ISU_Vault";
-            this.lookupISUVaultBindingSource.DataSource = this.mSCOA_VaultDataSet1;
-            // 
-            // lookup_ISU_VaultTableAdapter
-            // 
-            this.lookup_ISU_VaultTableAdapter.ClearBeforeFill = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(-23, 340);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Function";
-            // 
-            // cboFunction
-            // 
-            this.cboFunction.FormattingEnabled = true;
-            this.cboFunction.Location = new System.Drawing.Point(37, 332);
-            this.cboFunction.Name = "cboFunction";
-            this.cboFunction.Size = new System.Drawing.Size(796, 21);
-            this.cboFunction.TabIndex = 24;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(-22, 240);
+            this.label3.Location = new System.Drawing.Point(3, 240);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(246, 13);
             this.label3.TabIndex = 23;
@@ -251,79 +141,6 @@
             // 
             this.consVaultBindingSource1.DataMember = "Cons_Vault";
             this.consVaultBindingSource1.DataSource = this.mSCOA_VaultDataSet;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(-23, 431);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Fund";
-            // 
-            // cboFund
-            // 
-            this.cboFund.FormattingEnabled = true;
-            this.cboFund.Location = new System.Drawing.Point(37, 423);
-            this.cboFund.Name = "cboFund";
-            this.cboFund.Size = new System.Drawing.Size(796, 21);
-            this.cboFund.TabIndex = 30;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(-23, 404);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 13);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "Region";
-            // 
-            // cboRegion
-            // 
-            this.cboRegion.FormattingEnabled = true;
-            this.cboRegion.Location = new System.Drawing.Point(37, 396);
-            this.cboRegion.Name = "cboRegion";
-            this.cboRegion.Size = new System.Drawing.Size(796, 21);
-            this.cboRegion.TabIndex = 28;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(-23, 373);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Costing";
-            // 
-            // cboCosting
-            // 
-            this.cboCosting.FormattingEnabled = true;
-            this.cboCosting.Location = new System.Drawing.Point(37, 365);
-            this.cboCosting.Name = "cboCosting";
-            this.cboCosting.Size = new System.Drawing.Size(796, 21);
-            this.cboCosting.TabIndex = 26;
-            // 
-            // costingDescriptionDataGridViewTextBoxColumn
-            // 
-            this.costingDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Costing_Description";
-            this.costingDescriptionDataGridViewTextBoxColumn.HeaderText = "Costing_Description";
-            this.costingDescriptionDataGridViewTextBoxColumn.Name = "costingDescriptionDataGridViewTextBoxColumn";
-            this.costingDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cboProject
-            // 
-            this.cboProject.FormattingEnabled = true;
-            this.cboProject.Location = new System.Drawing.Point(37, 450);
-            this.cboProject.Name = "cboProject";
-            this.cboProject.Size = new System.Drawing.Size(796, 21);
-            this.cboProject.TabIndex = 32;
-            // 
-            // costingGuidDataGridViewTextBoxColumn
-            // 
-            this.costingGuidDataGridViewTextBoxColumn.DataPropertyName = "Costing_Guid";
-            this.costingGuidDataGridViewTextBoxColumn.HeaderText = "Costing_Guid";
-            this.costingGuidDataGridViewTextBoxColumn.Name = "costingGuidDataGridViewTextBoxColumn";
-            this.costingGuidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dataGridView1
             // 
@@ -369,7 +186,7 @@
             this.recommendedReceiptDescriptionDataGridViewTextBoxColumn,
             this.idISUVaultDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.lookupISUVaultBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(-32, -70);
+            this.dataGridView1.Location = new System.Drawing.Point(0, -70);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -579,45 +396,100 @@
             this.regionDescriptionDataGridViewTextBoxColumn.Name = "regionDescriptionDataGridViewTextBoxColumn";
             this.regionDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // costingGuidDataGridViewTextBoxColumn
+            // 
+            this.costingGuidDataGridViewTextBoxColumn.DataPropertyName = "Costing_Guid";
+            this.costingGuidDataGridViewTextBoxColumn.HeaderText = "Costing_Guid";
+            this.costingGuidDataGridViewTextBoxColumn.Name = "costingGuidDataGridViewTextBoxColumn";
+            this.costingGuidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // costingDescriptionDataGridViewTextBoxColumn
+            // 
+            this.costingDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Costing_Description";
+            this.costingDescriptionDataGridViewTextBoxColumn.HeaderText = "Costing_Description";
+            this.costingDescriptionDataGridViewTextBoxColumn.Name = "costingDescriptionDataGridViewTextBoxColumn";
+            this.costingDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // recommendedInvoiceGuidDataGridViewTextBoxColumn
+            // 
+            this.recommendedInvoiceGuidDataGridViewTextBoxColumn.DataPropertyName = "Recommended_Invoice_Guid";
+            this.recommendedInvoiceGuidDataGridViewTextBoxColumn.HeaderText = "Recommended_Invoice_Guid";
+            this.recommendedInvoiceGuidDataGridViewTextBoxColumn.Name = "recommendedInvoiceGuidDataGridViewTextBoxColumn";
+            this.recommendedInvoiceGuidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // recommendedInvoiceDescriptionDataGridViewTextBoxColumn
+            // 
+            this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Recommended_Invoice_Description";
+            this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn.HeaderText = "Recommended_Invoice_Description";
+            this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn.Name = "recommendedInvoiceDescriptionDataGridViewTextBoxColumn";
+            this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // recommendedReceiptGuidDataGridViewTextBoxColumn
+            // 
+            this.recommendedReceiptGuidDataGridViewTextBoxColumn.DataPropertyName = "Recommended_Receipt_Guid";
+            this.recommendedReceiptGuidDataGridViewTextBoxColumn.HeaderText = "Recommended_Receipt_Guid";
+            this.recommendedReceiptGuidDataGridViewTextBoxColumn.Name = "recommendedReceiptGuidDataGridViewTextBoxColumn";
+            this.recommendedReceiptGuidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // recommendedReceiptDescriptionDataGridViewTextBoxColumn
+            // 
+            this.recommendedReceiptDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Recommended_Receipt_Description";
+            this.recommendedReceiptDescriptionDataGridViewTextBoxColumn.HeaderText = "Recommended_Receipt_Description";
+            this.recommendedReceiptDescriptionDataGridViewTextBoxColumn.Name = "recommendedReceiptDescriptionDataGridViewTextBoxColumn";
+            this.recommendedReceiptDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idISUVaultDataGridViewTextBoxColumn
+            // 
+            this.idISUVaultDataGridViewTextBoxColumn.DataPropertyName = "Id_ISU_Vault";
+            this.idISUVaultDataGridViewTextBoxColumn.HeaderText = "Id_ISU_Vault";
+            this.idISUVaultDataGridViewTextBoxColumn.Name = "idISUVaultDataGridViewTextBoxColumn";
+            this.idISUVaultDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idISUVaultDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // lookupISUVaultBindingSource1
+            // 
+            this.lookupISUVaultBindingSource1.DataMember = "Lookup_ISU_Vault";
+            this.lookupISUVaultBindingSource1.DataSource = this.mSCOA_VaultDataSet1;
+            // 
+            // mSCOA_VaultDataSet1
+            // 
+            this.mSCOA_VaultDataSet1.DataSetName = "mSCOA_VaultDataSet1";
+            this.mSCOA_VaultDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lookupISUVaultBindingSource
+            // 
+            this.lookupISUVaultBindingSource.DataMember = "Lookup_ISU_Vault";
+            this.lookupISUVaultBindingSource.DataSource = this.mSCOA_VaultDataSet1;
+            // 
+            // lookup_ISU_VaultTableAdapter
+            // 
+            this.lookup_ISU_VaultTableAdapter.ClearBeforeFill = true;
+            // 
             // Lookup_Vault
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 529);
-            this.Controls.Add(this.label8);
+            this.ClientSize = new System.Drawing.Size(864, 350);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboDirect);
-            this.Controls.Add(this.cboContra);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.cboFunction);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.cboFund);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.cboRegion);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.cboCosting);
-            this.Controls.Add(this.cboProject);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Lookup_Vault";
-            this.Text = "Lookup_Vault";
-            ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).EndInit();
+            this.Text = "Cashbook Vault";
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn recommendedInvoiceGuidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn recommendedInvoiceDescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn recommendedReceiptGuidDataGridViewTextBoxColumn;
@@ -626,27 +498,16 @@
         private System.Windows.Forms.BindingSource lookupISUVaultBindingSource1;
         private mSCOA_VaultDataSet1 mSCOA_VaultDataSet1;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboDirect;
-        private System.Windows.Forms.ComboBox cboContra;
         private System.Windows.Forms.BindingSource lookupISUVaultBindingSource;
         private mSCOA_VaultDataSet1TableAdapters.Lookup_ISU_VaultTableAdapter lookup_ISU_VaultTableAdapter;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cboFunction;
         private System.Windows.Forms.Label label3;
         private mSCOA_VaultDataSet mSCOA_VaultDataSet;
         private System.Windows.Forms.BindingSource consVaultBindingSource;
         private mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter cons_VaultTableAdapter;
         private System.Windows.Forms.BindingSource consVaultBindingSource1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cboFund;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cboRegion;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cboCosting;
         private System.Windows.Forms.DataGridViewTextBoxColumn costingDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ComboBox cboProject;
         private System.Windows.Forms.DataGridViewTextBoxColumn costingGuidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn rATECATDataGridViewTextBoxColumn;

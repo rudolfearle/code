@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters;
 
 namespace WindowsFormsApp1
 {
@@ -23,13 +24,7 @@ namespace WindowsFormsApp1
         //FUNCTION
         //PROJECT
         private mSCOA_VaultDataSet.Cons_VaultDataTable objTableDirect;
-        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableContra;
-        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableFunction;
-
-        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableCosting;
-        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableRegional;
-        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableFund;
-        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableProject;
+       
 
 
         private ToolTip toolTip1;
@@ -81,7 +76,7 @@ namespace WindowsFormsApp1
             RefreshGrid();
             if (LoadOnce == false)
             {
-                LoadContra();
+                //LoadContra();
                 LoadDirect();
 
             }
@@ -94,14 +89,7 @@ namespace WindowsFormsApp1
             {
 
                 General.Utilities.LoadSCOACombobox(cboDirect, objTableDirect);
-                General.Utilities.LoadSCOACombobox(cboContra, objTableContra);
-                General.Utilities.LoadSCOACombobox(cboFunction, objTableFunction);
-
-                General.Utilities.LoadSCOACombobox(cboCosting, objTableCosting);
-                General.Utilities.LoadSCOACombobox(cboRegion, objTableRegional);
-                General.Utilities.LoadSCOACombobox(cboFund, objTableFund);
-                General.Utilities.LoadSCOACombobox(cboProject, objTableProject);
-
+              
                 LoadOnce = true;
             }
 
@@ -120,10 +108,11 @@ namespace WindowsFormsApp1
         {
             try
             {
-                this.lookup_ISU_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet1.Lookup_ISU_Vault);
+               Lookup_Vault_CashbookTableAdapter Ta = new Lookup_Vault_CashbookTableAdapter();
+               Ta.Fill(this.mSCOA_VaultDataSet1.Lookup_Vault_Cashbook);
                 BeginInvoke((MethodInvoker)delegate
                 {
-                    dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_ISU_Vault;
+                    dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_Vault_Cashbook;
                     dataGridView1.Refresh();
                 });
             }
@@ -136,27 +125,12 @@ namespace WindowsFormsApp1
         private void SetLabels(bool value)
         {
             label1.Enabled = value;
-            label2.Enabled = value;
-            label4.Enabled = value;
-
-            label5.Enabled = value;
-            label6.Enabled = value;
-            label7.Enabled = value;
-            label8.Enabled = value;
-
-            cboContra.Enabled = value;
+          
             cboDirect.Enabled = value;
-            cboFunction.Enabled = value;
-
-            cboCosting.Enabled = value;
-            cboFund.Enabled = value;
-            cboRegion.Enabled = value;
-            cboProject.Enabled = value;
-
+            
             btnUpdate.Enabled = value;
 
         }
-
 
         private void LoadDirect()
         {
@@ -178,131 +152,22 @@ namespace WindowsFormsApp1
 
         }
 
-        private void LoadContra()
-        {
-
-            try
-            {
-                //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
-                using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
-                {
-                    mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
-                    ta.FillByContra(Tbl);
-                    objTableContra = Tbl;
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
-
-        private void LoadFunction()
-        {
-            try
-            {
-                //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
-                using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
-                {
-                    mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
-                    ta.FillByFunction(Tbl);
-                    objTableFunction = Tbl;
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
-
-        private void LoadCosting()
-        {
-            try
-            {
-                //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
-                using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
-                {
-                    mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
-                    ta.FillByCosting(Tbl);
-                    objTableCosting = Tbl;
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
-
-        private void LoadRegion()
-        {
-            try
-            {
-                //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
-                using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
-                {
-                    mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
-                    ta.FillByRegion(Tbl);
-                    objTableRegional = Tbl;
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
-
-
-        private void LoadFund()
-        {
-            try
-            {
-                //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
-                using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
-                {
-                    mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
-                    ta.FillByFund(Tbl);
-                    objTableFund = Tbl;
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
-
-        private void LoadProject()
-        {
-            try
-            {
-                //this.cons_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet.Cons_Vault);
-                using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
-                {
-                    mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
-                    ta.FillByProject(Tbl);
-                    objTableProject = Tbl;
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
 
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (cboDirect.SelectedIndex > 0 && cboContra.SelectedIndex > 0)
+            if (cboDirect.SelectedIndex > 0 )
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     // do something with the row..
                     if (row.Selected == true)
                     {
-                        int nID = Convert.ToInt32(row.Cells["Id_ISU_Vault"].Value);
+                        int nID = Convert.ToInt32(row.Cells["Id_Lookup_Vault_Cashbook"].Value);
                         string sDirectGUID = cboDirect.SelectedValue.ToString();
-                        string sContraGUID = cboContra.SelectedValue.ToString();
-                        string sFunctionGUID = cboFunction.SelectedValue.ToString();
-                        lookup_ISU_VaultTableAdapter.UpdateQuery(sDirectGUID, sContraGUID, sFunctionGUID, nID);
+
+                        Lookup_Vault_CashbookTableAdapter Ta = new Lookup_Vault_CashbookTableAdapter();
+                        Ta.UpdateQueryByID(sDirectGUID, nID);
                     }
                 }
                 LoadData();
