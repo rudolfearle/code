@@ -604,6 +604,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Lookup_Assets_Vault";
             this.Text = "Lookup_Assets_Vault";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).EndInit();

@@ -568,6 +568,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Name = "Lookup_Vault";
             this.Text = "Cashbook Vault";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).EndInit();
