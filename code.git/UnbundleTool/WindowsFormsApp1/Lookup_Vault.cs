@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters;
+using DataGridViewAutoFilter;
+
 
 namespace WindowsFormsApp1
 {
@@ -36,6 +38,7 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            dataGridView1.Enabled = false;
             LoadOnce = false;
             toolTip1 = new ToolTip();
             // TODO: This line of code loads data into the 'mSCOA_VaultDataSet1.Lookup_ISU_Vault' table. You can move, or remove it, as needed.
@@ -92,6 +95,7 @@ namespace WindowsFormsApp1
               
                 LoadOnce = true;
             }
+            dataGridView1.Enabled = true;
 
         }
 
@@ -112,7 +116,11 @@ namespace WindowsFormsApp1
                Ta.Fill(this.mSCOA_VaultDataSet1.Lookup_Vault_Cashbook);
                 BeginInvoke((MethodInvoker)delegate
                 {
-                    dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_Vault_Cashbook;
+                    BindingSource bs = new BindingSource();
+                    bs.DataSource = this.mSCOA_VaultDataSet1.Lookup_Vault_Cashbook;
+                    dataGridView1.DataSource = bs;
+                    bs.ResetBindings(false);
+                    //dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_Vault_Cashbook;
                     dataGridView1.Refresh();
                 });
             }
@@ -198,6 +206,43 @@ namespace WindowsFormsApp1
             if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
             { toolTip1.Show(text, cboDirect, e.Bounds.Right, e.Bounds.Bottom); }
             e.DrawFocusRectangle();
+        }
+
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            String filterStatus = DataGridViewAutoFilterColumnHeaderCell
+             .GetFilterStatus(dataGridView1);
+            if (String.IsNullOrEmpty(filterStatus))
+            {
+                showAllLabel.Visible = false;
+                filterStatusLabel.Visible = false;
+            }
+            else
+            {
+                showAllLabel.Visible = true;
+                filterStatusLabel.Visible = true;
+                filterStatusLabel.Text = filterStatus;
+            }
+        }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Alt && (e.KeyCode == Keys.Down || e.KeyCode == Keys.Up))
+            {
+                DataGridViewAutoFilterColumnHeaderCell filterCell =
+                    dataGridView1.CurrentCell.OwningColumn.HeaderCell as
+                    DataGridViewAutoFilterColumnHeaderCell;
+                if (filterCell != null)
+                {
+                    filterCell.ShowDropDownList();
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void showAllLabel_Click(object sender, EventArgs e)
+        {
+            DataGridViewAutoFilterColumnHeaderCell.RemoveFilter(dataGridView1);
         }
     }
 }

@@ -22,3 +22,7 @@ C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\obj\Debug\UnbundeTool.pdb
 C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Lookup_Assets_Vault.resources
 C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Lookup_HCM_Vault.resources
 C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Lookup_Vault.resources
+C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\bin\Debug\DataGridViewAutoFilter.dll
+C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\bin\Debug\DataGridViewAutoFilter.pdb
+C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\obj\Debug\UnbundeTool.csproj.CopyComplete
+C:\EOH\code\code.git\UnbundleTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Budget_2Segment.resources

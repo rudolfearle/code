@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataGridViewAutoFilter;
 
 
 namespace WindowsFormsApp1
@@ -45,6 +46,8 @@ namespace WindowsFormsApp1
             toolTip1 = new ToolTip();
             // TODO: This line of code loads data into the 'mSCOA_VaultDataSet1.Lookup_ISU_Vault' table. You can move, or remove it, as needed.
             SetLabels(false);
+            dataGridView1.Enabled = false;
+
             InitializeWorkers();
             LoadData();
 
@@ -67,7 +70,7 @@ namespace WindowsFormsApp1
             else
             {
                 //gridControlIDPMaster.Visible = false;
-               // edtLoadingPanel.Show();
+                // edtLoadingPanel.Show();
 
                 workerLoad.RunWorkerAsync();
                 //gridControlIDPMaster.Enabled = false;
@@ -83,6 +86,11 @@ namespace WindowsFormsApp1
             {
                 LoadContra();
                 LoadDirect();
+                LoadFunction();
+                LoadCosting();
+                LoadFund();
+                LoadProject();
+                LoadRegion();
                 
             }
         }
@@ -104,8 +112,14 @@ namespace WindowsFormsApp1
 
                 LoadOnce = true;
             }
+            dataGridView1.Enabled = true;
 
         }
+
+
+
+
+     
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -121,9 +135,14 @@ namespace WindowsFormsApp1
             try
             {
                 this.lookup_ISU_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet1.Lookup_ISU_Vault);
+                //this.WorkBindingSource.ResetBindings(false);
                 BeginInvoke((MethodInvoker)delegate
                 {
-                    dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_ISU_Vault;
+                    BindingSource bs = new BindingSource();
+                    bs.DataSource = this.mSCOA_VaultDataSet1.Lookup_ISU_Vault;
+                    dataGridView1.DataSource = bs;
+                    bs.ResetBindings(false);
+                    //dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_ISU_Vault;
                     dataGridView1.Refresh();
                 });
             }
@@ -320,7 +339,7 @@ namespace WindowsFormsApp1
 
         private void Lookup_ISU_Vault_Resize(object sender, EventArgs e)
         {
-            dataGridView1.Size = new Size(this.Width - 10, dataGridView1.Height);
+            //dataGridView1.Size = new Size(this.Width - 10, dataGridView1.Height);
         }
 
         private void cboDirect_DropDownClosed(object sender, EventArgs e)
@@ -339,5 +358,44 @@ namespace WindowsFormsApp1
             { toolTip1.Show(text, cboDirect, e.Bounds.Right, e.Bounds.Bottom); }
             e.DrawFocusRectangle();
         }
+
+
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            String filterStatus = DataGridViewAutoFilterColumnHeaderCell
+             .GetFilterStatus(dataGridView1);
+            if (String.IsNullOrEmpty(filterStatus))
+            {
+                showAllLabel.Visible = false;
+                filterStatusLabel.Visible = false;
+            }
+            else
+            {
+                showAllLabel.Visible = true;
+                filterStatusLabel.Visible = true;
+                filterStatusLabel.Text = filterStatus;
+            }
+        }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Alt && (e.KeyCode == Keys.Down || e.KeyCode == Keys.Up))
+            {
+                DataGridViewAutoFilterColumnHeaderCell filterCell =
+                    dataGridView1.CurrentCell.OwningColumn.HeaderCell as
+                    DataGridViewAutoFilterColumnHeaderCell;
+                if (filterCell != null)
+                {
+                    filterCell.ShowDropDownList();
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void showAllLabel_Click(object sender, EventArgs e)
+        {
+            DataGridViewAutoFilterColumnHeaderCell.RemoveFilter(dataGridView1);
+        }
+
     }
 }

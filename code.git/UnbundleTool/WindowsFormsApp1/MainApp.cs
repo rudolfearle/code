@@ -58,6 +58,14 @@ namespace WindowsFormsApp1
                     obj3.Dock = DockStyle.Fill;
                     obj3.Show();
                     break;
+                case 5: // Lookup_Vault_Budget_2Segment_Combo
+                    Budget_2Segment  obj5 = new Budget_2Segment();
+                    obj5.TopLevel = false;
+                    splitContainer1.Panel2.Controls.Add(obj5);
+                    obj5.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                    obj5.Dock = DockStyle.Fill;
+                    obj5.Show();
+                    break;
             }
         }
     }

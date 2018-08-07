@@ -1,0 +1,29 @@
+USE [mSCOA_Vault]
+GO
+
+
+/** Object:  Table [dbo].[Lookup_Vault_Cashbook]  
+  Script Date: 2018/08/07 14:59:23 **/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Lookup_Vault_Cashbook](
+	[RACCT] [nvarchar](50) NULL,
+	[DOCTY] [nvarchar](50) NULL,
+	[DRCRK] [nvarchar](50) NULL,
+	[RACCT_DESC] [varchar](100) NULL,
+	[Short_Text] [varchar](200) NULL,
+	[GUID] [varchar](36) NULL,
+	[GUID_Description] [varchar](260) NULL,
+	[PARENT_GUID] [varchar](36) NULL,
+	[PARENT_GUID_Description] [varchar](260) NULL,
+	[Id_Lookup_Vault_Cashbook] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_Lookup_Vault_Cashbook] PRIMARY KEY CLUSTERED 
+(
+	[Id_Lookup_Vault_Cashbook] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO

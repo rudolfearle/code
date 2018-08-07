@@ -29,99 +29,72 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboDirect = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.mSCOA_VaultDataSet = new WindowsFormsApp1.mSCOA_VaultDataSet();
             this.consVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cons_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter();
             this.consVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.rATECATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dESCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.divisionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mainCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mainsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.docTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.divFiCaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fiCaMainsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subsFiCaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dbtCntGLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.revenueGLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sAPCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sAPDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nonFinGroupCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nonFinGroupDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nonFinSubGroupCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nonFinSubGroupDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.projectGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.projectDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.functionGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.functionDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fundGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fundDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.regionGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.regionDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costingGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costingDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recommendedInvoiceGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recommendedReceiptGuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recommendedReceiptDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idISUVaultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lookupISUVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mSCOA_VaultDataSet1 = new WindowsFormsApp1.mSCOA_VaultDataSet1();
             this.lookupISUVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lookup_ISU_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters.Lookup_ISU_VaultTableAdapter();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.filterStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.showAllLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rATECATDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.dESCDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.divisionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.mainCodeDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.mainsDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.subCodeDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.subDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.docTypeDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.divFiCaDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.fiCaMainsDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.subsFiCaDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.dbtCntGLDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.revenueGLDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.sAPCodeDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.sAPDescriptionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.nonFinGroupCodeDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.nonFinGroupDescriptionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.nonFinSubGroupCodeDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.nonFinSubGroupDescriptionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.projectGuidDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.projectDescriptionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.functionGuidDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.functionDescriptionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.fundGuidDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.fundDescriptionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.regionGuidDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.regionDescriptionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.costingGuidDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.costingDescriptionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.recommendedInvoiceGuidDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.recommendedReceiptGuidDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.recommendedReceiptDescriptionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
+            this.idISUVaultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboDirect = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).BeginInit();
+            this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(357, 310);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 22;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 269);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Direct";
-            // 
-            // cboDirect
-            // 
-            this.cboDirect.FormattingEnabled = true;
-            this.cboDirect.Location = new System.Drawing.Point(65, 269);
-            this.cboDirect.Name = "cboDirect";
-            this.cboDirect.Size = new System.Drawing.Size(796, 21);
-            this.cboDirect.TabIndex = 19;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(3, 240);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(246, 13);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Hold CTRL key down to select multiple rows in grid";
             // 
             // mSCOA_VaultDataSet
             // 
@@ -141,6 +114,73 @@
             // 
             this.consVaultBindingSource1.DataMember = "Cons_Vault";
             this.consVaultBindingSource1.DataSource = this.mSCOA_VaultDataSet;
+            // 
+            // lookupISUVaultBindingSource1
+            // 
+            this.lookupISUVaultBindingSource1.DataMember = "Lookup_ISU_Vault";
+            this.lookupISUVaultBindingSource1.DataSource = this.mSCOA_VaultDataSet1;
+            // 
+            // mSCOA_VaultDataSet1
+            // 
+            this.mSCOA_VaultDataSet1.DataSetName = "mSCOA_VaultDataSet1";
+            this.mSCOA_VaultDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lookupISUVaultBindingSource
+            // 
+            this.lookupISUVaultBindingSource.DataMember = "Lookup_ISU_Vault";
+            this.lookupISUVaultBindingSource.DataSource = this.mSCOA_VaultDataSet1;
+            // 
+            // lookup_ISU_VaultTableAdapter
+            // 
+            this.lookup_ISU_VaultTableAdapter.ClearBeforeFill = true;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filterStatusLabel,
+            this.showAllLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(754, 240);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(202, 22);
+            this.statusStrip1.TabIndex = 24;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // filterStatusLabel
+            // 
+            this.filterStatusLabel.Name = "filterStatusLabel";
+            this.filterStatusLabel.Size = new System.Drawing.Size(0, 17);
+            this.filterStatusLabel.Visible = false;
+            // 
+            // showAllLabel
+            // 
+            this.showAllLabel.IsLink = true;
+            this.showAllLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.showAllLabel.Name = "showAllLabel";
+            this.showAllLabel.Size = new System.Drawing.Size(53, 17);
+            this.showAllLabel.Text = "Show &All";
+            this.showAllLabel.Visible = false;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.btnUpdate);
+            this.splitContainer1.Panel2.Controls.Add(this.label3);
+            this.splitContainer1.Panel2.Controls.Add(this.label1);
+            this.splitContainer1.Panel2.Controls.Add(this.cboDirect);
+            this.splitContainer1.Size = new System.Drawing.Size(899, 350);
+            this.splitContainer1.SplitterDistance = 175;
+            this.splitContainer1.TabIndex = 25;
             // 
             // dataGridView1
             // 
@@ -186,12 +226,14 @@
             this.recommendedReceiptDescriptionDataGridViewTextBoxColumn,
             this.idISUVaultDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.lookupISUVaultBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(0, -70);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(861, 307);
-            this.dataGridView1.TabIndex = 17;
+            this.dataGridView1.Size = new System.Drawing.Size(899, 175);
+            this.dataGridView1.TabIndex = 24;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // rATECATDataGridViewTextBoxColumn
             // 
@@ -199,6 +241,7 @@
             this.rATECATDataGridViewTextBoxColumn.HeaderText = "RATE_CAT";
             this.rATECATDataGridViewTextBoxColumn.Name = "rATECATDataGridViewTextBoxColumn";
             this.rATECATDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rATECATDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dESCDataGridViewTextBoxColumn
             // 
@@ -206,6 +249,7 @@
             this.dESCDataGridViewTextBoxColumn.HeaderText = "DESC";
             this.dESCDataGridViewTextBoxColumn.Name = "dESCDataGridViewTextBoxColumn";
             this.dESCDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dESCDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // divisionDataGridViewTextBoxColumn
             // 
@@ -213,6 +257,7 @@
             this.divisionDataGridViewTextBoxColumn.HeaderText = "Division";
             this.divisionDataGridViewTextBoxColumn.Name = "divisionDataGridViewTextBoxColumn";
             this.divisionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.divisionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -220,6 +265,7 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // codeDataGridViewTextBoxColumn
             // 
@@ -227,6 +273,7 @@
             this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
             this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
             this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // mainCodeDataGridViewTextBoxColumn
             // 
@@ -234,6 +281,7 @@
             this.mainCodeDataGridViewTextBoxColumn.HeaderText = "MainCode";
             this.mainCodeDataGridViewTextBoxColumn.Name = "mainCodeDataGridViewTextBoxColumn";
             this.mainCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mainCodeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // mainsDataGridViewTextBoxColumn
             // 
@@ -241,6 +289,7 @@
             this.mainsDataGridViewTextBoxColumn.HeaderText = "Mains";
             this.mainsDataGridViewTextBoxColumn.Name = "mainsDataGridViewTextBoxColumn";
             this.mainsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mainsDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // subCodeDataGridViewTextBoxColumn
             // 
@@ -248,6 +297,7 @@
             this.subCodeDataGridViewTextBoxColumn.HeaderText = "SubCode";
             this.subCodeDataGridViewTextBoxColumn.Name = "subCodeDataGridViewTextBoxColumn";
             this.subCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subCodeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // subDataGridViewTextBoxColumn
             // 
@@ -255,6 +305,7 @@
             this.subDataGridViewTextBoxColumn.HeaderText = "Sub";
             this.subDataGridViewTextBoxColumn.Name = "subDataGridViewTextBoxColumn";
             this.subDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // docTypeDataGridViewTextBoxColumn
             // 
@@ -262,6 +313,7 @@
             this.docTypeDataGridViewTextBoxColumn.HeaderText = "Doc_Type";
             this.docTypeDataGridViewTextBoxColumn.Name = "docTypeDataGridViewTextBoxColumn";
             this.docTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.docTypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // divFiCaDataGridViewTextBoxColumn
             // 
@@ -269,6 +321,7 @@
             this.divFiCaDataGridViewTextBoxColumn.HeaderText = "Div__FiCa";
             this.divFiCaDataGridViewTextBoxColumn.Name = "divFiCaDataGridViewTextBoxColumn";
             this.divFiCaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.divFiCaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // fiCaMainsDataGridViewTextBoxColumn
             // 
@@ -276,6 +329,7 @@
             this.fiCaMainsDataGridViewTextBoxColumn.HeaderText = "FiCa_Mains";
             this.fiCaMainsDataGridViewTextBoxColumn.Name = "fiCaMainsDataGridViewTextBoxColumn";
             this.fiCaMainsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fiCaMainsDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // subsFiCaDataGridViewTextBoxColumn
             // 
@@ -283,6 +337,7 @@
             this.subsFiCaDataGridViewTextBoxColumn.HeaderText = "Subs_FiCa";
             this.subsFiCaDataGridViewTextBoxColumn.Name = "subsFiCaDataGridViewTextBoxColumn";
             this.subsFiCaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subsFiCaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dbtCntGLDataGridViewTextBoxColumn
             // 
@@ -290,6 +345,7 @@
             this.dbtCntGLDataGridViewTextBoxColumn.HeaderText = "DbtCnt_GL";
             this.dbtCntGLDataGridViewTextBoxColumn.Name = "dbtCntGLDataGridViewTextBoxColumn";
             this.dbtCntGLDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbtCntGLDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // revenueGLDataGridViewTextBoxColumn
             // 
@@ -297,6 +353,7 @@
             this.revenueGLDataGridViewTextBoxColumn.HeaderText = "Revenue_GL";
             this.revenueGLDataGridViewTextBoxColumn.Name = "revenueGLDataGridViewTextBoxColumn";
             this.revenueGLDataGridViewTextBoxColumn.ReadOnly = true;
+            this.revenueGLDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // sAPCodeDataGridViewTextBoxColumn
             // 
@@ -304,6 +361,7 @@
             this.sAPCodeDataGridViewTextBoxColumn.HeaderText = "SAP_Code";
             this.sAPCodeDataGridViewTextBoxColumn.Name = "sAPCodeDataGridViewTextBoxColumn";
             this.sAPCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sAPCodeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // sAPDescriptionDataGridViewTextBoxColumn
             // 
@@ -311,6 +369,7 @@
             this.sAPDescriptionDataGridViewTextBoxColumn.HeaderText = "SAP_Description";
             this.sAPDescriptionDataGridViewTextBoxColumn.Name = "sAPDescriptionDataGridViewTextBoxColumn";
             this.sAPDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sAPDescriptionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // nonFinGroupCodeDataGridViewTextBoxColumn
             // 
@@ -318,6 +377,7 @@
             this.nonFinGroupCodeDataGridViewTextBoxColumn.HeaderText = "Non_Fin_Group_Code";
             this.nonFinGroupCodeDataGridViewTextBoxColumn.Name = "nonFinGroupCodeDataGridViewTextBoxColumn";
             this.nonFinGroupCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nonFinGroupCodeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // nonFinGroupDescriptionDataGridViewTextBoxColumn
             // 
@@ -325,6 +385,7 @@
             this.nonFinGroupDescriptionDataGridViewTextBoxColumn.HeaderText = "Non_Fin_Group_Description";
             this.nonFinGroupDescriptionDataGridViewTextBoxColumn.Name = "nonFinGroupDescriptionDataGridViewTextBoxColumn";
             this.nonFinGroupDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nonFinGroupDescriptionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // nonFinSubGroupCodeDataGridViewTextBoxColumn
             // 
@@ -332,6 +393,7 @@
             this.nonFinSubGroupCodeDataGridViewTextBoxColumn.HeaderText = "Non_Fin_Sub_Group_Code";
             this.nonFinSubGroupCodeDataGridViewTextBoxColumn.Name = "nonFinSubGroupCodeDataGridViewTextBoxColumn";
             this.nonFinSubGroupCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nonFinSubGroupCodeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // nonFinSubGroupDescriptionDataGridViewTextBoxColumn
             // 
@@ -339,6 +401,7 @@
             this.nonFinSubGroupDescriptionDataGridViewTextBoxColumn.HeaderText = "Non_Fin_Sub_Group_Description";
             this.nonFinSubGroupDescriptionDataGridViewTextBoxColumn.Name = "nonFinSubGroupDescriptionDataGridViewTextBoxColumn";
             this.nonFinSubGroupDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nonFinSubGroupDescriptionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // projectGuidDataGridViewTextBoxColumn
             // 
@@ -346,6 +409,7 @@
             this.projectGuidDataGridViewTextBoxColumn.HeaderText = "Project_Guid";
             this.projectGuidDataGridViewTextBoxColumn.Name = "projectGuidDataGridViewTextBoxColumn";
             this.projectGuidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.projectGuidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // projectDescriptionDataGridViewTextBoxColumn
             // 
@@ -353,6 +417,7 @@
             this.projectDescriptionDataGridViewTextBoxColumn.HeaderText = "Project_Description";
             this.projectDescriptionDataGridViewTextBoxColumn.Name = "projectDescriptionDataGridViewTextBoxColumn";
             this.projectDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.projectDescriptionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // functionGuidDataGridViewTextBoxColumn
             // 
@@ -360,6 +425,7 @@
             this.functionGuidDataGridViewTextBoxColumn.HeaderText = "Function_Guid";
             this.functionGuidDataGridViewTextBoxColumn.Name = "functionGuidDataGridViewTextBoxColumn";
             this.functionGuidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.functionGuidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // functionDescriptionDataGridViewTextBoxColumn
             // 
@@ -367,6 +433,7 @@
             this.functionDescriptionDataGridViewTextBoxColumn.HeaderText = "Function_Description";
             this.functionDescriptionDataGridViewTextBoxColumn.Name = "functionDescriptionDataGridViewTextBoxColumn";
             this.functionDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.functionDescriptionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // fundGuidDataGridViewTextBoxColumn
             // 
@@ -374,6 +441,7 @@
             this.fundGuidDataGridViewTextBoxColumn.HeaderText = "Fund_Guid";
             this.fundGuidDataGridViewTextBoxColumn.Name = "fundGuidDataGridViewTextBoxColumn";
             this.fundGuidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fundGuidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // fundDescriptionDataGridViewTextBoxColumn
             // 
@@ -381,6 +449,7 @@
             this.fundDescriptionDataGridViewTextBoxColumn.HeaderText = "Fund_Description";
             this.fundDescriptionDataGridViewTextBoxColumn.Name = "fundDescriptionDataGridViewTextBoxColumn";
             this.fundDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fundDescriptionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // regionGuidDataGridViewTextBoxColumn
             // 
@@ -388,6 +457,7 @@
             this.regionGuidDataGridViewTextBoxColumn.HeaderText = "Region_Guid";
             this.regionGuidDataGridViewTextBoxColumn.Name = "regionGuidDataGridViewTextBoxColumn";
             this.regionGuidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.regionGuidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // regionDescriptionDataGridViewTextBoxColumn
             // 
@@ -395,6 +465,7 @@
             this.regionDescriptionDataGridViewTextBoxColumn.HeaderText = "Region_Description";
             this.regionDescriptionDataGridViewTextBoxColumn.Name = "regionDescriptionDataGridViewTextBoxColumn";
             this.regionDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.regionDescriptionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // costingGuidDataGridViewTextBoxColumn
             // 
@@ -402,6 +473,7 @@
             this.costingGuidDataGridViewTextBoxColumn.HeaderText = "Costing_Guid";
             this.costingGuidDataGridViewTextBoxColumn.Name = "costingGuidDataGridViewTextBoxColumn";
             this.costingGuidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.costingGuidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // costingDescriptionDataGridViewTextBoxColumn
             // 
@@ -409,6 +481,7 @@
             this.costingDescriptionDataGridViewTextBoxColumn.HeaderText = "Costing_Description";
             this.costingDescriptionDataGridViewTextBoxColumn.Name = "costingDescriptionDataGridViewTextBoxColumn";
             this.costingDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.costingDescriptionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // recommendedInvoiceGuidDataGridViewTextBoxColumn
             // 
@@ -416,6 +489,7 @@
             this.recommendedInvoiceGuidDataGridViewTextBoxColumn.HeaderText = "Recommended_Invoice_Guid";
             this.recommendedInvoiceGuidDataGridViewTextBoxColumn.Name = "recommendedInvoiceGuidDataGridViewTextBoxColumn";
             this.recommendedInvoiceGuidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.recommendedInvoiceGuidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // recommendedInvoiceDescriptionDataGridViewTextBoxColumn
             // 
@@ -423,6 +497,7 @@
             this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn.HeaderText = "Recommended_Invoice_Description";
             this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn.Name = "recommendedInvoiceDescriptionDataGridViewTextBoxColumn";
             this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.recommendedInvoiceDescriptionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // recommendedReceiptGuidDataGridViewTextBoxColumn
             // 
@@ -430,6 +505,7 @@
             this.recommendedReceiptGuidDataGridViewTextBoxColumn.HeaderText = "Recommended_Receipt_Guid";
             this.recommendedReceiptGuidDataGridViewTextBoxColumn.Name = "recommendedReceiptGuidDataGridViewTextBoxColumn";
             this.recommendedReceiptGuidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.recommendedReceiptGuidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // recommendedReceiptDescriptionDataGridViewTextBoxColumn
             // 
@@ -437,6 +513,7 @@
             this.recommendedReceiptDescriptionDataGridViewTextBoxColumn.HeaderText = "Recommended_Receipt_Description";
             this.recommendedReceiptDescriptionDataGridViewTextBoxColumn.Name = "recommendedReceiptDescriptionDataGridViewTextBoxColumn";
             this.recommendedReceiptDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.recommendedReceiptDescriptionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // idISUVaultDataGridViewTextBoxColumn
             // 
@@ -446,98 +523,123 @@
             this.idISUVaultDataGridViewTextBoxColumn.ReadOnly = true;
             this.idISUVaultDataGridViewTextBoxColumn.Visible = false;
             // 
-            // lookupISUVaultBindingSource1
+            // btnUpdate
             // 
-            this.lookupISUVaultBindingSource1.DataMember = "Lookup_ISU_Vault";
-            this.lookupISUVaultBindingSource1.DataSource = this.mSCOA_VaultDataSet1;
+            this.btnUpdate.Location = new System.Drawing.Point(366, 81);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 27;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // mSCOA_VaultDataSet1
+            // label3
             // 
-            this.mSCOA_VaultDataSet1.DataSetName = "mSCOA_VaultDataSet1";
-            this.mSCOA_VaultDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(12, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(246, 13);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Hold CTRL key down to select multiple rows in grid";
             // 
-            // lookupISUVaultBindingSource
+            // label1
             // 
-            this.lookupISUVaultBindingSource.DataMember = "Lookup_ISU_Vault";
-            this.lookupISUVaultBindingSource.DataSource = this.mSCOA_VaultDataSet1;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Direct";
             // 
-            // lookup_ISU_VaultTableAdapter
+            // cboDirect
             // 
-            this.lookup_ISU_VaultTableAdapter.ClearBeforeFill = true;
+            this.cboDirect.FormattingEnabled = true;
+            this.cboDirect.Location = new System.Drawing.Point(74, 40);
+            this.cboDirect.Name = "cboDirect";
+            this.cboDirect.Size = new System.Drawing.Size(813, 21);
+            this.cboDirect.TabIndex = 25;
             // 
             // Lookup_Vault
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 350);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cboDirect);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(899, 350);
+            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.statusStrip1);
             this.Name = "Lookup_Vault";
             this.Text = "Cashbook Vault";
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridViewTextBoxColumn recommendedInvoiceGuidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn recommendedInvoiceDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn recommendedReceiptGuidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn recommendedReceiptDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idISUVaultDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource lookupISUVaultBindingSource1;
         private mSCOA_VaultDataSet1 mSCOA_VaultDataSet1;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboDirect;
         private System.Windows.Forms.BindingSource lookupISUVaultBindingSource;
         private mSCOA_VaultDataSet1TableAdapters.Lookup_ISU_VaultTableAdapter lookup_ISU_VaultTableAdapter;
-        private System.Windows.Forms.Label label3;
         private mSCOA_VaultDataSet mSCOA_VaultDataSet;
         private System.Windows.Forms.BindingSource consVaultBindingSource;
         private mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter cons_VaultTableAdapter;
         private System.Windows.Forms.BindingSource consVaultBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costingDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costingGuidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel filterStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel showAllLabel;
+        private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rATECATDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dESCDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn divisionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mainCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mainsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn docTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn divFiCaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fiCaMainsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subsFiCaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dbtCntGLDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn revenueGLDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sAPCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sAPDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nonFinGroupCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nonFinGroupDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nonFinSubGroupCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nonFinSubGroupDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn projectGuidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn projectDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn functionGuidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn functionDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fundGuidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fundDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn regionGuidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn regionDescriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboDirect;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn rATECATDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn dESCDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn divisionDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn nameDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn codeDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn mainCodeDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn mainsDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn subCodeDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn subDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn docTypeDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn divFiCaDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn fiCaMainsDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn subsFiCaDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn dbtCntGLDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn revenueGLDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn sAPCodeDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn sAPDescriptionDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn nonFinGroupCodeDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn nonFinGroupDescriptionDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn nonFinSubGroupCodeDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn nonFinSubGroupDescriptionDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn projectGuidDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn projectDescriptionDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn functionGuidDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn functionDescriptionDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn fundGuidDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn fundDescriptionDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn regionGuidDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn regionDescriptionDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn costingGuidDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn costingDescriptionDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn recommendedInvoiceGuidDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn recommendedInvoiceDescriptionDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn recommendedReceiptGuidDataGridViewTextBoxColumn;
+        private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn recommendedReceiptDescriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idISUVaultDataGridViewTextBoxColumn;
     }
 }

@@ -83,6 +83,12 @@ namespace WindowsFormsApp1
             {
                 LoadContra();
                 LoadDirect();
+                
+                LoadFunction();
+                LoadCosting();
+                LoadFund();
+                LoadProject();
+                LoadRegion();
 
             }
         }

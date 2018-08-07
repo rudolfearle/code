@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DataGridViewAutoFilter">
+      <HintPath>..\..\ReportTool\LIBS\DataGridViewAutoFilter.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Budget_2Segment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Budget_2Segment.Designer.cs">
+      <DependentUpon>Budget_2Segment.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\Utilities.cs" />
     <Compile Include="Lookup_Assets_Vault.cs">
       <SubType>Form</SubType>
@@ -88,6 +97,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Budget_2Segment.resx">
+      <DependentUpon>Budget_2Segment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lookup_Assets_Vault.resx">
       <DependentUpon>Lookup_Assets_Vault.cs</DependentUpon>
     </EmbeddedResource>

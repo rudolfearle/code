@@ -30,6 +30,8 @@ namespace WindowsFormsApp1 {
         
         private Lookup_Vault_HCMDataTable tableLookup_Vault_HCM;
         
+        private Lookup_Vault_Budget_2Segment_ComboDataTable tableLookup_Vault_Budget_2Segment_Combo;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -66,6 +68,9 @@ namespace WindowsFormsApp1 {
                 }
                 if ((ds.Tables["Lookup_Vault_HCM"] != null)) {
                     base.Tables.Add(new Lookup_Vault_HCMDataTable(ds.Tables["Lookup_Vault_HCM"]));
+                }
+                if ((ds.Tables["Lookup_Vault_Budget_2Segment_Combo"] != null)) {
+                    base.Tables.Add(new Lookup_Vault_Budget_2Segment_ComboDataTable(ds.Tables["Lookup_Vault_Budget_2Segment_Combo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -112,6 +117,16 @@ namespace WindowsFormsApp1 {
         public Lookup_Vault_HCMDataTable Lookup_Vault_HCM {
             get {
                 return this.tableLookup_Vault_HCM;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Lookup_Vault_Budget_2Segment_ComboDataTable Lookup_Vault_Budget_2Segment_Combo {
+            get {
+                return this.tableLookup_Vault_Budget_2Segment_Combo;
             }
         }
         
@@ -191,6 +206,9 @@ namespace WindowsFormsApp1 {
                 if ((ds.Tables["Lookup_Vault_HCM"] != null)) {
                     base.Tables.Add(new Lookup_Vault_HCMDataTable(ds.Tables["Lookup_Vault_HCM"]));
                 }
+                if ((ds.Tables["Lookup_Vault_Budget_2Segment_Combo"] != null)) {
+                    base.Tables.Add(new Lookup_Vault_Budget_2Segment_ComboDataTable(ds.Tables["Lookup_Vault_Budget_2Segment_Combo"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -242,6 +260,12 @@ namespace WindowsFormsApp1 {
                     this.tableLookup_Vault_HCM.InitVars();
                 }
             }
+            this.tableLookup_Vault_Budget_2Segment_Combo = ((Lookup_Vault_Budget_2Segment_ComboDataTable)(base.Tables["Lookup_Vault_Budget_2Segment_Combo"]));
+            if ((initTable == true)) {
+                if ((this.tableLookup_Vault_Budget_2Segment_Combo != null)) {
+                    this.tableLookup_Vault_Budget_2Segment_Combo.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -258,6 +282,8 @@ namespace WindowsFormsApp1 {
             base.Tables.Add(this.tableLookup_Vault_Cashbook);
             this.tableLookup_Vault_HCM = new Lookup_Vault_HCMDataTable();
             base.Tables.Add(this.tableLookup_Vault_HCM);
+            this.tableLookup_Vault_Budget_2Segment_Combo = new Lookup_Vault_Budget_2Segment_ComboDataTable();
+            base.Tables.Add(this.tableLookup_Vault_Budget_2Segment_Combo);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -275,6 +301,12 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeLookup_Vault_HCM() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializeLookup_Vault_Budget_2Segment_Combo() {
             return false;
         }
         
@@ -341,6 +373,9 @@ namespace WindowsFormsApp1 {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void Lookup_Vault_HCMRowChangeEventHandler(object sender, Lookup_Vault_HCMRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void Lookup_Vault_Budget_2Segment_ComboRowChangeEventHandler(object sender, Lookup_Vault_Budget_2Segment_ComboRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2197,6 +2232,700 @@ namespace WindowsFormsApp1 {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "Lookup_Vault_HCMDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Lookup_Vault_Budget_2Segment_ComboDataTable : global::System.Data.TypedTableBase<Lookup_Vault_Budget_2Segment_ComboRow> {
+            
+            private global::System.Data.DataColumn columnCurrent_ECC_Structure;
+            
+            private global::System.Data.DataColumn columnNew_GL;
+            
+            private global::System.Data.DataColumn columnCC;
+            
+            private global::System.Data.DataColumn columnCurrent_GL_No_;
+            
+            private global::System.Data.DataColumn columnGL_Description;
+            
+            private global::System.Data.DataColumn columnTB_TYPE;
+            
+            private global::System.Data.DataColumn columnGRAP1_Cat;
+            
+            private global::System.Data.DataColumn columnShort_Code;
+            
+            private global::System.Data.DataColumn columnITEM_GUID;
+            
+            private global::System.Data.DataColumn columnGL;
+            
+            private global::System.Data.DataColumn columnmSCOA_Account;
+            
+            private global::System.Data.DataColumn columnCosting_Desc;
+            
+            private global::System.Data.DataColumn columnFund_Desc;
+            
+            private global::System.Data.DataColumn columnProject_SC;
+            
+            private global::System.Data.DataColumn columnProject_GUID;
+            
+            private global::System.Data.DataColumn columnProject_Desc;
+            
+            private global::System.Data.DataColumn columnRegion_SC;
+            
+            private global::System.Data.DataColumn columnRegion_GUID;
+            
+            private global::System.Data.DataColumn columnRegion_Desc;
+            
+            private global::System.Data.DataColumn columnCosting_SC;
+            
+            private global::System.Data.DataColumn columnCosting_GUID;
+            
+            private global::System.Data.DataColumn columnECC_Structure_Desc;
+            
+            private global::System.Data.DataColumn columnCC_Desc;
+            
+            private global::System.Data.DataColumn columnFunction_GUID;
+            
+            private global::System.Data.DataColumn columnFunction_Desc;
+            
+            private global::System.Data.DataColumn columnFund_SC;
+            
+            private global::System.Data.DataColumn columnFund_GUID;
+            
+            private global::System.Data.DataColumn columnId_Lookup_Vault_Budget_2Segment_Combo;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Lookup_Vault_Budget_2Segment_ComboDataTable() {
+                this.TableName = "Lookup_Vault_Budget_2Segment_Combo";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal Lookup_Vault_Budget_2Segment_ComboDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected Lookup_Vault_Budget_2Segment_ComboDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Current_ECC_StructureColumn {
+                get {
+                    return this.columnCurrent_ECC_Structure;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn New_GLColumn {
+                get {
+                    return this.columnNew_GL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CCColumn {
+                get {
+                    return this.columnCC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Current_GL_No_Column {
+                get {
+                    return this.columnCurrent_GL_No_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn GL_DescriptionColumn {
+                get {
+                    return this.columnGL_Description;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TB_TYPEColumn {
+                get {
+                    return this.columnTB_TYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn GRAP1_CatColumn {
+                get {
+                    return this.columnGRAP1_Cat;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Short_CodeColumn {
+                get {
+                    return this.columnShort_Code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ITEM_GUIDColumn {
+                get {
+                    return this.columnITEM_GUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn GLColumn {
+                get {
+                    return this.columnGL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn mSCOA_AccountColumn {
+                get {
+                    return this.columnmSCOA_Account;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Costing_DescColumn {
+                get {
+                    return this.columnCosting_Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Fund_DescColumn {
+                get {
+                    return this.columnFund_Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Project_SCColumn {
+                get {
+                    return this.columnProject_SC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Project_GUIDColumn {
+                get {
+                    return this.columnProject_GUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Project_DescColumn {
+                get {
+                    return this.columnProject_Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Region_SCColumn {
+                get {
+                    return this.columnRegion_SC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Region_GUIDColumn {
+                get {
+                    return this.columnRegion_GUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Region_DescColumn {
+                get {
+                    return this.columnRegion_Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Costing_SCColumn {
+                get {
+                    return this.columnCosting_SC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Costing_GUIDColumn {
+                get {
+                    return this.columnCosting_GUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ECC_Structure_DescColumn {
+                get {
+                    return this.columnECC_Structure_Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CC_DescColumn {
+                get {
+                    return this.columnCC_Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Function_GUIDColumn {
+                get {
+                    return this.columnFunction_GUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Function_DescColumn {
+                get {
+                    return this.columnFunction_Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Fund_SCColumn {
+                get {
+                    return this.columnFund_SC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Fund_GUIDColumn {
+                get {
+                    return this.columnFund_GUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Id_Lookup_Vault_Budget_2Segment_ComboColumn {
+                get {
+                    return this.columnId_Lookup_Vault_Budget_2Segment_Combo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Lookup_Vault_Budget_2Segment_ComboRow this[int index] {
+                get {
+                    return ((Lookup_Vault_Budget_2Segment_ComboRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event Lookup_Vault_Budget_2Segment_ComboRowChangeEventHandler Lookup_Vault_Budget_2Segment_ComboRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event Lookup_Vault_Budget_2Segment_ComboRowChangeEventHandler Lookup_Vault_Budget_2Segment_ComboRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event Lookup_Vault_Budget_2Segment_ComboRowChangeEventHandler Lookup_Vault_Budget_2Segment_ComboRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event Lookup_Vault_Budget_2Segment_ComboRowChangeEventHandler Lookup_Vault_Budget_2Segment_ComboRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddLookup_Vault_Budget_2Segment_ComboRow(Lookup_Vault_Budget_2Segment_ComboRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Lookup_Vault_Budget_2Segment_ComboRow AddLookup_Vault_Budget_2Segment_ComboRow(
+                        string Current_ECC_Structure, 
+                        string New_GL, 
+                        string CC, 
+                        string Current_GL_No_, 
+                        string GL_Description, 
+                        string TB_TYPE, 
+                        string GRAP1_Cat, 
+                        string Short_Code, 
+                        string ITEM_GUID, 
+                        string GL, 
+                        string mSCOA_Account, 
+                        string Costing_Desc, 
+                        string Fund_Desc, 
+                        string Project_SC, 
+                        string Project_GUID, 
+                        string Project_Desc, 
+                        string Region_SC, 
+                        string Region_GUID, 
+                        string Region_Desc, 
+                        string Costing_SC, 
+                        string Costing_GUID, 
+                        string ECC_Structure_Desc, 
+                        string CC_Desc, 
+                        string Function_GUID, 
+                        string Function_Desc, 
+                        string Fund_SC, 
+                        string Fund_GUID) {
+                Lookup_Vault_Budget_2Segment_ComboRow rowLookup_Vault_Budget_2Segment_ComboRow = ((Lookup_Vault_Budget_2Segment_ComboRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Current_ECC_Structure,
+                        New_GL,
+                        CC,
+                        Current_GL_No_,
+                        GL_Description,
+                        TB_TYPE,
+                        GRAP1_Cat,
+                        Short_Code,
+                        ITEM_GUID,
+                        GL,
+                        mSCOA_Account,
+                        Costing_Desc,
+                        Fund_Desc,
+                        Project_SC,
+                        Project_GUID,
+                        Project_Desc,
+                        Region_SC,
+                        Region_GUID,
+                        Region_Desc,
+                        Costing_SC,
+                        Costing_GUID,
+                        ECC_Structure_Desc,
+                        CC_Desc,
+                        Function_GUID,
+                        Function_Desc,
+                        Fund_SC,
+                        Fund_GUID,
+                        null};
+                rowLookup_Vault_Budget_2Segment_ComboRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLookup_Vault_Budget_2Segment_ComboRow);
+                return rowLookup_Vault_Budget_2Segment_ComboRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Lookup_Vault_Budget_2Segment_ComboRow FindById_Lookup_Vault_Budget_2Segment_Combo(int Id_Lookup_Vault_Budget_2Segment_Combo) {
+                return ((Lookup_Vault_Budget_2Segment_ComboRow)(this.Rows.Find(new object[] {
+                            Id_Lookup_Vault_Budget_2Segment_Combo})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Lookup_Vault_Budget_2Segment_ComboDataTable cln = ((Lookup_Vault_Budget_2Segment_ComboDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Lookup_Vault_Budget_2Segment_ComboDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnCurrent_ECC_Structure = base.Columns["Current_ECC_Structure"];
+                this.columnNew_GL = base.Columns["New_GL"];
+                this.columnCC = base.Columns["CC"];
+                this.columnCurrent_GL_No_ = base.Columns["Current_GL_No_"];
+                this.columnGL_Description = base.Columns["GL_Description"];
+                this.columnTB_TYPE = base.Columns["TB_TYPE"];
+                this.columnGRAP1_Cat = base.Columns["GRAP1_Cat"];
+                this.columnShort_Code = base.Columns["Short_Code"];
+                this.columnITEM_GUID = base.Columns["ITEM_GUID"];
+                this.columnGL = base.Columns["GL"];
+                this.columnmSCOA_Account = base.Columns["mSCOA_Account"];
+                this.columnCosting_Desc = base.Columns["Costing_Desc"];
+                this.columnFund_Desc = base.Columns["Fund_Desc"];
+                this.columnProject_SC = base.Columns["Project_SC"];
+                this.columnProject_GUID = base.Columns["Project_GUID"];
+                this.columnProject_Desc = base.Columns["Project_Desc"];
+                this.columnRegion_SC = base.Columns["Region_SC"];
+                this.columnRegion_GUID = base.Columns["Region_GUID"];
+                this.columnRegion_Desc = base.Columns["Region_Desc"];
+                this.columnCosting_SC = base.Columns["Costing_SC"];
+                this.columnCosting_GUID = base.Columns["Costing_GUID"];
+                this.columnECC_Structure_Desc = base.Columns["ECC_Structure_Desc"];
+                this.columnCC_Desc = base.Columns["CC_Desc"];
+                this.columnFunction_GUID = base.Columns["Function_GUID"];
+                this.columnFunction_Desc = base.Columns["Function_Desc"];
+                this.columnFund_SC = base.Columns["Fund_SC"];
+                this.columnFund_GUID = base.Columns["Fund_GUID"];
+                this.columnId_Lookup_Vault_Budget_2Segment_Combo = base.Columns["Id_Lookup_Vault_Budget_2Segment_Combo"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnCurrent_ECC_Structure = new global::System.Data.DataColumn("Current_ECC_Structure", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCurrent_ECC_Structure);
+                this.columnNew_GL = new global::System.Data.DataColumn("New_GL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNew_GL);
+                this.columnCC = new global::System.Data.DataColumn("CC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCC);
+                this.columnCurrent_GL_No_ = new global::System.Data.DataColumn("Current_GL_No_", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCurrent_GL_No_);
+                this.columnGL_Description = new global::System.Data.DataColumn("GL_Description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGL_Description);
+                this.columnTB_TYPE = new global::System.Data.DataColumn("TB_TYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTB_TYPE);
+                this.columnGRAP1_Cat = new global::System.Data.DataColumn("GRAP1_Cat", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGRAP1_Cat);
+                this.columnShort_Code = new global::System.Data.DataColumn("Short_Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShort_Code);
+                this.columnITEM_GUID = new global::System.Data.DataColumn("ITEM_GUID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEM_GUID);
+                this.columnGL = new global::System.Data.DataColumn("GL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGL);
+                this.columnmSCOA_Account = new global::System.Data.DataColumn("mSCOA_Account", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmSCOA_Account);
+                this.columnCosting_Desc = new global::System.Data.DataColumn("Costing_Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCosting_Desc);
+                this.columnFund_Desc = new global::System.Data.DataColumn("Fund_Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFund_Desc);
+                this.columnProject_SC = new global::System.Data.DataColumn("Project_SC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProject_SC);
+                this.columnProject_GUID = new global::System.Data.DataColumn("Project_GUID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProject_GUID);
+                this.columnProject_Desc = new global::System.Data.DataColumn("Project_Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProject_Desc);
+                this.columnRegion_SC = new global::System.Data.DataColumn("Region_SC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRegion_SC);
+                this.columnRegion_GUID = new global::System.Data.DataColumn("Region_GUID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRegion_GUID);
+                this.columnRegion_Desc = new global::System.Data.DataColumn("Region_Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRegion_Desc);
+                this.columnCosting_SC = new global::System.Data.DataColumn("Costing_SC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCosting_SC);
+                this.columnCosting_GUID = new global::System.Data.DataColumn("Costing_GUID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCosting_GUID);
+                this.columnECC_Structure_Desc = new global::System.Data.DataColumn("ECC_Structure_Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnECC_Structure_Desc);
+                this.columnCC_Desc = new global::System.Data.DataColumn("CC_Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCC_Desc);
+                this.columnFunction_GUID = new global::System.Data.DataColumn("Function_GUID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFunction_GUID);
+                this.columnFunction_Desc = new global::System.Data.DataColumn("Function_Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFunction_Desc);
+                this.columnFund_SC = new global::System.Data.DataColumn("Fund_SC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFund_SC);
+                this.columnFund_GUID = new global::System.Data.DataColumn("Fund_GUID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFund_GUID);
+                this.columnId_Lookup_Vault_Budget_2Segment_Combo = new global::System.Data.DataColumn("Id_Lookup_Vault_Budget_2Segment_Combo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_Lookup_Vault_Budget_2Segment_Combo);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId_Lookup_Vault_Budget_2Segment_Combo}, true));
+                this.columnCurrent_ECC_Structure.MaxLength = 50;
+                this.columnNew_GL.MaxLength = 50;
+                this.columnCC.MaxLength = 50;
+                this.columnCurrent_GL_No_.MaxLength = 50;
+                this.columnGL_Description.MaxLength = 50;
+                this.columnTB_TYPE.MaxLength = 50;
+                this.columnGRAP1_Cat.MaxLength = 50;
+                this.columnShort_Code.MaxLength = 50;
+                this.columnITEM_GUID.MaxLength = 50;
+                this.columnGL.MaxLength = 50;
+                this.columnmSCOA_Account.MaxLength = 300;
+                this.columnCosting_Desc.MaxLength = 300;
+                this.columnFund_Desc.MaxLength = 300;
+                this.columnProject_SC.MaxLength = 50;
+                this.columnProject_GUID.MaxLength = 50;
+                this.columnProject_Desc.MaxLength = 300;
+                this.columnRegion_SC.MaxLength = 50;
+                this.columnRegion_GUID.MaxLength = 50;
+                this.columnRegion_Desc.MaxLength = 300;
+                this.columnCosting_SC.MaxLength = 50;
+                this.columnCosting_GUID.MaxLength = 50;
+                this.columnECC_Structure_Desc.MaxLength = 200;
+                this.columnCC_Desc.MaxLength = 200;
+                this.columnFunction_GUID.MaxLength = 50;
+                this.columnFunction_Desc.MaxLength = 300;
+                this.columnFund_SC.MaxLength = 50;
+                this.columnFund_GUID.MaxLength = 50;
+                this.columnId_Lookup_Vault_Budget_2Segment_Combo.AutoIncrement = true;
+                this.columnId_Lookup_Vault_Budget_2Segment_Combo.AutoIncrementSeed = -1;
+                this.columnId_Lookup_Vault_Budget_2Segment_Combo.AutoIncrementStep = -1;
+                this.columnId_Lookup_Vault_Budget_2Segment_Combo.AllowDBNull = false;
+                this.columnId_Lookup_Vault_Budget_2Segment_Combo.ReadOnly = true;
+                this.columnId_Lookup_Vault_Budget_2Segment_Combo.Unique = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Lookup_Vault_Budget_2Segment_ComboRow NewLookup_Vault_Budget_2Segment_ComboRow() {
+                return ((Lookup_Vault_Budget_2Segment_ComboRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Lookup_Vault_Budget_2Segment_ComboRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Lookup_Vault_Budget_2Segment_ComboRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Lookup_Vault_Budget_2Segment_ComboRowChanged != null)) {
+                    this.Lookup_Vault_Budget_2Segment_ComboRowChanged(this, new Lookup_Vault_Budget_2Segment_ComboRowChangeEvent(((Lookup_Vault_Budget_2Segment_ComboRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Lookup_Vault_Budget_2Segment_ComboRowChanging != null)) {
+                    this.Lookup_Vault_Budget_2Segment_ComboRowChanging(this, new Lookup_Vault_Budget_2Segment_ComboRowChangeEvent(((Lookup_Vault_Budget_2Segment_ComboRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Lookup_Vault_Budget_2Segment_ComboRowDeleted != null)) {
+                    this.Lookup_Vault_Budget_2Segment_ComboRowDeleted(this, new Lookup_Vault_Budget_2Segment_ComboRowChangeEvent(((Lookup_Vault_Budget_2Segment_ComboRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Lookup_Vault_Budget_2Segment_ComboRowDeleting != null)) {
+                    this.Lookup_Vault_Budget_2Segment_ComboRowDeleting(this, new Lookup_Vault_Budget_2Segment_ComboRowChangeEvent(((Lookup_Vault_Budget_2Segment_ComboRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveLookup_Vault_Budget_2Segment_ComboRow(Lookup_Vault_Budget_2Segment_ComboRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                mSCOA_VaultDataSet1 ds = new mSCOA_VaultDataSet1();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Lookup_Vault_Budget_2Segment_ComboDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4293,6 +5022,815 @@ namespace WindowsFormsApp1 {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Lookup_Vault_Budget_2Segment_ComboRow : global::System.Data.DataRow {
+            
+            private Lookup_Vault_Budget_2Segment_ComboDataTable tableLookup_Vault_Budget_2Segment_Combo;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal Lookup_Vault_Budget_2Segment_ComboRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableLookup_Vault_Budget_2Segment_Combo = ((Lookup_Vault_Budget_2Segment_ComboDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Current_ECC_Structure {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Current_ECC_StructureColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Current_ECC_Structure\' in table \'Lookup_Vault_Budget_2Segme" +
+                                "nt_Combo\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Current_ECC_StructureColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string New_GL {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.New_GLColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'New_GL\' in table \'Lookup_Vault_Budget_2Segment_Combo\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.New_GLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CC {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.CCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CC\' in table \'Lookup_Vault_Budget_2Segment_Combo\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.CCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Current_GL_No_ {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Current_GL_No_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Current_GL_No_\' in table \'Lookup_Vault_Budget_2Segment_Comb" +
+                                "o\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Current_GL_No_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string GL_Description {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.GL_DescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GL_Description\' in table \'Lookup_Vault_Budget_2Segment_Comb" +
+                                "o\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.GL_DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string TB_TYPE {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.TB_TYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TB_TYPE\' in table \'Lookup_Vault_Budget_2Segment_Combo\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.TB_TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string GRAP1_Cat {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.GRAP1_CatColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GRAP1_Cat\' in table \'Lookup_Vault_Budget_2Segment_Combo\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.GRAP1_CatColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Short_Code {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Short_CodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Short_Code\' in table \'Lookup_Vault_Budget_2Segment_Combo\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Short_CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ITEM_GUID {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.ITEM_GUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEM_GUID\' in table \'Lookup_Vault_Budget_2Segment_Combo\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.ITEM_GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string GL {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.GLColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GL\' in table \'Lookup_Vault_Budget_2Segment_Combo\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.GLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string mSCOA_Account {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.mSCOA_AccountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'mSCOA_Account\' in table \'Lookup_Vault_Budget_2Segment_Combo" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.mSCOA_AccountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Costing_Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Costing_DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Costing_Desc\' in table \'Lookup_Vault_Budget_2Segment_Combo\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Costing_DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Fund_Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Fund_DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fund_Desc\' in table \'Lookup_Vault_Budget_2Segment_Combo\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Fund_DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Project_SC {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Project_SCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Project_SC\' in table \'Lookup_Vault_Budget_2Segment_Combo\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Project_SCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Project_GUID {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Project_GUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Project_GUID\' in table \'Lookup_Vault_Budget_2Segment_Combo\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Project_GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Project_Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Project_DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Project_Desc\' in table \'Lookup_Vault_Budget_2Segment_Combo\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Project_DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Region_SC {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Region_SCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Region_SC\' in table \'Lookup_Vault_Budget_2Segment_Combo\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Region_SCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Region_GUID {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Region_GUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Region_GUID\' in table \'Lookup_Vault_Budget_2Segment_Combo\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Region_GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Region_Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Region_DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Region_Desc\' in table \'Lookup_Vault_Budget_2Segment_Combo\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Region_DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Costing_SC {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Costing_SCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Costing_SC\' in table \'Lookup_Vault_Budget_2Segment_Combo\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Costing_SCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Costing_GUID {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Costing_GUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Costing_GUID\' in table \'Lookup_Vault_Budget_2Segment_Combo\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Costing_GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ECC_Structure_Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.ECC_Structure_DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ECC_Structure_Desc\' in table \'Lookup_Vault_Budget_2Segment_" +
+                                "Combo\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.ECC_Structure_DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CC_Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.CC_DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CC_Desc\' in table \'Lookup_Vault_Budget_2Segment_Combo\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.CC_DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Function_GUID {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Function_GUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Function_GUID\' in table \'Lookup_Vault_Budget_2Segment_Combo" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Function_GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Function_Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Function_DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Function_Desc\' in table \'Lookup_Vault_Budget_2Segment_Combo" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Function_DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Fund_SC {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Fund_SCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fund_SC\' in table \'Lookup_Vault_Budget_2Segment_Combo\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Fund_SCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Fund_GUID {
+                get {
+                    try {
+                        return ((string)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Fund_GUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fund_GUID\' in table \'Lookup_Vault_Budget_2Segment_Combo\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Fund_GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Id_Lookup_Vault_Budget_2Segment_Combo {
+                get {
+                    return ((int)(this[this.tableLookup_Vault_Budget_2Segment_Combo.Id_Lookup_Vault_Budget_2Segment_ComboColumn]));
+                }
+                set {
+                    this[this.tableLookup_Vault_Budget_2Segment_Combo.Id_Lookup_Vault_Budget_2Segment_ComboColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCurrent_ECC_StructureNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Current_ECC_StructureColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCurrent_ECC_StructureNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Current_ECC_StructureColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsNew_GLNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.New_GLColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetNew_GLNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.New_GLColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCCNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.CCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCCNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.CCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCurrent_GL_No_Null() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Current_GL_No_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCurrent_GL_No_Null() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Current_GL_No_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsGL_DescriptionNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.GL_DescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetGL_DescriptionNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.GL_DescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTB_TYPENull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.TB_TYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTB_TYPENull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.TB_TYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsGRAP1_CatNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.GRAP1_CatColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetGRAP1_CatNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.GRAP1_CatColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsShort_CodeNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Short_CodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetShort_CodeNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Short_CodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsITEM_GUIDNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.ITEM_GUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetITEM_GUIDNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.ITEM_GUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsGLNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.GLColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetGLNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.GLColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsmSCOA_AccountNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.mSCOA_AccountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetmSCOA_AccountNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.mSCOA_AccountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCosting_DescNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Costing_DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCosting_DescNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Costing_DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFund_DescNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Fund_DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFund_DescNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Fund_DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsProject_SCNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Project_SCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetProject_SCNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Project_SCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsProject_GUIDNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Project_GUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetProject_GUIDNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Project_GUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsProject_DescNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Project_DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetProject_DescNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Project_DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsRegion_SCNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Region_SCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetRegion_SCNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Region_SCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsRegion_GUIDNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Region_GUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetRegion_GUIDNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Region_GUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsRegion_DescNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Region_DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetRegion_DescNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Region_DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCosting_SCNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Costing_SCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCosting_SCNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Costing_SCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCosting_GUIDNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Costing_GUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCosting_GUIDNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Costing_GUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsECC_Structure_DescNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.ECC_Structure_DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetECC_Structure_DescNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.ECC_Structure_DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCC_DescNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.CC_DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCC_DescNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.CC_DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFunction_GUIDNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Function_GUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFunction_GUIDNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Function_GUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFunction_DescNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Function_DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFunction_DescNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Function_DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFund_SCNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Fund_SCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFund_SCNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Fund_SCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFund_GUIDNull() {
+                return this.IsNull(this.tableLookup_Vault_Budget_2Segment_Combo.Fund_GUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFund_GUIDNull() {
+                this[this.tableLookup_Vault_Budget_2Segment_Combo.Fund_GUIDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -4380,6 +5918,40 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public Lookup_Vault_HCMRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class Lookup_Vault_Budget_2Segment_ComboRowChangeEvent : global::System.EventArgs {
+            
+            private Lookup_Vault_Budget_2Segment_ComboRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Lookup_Vault_Budget_2Segment_ComboRowChangeEvent(Lookup_Vault_Budget_2Segment_ComboRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Lookup_Vault_Budget_2Segment_ComboRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7277,6 +8849,1564 @@ WHERE    (Id_Vault_HCM = @Id_Vault_HCM)";
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Lookup_Vault_Budget_2Segment_ComboTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public Lookup_Vault_Budget_2Segment_ComboTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Lookup_Vault_Budget_2Segment_Combo";
+            tableMapping.ColumnMappings.Add("Current_ECC_Structure", "Current_ECC_Structure");
+            tableMapping.ColumnMappings.Add("New_GL", "New_GL");
+            tableMapping.ColumnMappings.Add("CC", "CC");
+            tableMapping.ColumnMappings.Add("Current_GL_No_", "Current_GL_No_");
+            tableMapping.ColumnMappings.Add("GL_Description", "GL_Description");
+            tableMapping.ColumnMappings.Add("TB_TYPE", "TB_TYPE");
+            tableMapping.ColumnMappings.Add("GRAP1_Cat", "GRAP1_Cat");
+            tableMapping.ColumnMappings.Add("Short_Code", "Short_Code");
+            tableMapping.ColumnMappings.Add("ITEM_GUID", "ITEM_GUID");
+            tableMapping.ColumnMappings.Add("GL", "GL");
+            tableMapping.ColumnMappings.Add("mSCOA_Account", "mSCOA_Account");
+            tableMapping.ColumnMappings.Add("Costing_Desc", "Costing_Desc");
+            tableMapping.ColumnMappings.Add("Fund_Desc", "Fund_Desc");
+            tableMapping.ColumnMappings.Add("Project_SC", "Project_SC");
+            tableMapping.ColumnMappings.Add("Project_GUID", "Project_GUID");
+            tableMapping.ColumnMappings.Add("Project_Desc", "Project_Desc");
+            tableMapping.ColumnMappings.Add("Region_SC", "Region_SC");
+            tableMapping.ColumnMappings.Add("Region_GUID", "Region_GUID");
+            tableMapping.ColumnMappings.Add("Region_Desc", "Region_Desc");
+            tableMapping.ColumnMappings.Add("Costing_SC", "Costing_SC");
+            tableMapping.ColumnMappings.Add("Costing_GUID", "Costing_GUID");
+            tableMapping.ColumnMappings.Add("ECC_Structure_Desc", "ECC_Structure_Desc");
+            tableMapping.ColumnMappings.Add("CC_Desc", "CC_Desc");
+            tableMapping.ColumnMappings.Add("Function_GUID", "Function_GUID");
+            tableMapping.ColumnMappings.Add("Function_Desc", "Function_Desc");
+            tableMapping.ColumnMappings.Add("Fund_SC", "Fund_SC");
+            tableMapping.ColumnMappings.Add("Fund_GUID", "Fund_GUID");
+            tableMapping.ColumnMappings.Add("Id_Lookup_Vault_Budget_2Segment_Combo", "Id_Lookup_Vault_Budget_2Segment_Combo");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Lookup_Vault_Budget_2Segment_Combo] WHERE (((@IsNull_Current_E" +
+                "CC_Structure = 1 AND [Current_ECC_Structure] IS NULL) OR ([Current_ECC_Structure" +
+                "] = @Original_Current_ECC_Structure)) AND ((@IsNull_New_GL = 1 AND [New_GL] IS N" +
+                "ULL) OR ([New_GL] = @Original_New_GL)) AND ((@IsNull_CC = 1 AND [CC] IS NULL) OR" +
+                " ([CC] = @Original_CC)) AND ((@IsNull_Current_GL_No_ = 1 AND [Current_GL_No_] IS" +
+                " NULL) OR ([Current_GL_No_] = @Original_Current_GL_No_)) AND ((@IsNull_GL_Descri" +
+                "ption = 1 AND [GL_Description] IS NULL) OR ([GL_Description] = @Original_GL_Desc" +
+                "ription)) AND ((@IsNull_TB_TYPE = 1 AND [TB_TYPE] IS NULL) OR ([TB_TYPE] = @Orig" +
+                "inal_TB_TYPE)) AND ((@IsNull_GRAP1_Cat = 1 AND [GRAP1_Cat] IS NULL) OR ([GRAP1_C" +
+                "at] = @Original_GRAP1_Cat)) AND ((@IsNull_Short_Code = 1 AND [Short_Code] IS NUL" +
+                "L) OR ([Short_Code] = @Original_Short_Code)) AND ((@IsNull_ITEM_GUID = 1 AND [IT" +
+                "EM_GUID] IS NULL) OR ([ITEM_GUID] = @Original_ITEM_GUID)) AND ((@IsNull_GL = 1 A" +
+                "ND [GL] IS NULL) OR ([GL] = @Original_GL)) AND ((@IsNull_mSCOA_Account = 1 AND [" +
+                "mSCOA_Account] IS NULL) OR ([mSCOA_Account] = @Original_mSCOA_Account)) AND ((@I" +
+                "sNull_Costing_Desc = 1 AND [Costing_Desc] IS NULL) OR ([Costing_Desc] = @Origina" +
+                "l_Costing_Desc)) AND ((@IsNull_Fund_Desc = 1 AND [Fund_Desc] IS NULL) OR ([Fund_" +
+                "Desc] = @Original_Fund_Desc)) AND ((@IsNull_Project_SC = 1 AND [Project_SC] IS N" +
+                "ULL) OR ([Project_SC] = @Original_Project_SC)) AND ((@IsNull_Project_GUID = 1 AN" +
+                "D [Project_GUID] IS NULL) OR ([Project_GUID] = @Original_Project_GUID)) AND ((@I" +
+                "sNull_Project_Desc = 1 AND [Project_Desc] IS NULL) OR ([Project_Desc] = @Origina" +
+                "l_Project_Desc)) AND ((@IsNull_Region_SC = 1 AND [Region_SC] IS NULL) OR ([Regio" +
+                "n_SC] = @Original_Region_SC)) AND ((@IsNull_Region_GUID = 1 AND [Region_GUID] IS" +
+                " NULL) OR ([Region_GUID] = @Original_Region_GUID)) AND ((@IsNull_Region_Desc = 1" +
+                " AND [Region_Desc] IS NULL) OR ([Region_Desc] = @Original_Region_Desc)) AND ((@I" +
+                "sNull_Costing_SC = 1 AND [Costing_SC] IS NULL) OR ([Costing_SC] = @Original_Cost" +
+                "ing_SC)) AND ((@IsNull_Costing_GUID = 1 AND [Costing_GUID] IS NULL) OR ([Costing" +
+                "_GUID] = @Original_Costing_GUID)) AND ((@IsNull_ECC_Structure_Desc = 1 AND [ECC_" +
+                "Structure_Desc] IS NULL) OR ([ECC_Structure_Desc] = @Original_ECC_Structure_Desc" +
+                ")) AND ((@IsNull_CC_Desc = 1 AND [CC_Desc] IS NULL) OR ([CC_Desc] = @Original_CC" +
+                "_Desc)) AND ((@IsNull_Function_GUID = 1 AND [Function_GUID] IS NULL) OR ([Functi" +
+                "on_GUID] = @Original_Function_GUID)) AND ((@IsNull_Function_Desc = 1 AND [Functi" +
+                "on_Desc] IS NULL) OR ([Function_Desc] = @Original_Function_Desc)) AND ((@IsNull_" +
+                "Fund_SC = 1 AND [Fund_SC] IS NULL) OR ([Fund_SC] = @Original_Fund_SC)) AND ((@Is" +
+                "Null_Fund_GUID = 1 AND [Fund_GUID] IS NULL) OR ([Fund_GUID] = @Original_Fund_GUI" +
+                "D)) AND ([Id_Lookup_Vault_Budget_2Segment_Combo] = @Original_Id_Lookup_Vault_Bud" +
+                "get_2Segment_Combo))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Current_ECC_Structure", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_ECC_Structure", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Current_ECC_Structure", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_ECC_Structure", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_New_GL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "New_GL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_New_GL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "New_GL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Current_GL_No_", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_GL_No_", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Current_GL_No_", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_GL_No_", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GL_Description", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL_Description", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GL_Description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL_Description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TB_TYPE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TB_TYPE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TB_TYPE", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TB_TYPE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GRAP1_Cat", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GRAP1_Cat", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GRAP1_Cat", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GRAP1_Cat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Short_Code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Short_Code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Short_Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Short_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ITEM_GUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM_GUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ITEM_GUID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM_GUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_mSCOA_Account", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mSCOA_Account", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_mSCOA_Account", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mSCOA_Account", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Costing_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Costing_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fund_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fund_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Project_SC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_SC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Project_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_SC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Project_GUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_GUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Project_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_GUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Project_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Project_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Region_SC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_SC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Region_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_SC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Region_GUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_GUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Region_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_GUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Region_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Region_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Costing_SC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_SC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Costing_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_SC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Costing_GUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_GUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Costing_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_GUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ECC_Structure_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ECC_Structure_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ECC_Structure_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ECC_Structure_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CC_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CC_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CC_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CC_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Function_GUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Function_GUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Function_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Function_GUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Function_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Function_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Function_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Function_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fund_SC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_SC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fund_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_SC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fund_GUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_GUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fund_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_GUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Lookup_Vault_Budget_2Segment_Combo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Lookup_Vault_Budget_2Segment_Combo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Lookup_Vault_Budget_2Segment_Combo] ([Current_ECC_Structure], [New_GL], [CC], [Current_GL_No_], [GL_Description], [TB_TYPE], [GRAP1_Cat], [Short_Code], [ITEM_GUID], [GL], [mSCOA_Account], [Costing_Desc], [Fund_Desc], [Project_SC], [Project_GUID], [Project_Desc], [Region_SC], [Region_GUID], [Region_Desc], [Costing_SC], [Costing_GUID], [ECC_Structure_Desc], [CC_Desc], [Function_GUID], [Function_Desc], [Fund_SC], [Fund_GUID]) VALUES (@Current_ECC_Structure, @New_GL, @CC, @Current_GL_No_, @GL_Description, @TB_TYPE, @GRAP1_Cat, @Short_Code, @ITEM_GUID, @GL, @mSCOA_Account, @Costing_Desc, @Fund_Desc, @Project_SC, @Project_GUID, @Project_Desc, @Region_SC, @Region_GUID, @Region_Desc, @Costing_SC, @Costing_GUID, @ECC_Structure_Desc, @CC_Desc, @Function_GUID, @Function_Desc, @Fund_SC, @Fund_GUID);
+SELECT Current_ECC_Structure, New_GL, CC, Current_GL_No_, GL_Description, TB_TYPE, GRAP1_Cat, Short_Code, ITEM_GUID, GL, mSCOA_Account, Costing_Desc, Fund_Desc, Project_SC, Project_GUID, Project_Desc, Region_SC, Region_GUID, Region_Desc, Costing_SC, Costing_GUID, ECC_Structure_Desc, CC_Desc, Function_GUID, Function_Desc, Fund_SC, Fund_GUID, Id_Lookup_Vault_Budget_2Segment_Combo FROM Lookup_Vault_Budget_2Segment_Combo WHERE (Id_Lookup_Vault_Budget_2Segment_Combo = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Current_ECC_Structure", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_ECC_Structure", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@New_GL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "New_GL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Current_GL_No_", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_GL_No_", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GL_Description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL_Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TB_TYPE", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TB_TYPE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GRAP1_Cat", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GRAP1_Cat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Short_Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Short_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ITEM_GUID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mSCOA_Account", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mSCOA_Account", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Costing_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fund_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Project_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_SC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Project_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Project_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Region_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_SC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Region_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Region_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Costing_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_SC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Costing_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ECC_Structure_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ECC_Structure_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CC_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CC_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Function_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Function_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Function_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Function_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fund_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_SC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fund_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Lookup_Vault_Budget_2Segment_Combo] SET [Current_ECC_Structure] = @" +
+                "Current_ECC_Structure, [New_GL] = @New_GL, [CC] = @CC, [Current_GL_No_] = @Curre" +
+                "nt_GL_No_, [GL_Description] = @GL_Description, [TB_TYPE] = @TB_TYPE, [GRAP1_Cat]" +
+                " = @GRAP1_Cat, [Short_Code] = @Short_Code, [ITEM_GUID] = @ITEM_GUID, [GL] = @GL," +
+                " [mSCOA_Account] = @mSCOA_Account, [Costing_Desc] = @Costing_Desc, [Fund_Desc] =" +
+                " @Fund_Desc, [Project_SC] = @Project_SC, [Project_GUID] = @Project_GUID, [Projec" +
+                "t_Desc] = @Project_Desc, [Region_SC] = @Region_SC, [Region_GUID] = @Region_GUID," +
+                " [Region_Desc] = @Region_Desc, [Costing_SC] = @Costing_SC, [Costing_GUID] = @Cos" +
+                "ting_GUID, [ECC_Structure_Desc] = @ECC_Structure_Desc, [CC_Desc] = @CC_Desc, [Fu" +
+                "nction_GUID] = @Function_GUID, [Function_Desc] = @Function_Desc, [Fund_SC] = @Fu" +
+                "nd_SC, [Fund_GUID] = @Fund_GUID WHERE (((@IsNull_Current_ECC_Structure = 1 AND [" +
+                "Current_ECC_Structure] IS NULL) OR ([Current_ECC_Structure] = @Original_Current_" +
+                "ECC_Structure)) AND ((@IsNull_New_GL = 1 AND [New_GL] IS NULL) OR ([New_GL] = @O" +
+                "riginal_New_GL)) AND ((@IsNull_CC = 1 AND [CC] IS NULL) OR ([CC] = @Original_CC)" +
+                ") AND ((@IsNull_Current_GL_No_ = 1 AND [Current_GL_No_] IS NULL) OR ([Current_GL" +
+                "_No_] = @Original_Current_GL_No_)) AND ((@IsNull_GL_Description = 1 AND [GL_Desc" +
+                "ription] IS NULL) OR ([GL_Description] = @Original_GL_Description)) AND ((@IsNul" +
+                "l_TB_TYPE = 1 AND [TB_TYPE] IS NULL) OR ([TB_TYPE] = @Original_TB_TYPE)) AND ((@" +
+                "IsNull_GRAP1_Cat = 1 AND [GRAP1_Cat] IS NULL) OR ([GRAP1_Cat] = @Original_GRAP1_" +
+                "Cat)) AND ((@IsNull_Short_Code = 1 AND [Short_Code] IS NULL) OR ([Short_Code] = " +
+                "@Original_Short_Code)) AND ((@IsNull_ITEM_GUID = 1 AND [ITEM_GUID] IS NULL) OR (" +
+                "[ITEM_GUID] = @Original_ITEM_GUID)) AND ((@IsNull_GL = 1 AND [GL] IS NULL) OR ([" +
+                "GL] = @Original_GL)) AND ((@IsNull_mSCOA_Account = 1 AND [mSCOA_Account] IS NULL" +
+                ") OR ([mSCOA_Account] = @Original_mSCOA_Account)) AND ((@IsNull_Costing_Desc = 1" +
+                " AND [Costing_Desc] IS NULL) OR ([Costing_Desc] = @Original_Costing_Desc)) AND (" +
+                "(@IsNull_Fund_Desc = 1 AND [Fund_Desc] IS NULL) OR ([Fund_Desc] = @Original_Fund" +
+                "_Desc)) AND ((@IsNull_Project_SC = 1 AND [Project_SC] IS NULL) OR ([Project_SC] " +
+                "= @Original_Project_SC)) AND ((@IsNull_Project_GUID = 1 AND [Project_GUID] IS NU" +
+                "LL) OR ([Project_GUID] = @Original_Project_GUID)) AND ((@IsNull_Project_Desc = 1" +
+                " AND [Project_Desc] IS NULL) OR ([Project_Desc] = @Original_Project_Desc)) AND (" +
+                "(@IsNull_Region_SC = 1 AND [Region_SC] IS NULL) OR ([Region_SC] = @Original_Regi" +
+                "on_SC)) AND ((@IsNull_Region_GUID = 1 AND [Region_GUID] IS NULL) OR ([Region_GUI" +
+                "D] = @Original_Region_GUID)) AND ((@IsNull_Region_Desc = 1 AND [Region_Desc] IS " +
+                "NULL) OR ([Region_Desc] = @Original_Region_Desc)) AND ((@IsNull_Costing_SC = 1 A" +
+                "ND [Costing_SC] IS NULL) OR ([Costing_SC] = @Original_Costing_SC)) AND ((@IsNull" +
+                "_Costing_GUID = 1 AND [Costing_GUID] IS NULL) OR ([Costing_GUID] = @Original_Cos" +
+                "ting_GUID)) AND ((@IsNull_ECC_Structure_Desc = 1 AND [ECC_Structure_Desc] IS NUL" +
+                "L) OR ([ECC_Structure_Desc] = @Original_ECC_Structure_Desc)) AND ((@IsNull_CC_De" +
+                "sc = 1 AND [CC_Desc] IS NULL) OR ([CC_Desc] = @Original_CC_Desc)) AND ((@IsNull_" +
+                "Function_GUID = 1 AND [Function_GUID] IS NULL) OR ([Function_GUID] = @Original_F" +
+                "unction_GUID)) AND ((@IsNull_Function_Desc = 1 AND [Function_Desc] IS NULL) OR (" +
+                "[Function_Desc] = @Original_Function_Desc)) AND ((@IsNull_Fund_SC = 1 AND [Fund_" +
+                "SC] IS NULL) OR ([Fund_SC] = @Original_Fund_SC)) AND ((@IsNull_Fund_GUID = 1 AND" +
+                " [Fund_GUID] IS NULL) OR ([Fund_GUID] = @Original_Fund_GUID)) AND ([Id_Lookup_Va" +
+                "ult_Budget_2Segment_Combo] = @Original_Id_Lookup_Vault_Budget_2Segment_Combo));\r" +
+                "\nSELECT Current_ECC_Structure, New_GL, CC, Current_GL_No_, GL_Description, TB_TY" +
+                "PE, GRAP1_Cat, Short_Code, ITEM_GUID, GL, mSCOA_Account, Costing_Desc, Fund_Desc" +
+                ", Project_SC, Project_GUID, Project_Desc, Region_SC, Region_GUID, Region_Desc, C" +
+                "osting_SC, Costing_GUID, ECC_Structure_Desc, CC_Desc, Function_GUID, Function_De" +
+                "sc, Fund_SC, Fund_GUID, Id_Lookup_Vault_Budget_2Segment_Combo FROM Lookup_Vault_" +
+                "Budget_2Segment_Combo WHERE (Id_Lookup_Vault_Budget_2Segment_Combo = @Id_Lookup_" +
+                "Vault_Budget_2Segment_Combo)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Current_ECC_Structure", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_ECC_Structure", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@New_GL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "New_GL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Current_GL_No_", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_GL_No_", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GL_Description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL_Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TB_TYPE", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TB_TYPE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GRAP1_Cat", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GRAP1_Cat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Short_Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Short_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ITEM_GUID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mSCOA_Account", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mSCOA_Account", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Costing_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fund_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Project_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_SC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Project_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Project_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Region_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_SC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Region_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Region_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Costing_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_SC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Costing_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ECC_Structure_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ECC_Structure_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CC_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CC_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Function_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Function_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Function_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Function_Desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fund_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_SC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fund_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Current_ECC_Structure", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_ECC_Structure", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Current_ECC_Structure", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_ECC_Structure", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_New_GL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "New_GL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_New_GL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "New_GL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Current_GL_No_", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_GL_No_", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Current_GL_No_", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_GL_No_", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GL_Description", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL_Description", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GL_Description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL_Description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TB_TYPE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TB_TYPE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TB_TYPE", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TB_TYPE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GRAP1_Cat", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GRAP1_Cat", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GRAP1_Cat", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GRAP1_Cat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Short_Code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Short_Code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Short_Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Short_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ITEM_GUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM_GUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ITEM_GUID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM_GUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_mSCOA_Account", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mSCOA_Account", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_mSCOA_Account", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mSCOA_Account", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Costing_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Costing_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fund_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fund_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Project_SC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_SC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Project_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_SC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Project_GUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_GUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Project_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_GUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Project_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Project_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Region_SC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_SC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Region_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_SC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Region_GUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_GUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Region_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_GUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Region_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Region_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Region_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Costing_SC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_SC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Costing_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_SC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Costing_GUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_GUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Costing_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_GUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ECC_Structure_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ECC_Structure_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ECC_Structure_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ECC_Structure_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CC_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CC_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CC_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CC_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Function_GUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Function_GUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Function_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Function_GUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Function_Desc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Function_Desc", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Function_Desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Function_Desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fund_SC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_SC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fund_SC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_SC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fund_GUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_GUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fund_GUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_GUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Lookup_Vault_Budget_2Segment_Combo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Lookup_Vault_Budget_2Segment_Combo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Lookup_Vault_Budget_2Segment_Combo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Lookup_Vault_Budget_2Segment_Combo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.mSCOA_VaultConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT Current_ECC_Structure, New_GL, CC, Current_GL_No_, GL_Description, TB_TYPE, GRAP1_Cat, Short_Code, ITEM_GUID, GL, mSCOA_Account, Costing_Desc, Fund_Desc, Project_SC, Project_GUID, Project_Desc, Region_SC, Region_GUID, Region_Desc, Costing_SC, Costing_GUID, ECC_Structure_Desc, CC_Desc, Function_GUID, Function_Desc, Fund_SC, Fund_GUID, Id_Lookup_Vault_Budget_2Segment_Combo FROM dbo.Lookup_Vault_Budget_2Segment_Combo";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"UPDATE [dbo].[Lookup_Vault_Budget_2Segment_Combo] SET
+ Project_Guid = @Project_Guid, Fund_Guid = @Fund_Guid, 
+Item_Guid = @Item_Guid, 
+ Region_Guid = @Region_Guid,Function_GUID = @FunctionGUID,costing_GUID = @Costing_GUID
+WHERE (Id_Lookup_Vault_Budget_2Segment_Combo = @Id_Lookup_Vault_Budget_2Segment_Combo)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Project_Guid", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Project_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fund_Guid", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Item_Guid", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Region_Guid", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Region_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FunctionGUID", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Function_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Costing_GUID", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_GUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Lookup_Vault_Budget_2Segment_Combo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Lookup_Vault_Budget_2Segment_Combo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(mSCOA_VaultDataSet1.Lookup_Vault_Budget_2Segment_ComboDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual mSCOA_VaultDataSet1.Lookup_Vault_Budget_2Segment_ComboDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            mSCOA_VaultDataSet1.Lookup_Vault_Budget_2Segment_ComboDataTable dataTable = new mSCOA_VaultDataSet1.Lookup_Vault_Budget_2Segment_ComboDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(mSCOA_VaultDataSet1.Lookup_Vault_Budget_2Segment_ComboDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(mSCOA_VaultDataSet1 dataSet) {
+            return this.Adapter.Update(dataSet, "Lookup_Vault_Budget_2Segment_Combo");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(
+                    string Original_Current_ECC_Structure, 
+                    string Original_New_GL, 
+                    string Original_CC, 
+                    string Original_Current_GL_No_, 
+                    string Original_GL_Description, 
+                    string Original_TB_TYPE, 
+                    string Original_GRAP1_Cat, 
+                    string Original_Short_Code, 
+                    string Original_ITEM_GUID, 
+                    string Original_GL, 
+                    string Original_mSCOA_Account, 
+                    string Original_Costing_Desc, 
+                    string Original_Fund_Desc, 
+                    string Original_Project_SC, 
+                    string Original_Project_GUID, 
+                    string Original_Project_Desc, 
+                    string Original_Region_SC, 
+                    string Original_Region_GUID, 
+                    string Original_Region_Desc, 
+                    string Original_Costing_SC, 
+                    string Original_Costing_GUID, 
+                    string Original_ECC_Structure_Desc, 
+                    string Original_CC_Desc, 
+                    string Original_Function_GUID, 
+                    string Original_Function_Desc, 
+                    string Original_Fund_SC, 
+                    string Original_Fund_GUID, 
+                    int Original_Id_Lookup_Vault_Budget_2Segment_Combo) {
+            if ((Original_Current_ECC_Structure == null)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Current_ECC_Structure));
+            }
+            if ((Original_New_GL == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_New_GL));
+            }
+            if ((Original_CC == null)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_CC));
+            }
+            if ((Original_Current_GL_No_ == null)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Current_GL_No_));
+            }
+            if ((Original_GL_Description == null)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_GL_Description));
+            }
+            if ((Original_TB_TYPE == null)) {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_TB_TYPE));
+            }
+            if ((Original_GRAP1_Cat == null)) {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_GRAP1_Cat));
+            }
+            if ((Original_Short_Code == null)) {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_Short_Code));
+            }
+            if ((Original_ITEM_GUID == null)) {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((string)(Original_ITEM_GUID));
+            }
+            if ((Original_GL == null)) {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((string)(Original_GL));
+            }
+            if ((Original_mSCOA_Account == null)) {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((string)(Original_mSCOA_Account));
+            }
+            if ((Original_Costing_Desc == null)) {
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((string)(Original_Costing_Desc));
+            }
+            if ((Original_Fund_Desc == null)) {
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((string)(Original_Fund_Desc));
+            }
+            if ((Original_Project_SC == null)) {
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((string)(Original_Project_SC));
+            }
+            if ((Original_Project_GUID == null)) {
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((string)(Original_Project_GUID));
+            }
+            if ((Original_Project_Desc == null)) {
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((string)(Original_Project_Desc));
+            }
+            if ((Original_Region_SC == null)) {
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((string)(Original_Region_SC));
+            }
+            if ((Original_Region_GUID == null)) {
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((string)(Original_Region_GUID));
+            }
+            if ((Original_Region_Desc == null)) {
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((string)(Original_Region_Desc));
+            }
+            if ((Original_Costing_SC == null)) {
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[39].Value = ((string)(Original_Costing_SC));
+            }
+            if ((Original_Costing_GUID == null)) {
+                this.Adapter.DeleteCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[41].Value = ((string)(Original_Costing_GUID));
+            }
+            if ((Original_ECC_Structure_Desc == null)) {
+                this.Adapter.DeleteCommand.Parameters[42].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[42].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[43].Value = ((string)(Original_ECC_Structure_Desc));
+            }
+            if ((Original_CC_Desc == null)) {
+                this.Adapter.DeleteCommand.Parameters[44].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[44].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[45].Value = ((string)(Original_CC_Desc));
+            }
+            if ((Original_Function_GUID == null)) {
+                this.Adapter.DeleteCommand.Parameters[46].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[47].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[46].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[47].Value = ((string)(Original_Function_GUID));
+            }
+            if ((Original_Function_Desc == null)) {
+                this.Adapter.DeleteCommand.Parameters[48].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[49].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[48].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[49].Value = ((string)(Original_Function_Desc));
+            }
+            if ((Original_Fund_SC == null)) {
+                this.Adapter.DeleteCommand.Parameters[50].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[51].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[50].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[51].Value = ((string)(Original_Fund_SC));
+            }
+            if ((Original_Fund_GUID == null)) {
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[53].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((string)(Original_Fund_GUID));
+            }
+            this.Adapter.DeleteCommand.Parameters[54].Value = ((int)(Original_Id_Lookup_Vault_Budget_2Segment_Combo));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    string Current_ECC_Structure, 
+                    string New_GL, 
+                    string CC, 
+                    string Current_GL_No_, 
+                    string GL_Description, 
+                    string TB_TYPE, 
+                    string GRAP1_Cat, 
+                    string Short_Code, 
+                    string ITEM_GUID, 
+                    string GL, 
+                    string mSCOA_Account, 
+                    string Costing_Desc, 
+                    string Fund_Desc, 
+                    string Project_SC, 
+                    string Project_GUID, 
+                    string Project_Desc, 
+                    string Region_SC, 
+                    string Region_GUID, 
+                    string Region_Desc, 
+                    string Costing_SC, 
+                    string Costing_GUID, 
+                    string ECC_Structure_Desc, 
+                    string CC_Desc, 
+                    string Function_GUID, 
+                    string Function_Desc, 
+                    string Fund_SC, 
+                    string Fund_GUID) {
+            if ((Current_ECC_Structure == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Current_ECC_Structure));
+            }
+            if ((New_GL == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(New_GL));
+            }
+            if ((CC == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(CC));
+            }
+            if ((Current_GL_No_ == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Current_GL_No_));
+            }
+            if ((GL_Description == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(GL_Description));
+            }
+            if ((TB_TYPE == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(TB_TYPE));
+            }
+            if ((GRAP1_Cat == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(GRAP1_Cat));
+            }
+            if ((Short_Code == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Short_Code));
+            }
+            if ((ITEM_GUID == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(ITEM_GUID));
+            }
+            if ((GL == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(GL));
+            }
+            if ((mSCOA_Account == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(mSCOA_Account));
+            }
+            if ((Costing_Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Costing_Desc));
+            }
+            if ((Fund_Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(Fund_Desc));
+            }
+            if ((Project_SC == null)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(Project_SC));
+            }
+            if ((Project_GUID == null)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(Project_GUID));
+            }
+            if ((Project_Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(Project_Desc));
+            }
+            if ((Region_SC == null)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(Region_SC));
+            }
+            if ((Region_GUID == null)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(Region_GUID));
+            }
+            if ((Region_Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(Region_Desc));
+            }
+            if ((Costing_SC == null)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(Costing_SC));
+            }
+            if ((Costing_GUID == null)) {
+                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(Costing_GUID));
+            }
+            if ((ECC_Structure_Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[21].Value = ((string)(ECC_Structure_Desc));
+            }
+            if ((CC_Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[22].Value = ((string)(CC_Desc));
+            }
+            if ((Function_GUID == null)) {
+                this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[23].Value = ((string)(Function_GUID));
+            }
+            if ((Function_Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[24].Value = ((string)(Function_Desc));
+            }
+            if ((Fund_SC == null)) {
+                this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[25].Value = ((string)(Fund_SC));
+            }
+            if ((Fund_GUID == null)) {
+                this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(Fund_GUID));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Current_ECC_Structure, 
+                    string New_GL, 
+                    string CC, 
+                    string Current_GL_No_, 
+                    string GL_Description, 
+                    string TB_TYPE, 
+                    string GRAP1_Cat, 
+                    string Short_Code, 
+                    string ITEM_GUID, 
+                    string GL, 
+                    string mSCOA_Account, 
+                    string Costing_Desc, 
+                    string Fund_Desc, 
+                    string Project_SC, 
+                    string Project_GUID, 
+                    string Project_Desc, 
+                    string Region_SC, 
+                    string Region_GUID, 
+                    string Region_Desc, 
+                    string Costing_SC, 
+                    string Costing_GUID, 
+                    string ECC_Structure_Desc, 
+                    string CC_Desc, 
+                    string Function_GUID, 
+                    string Function_Desc, 
+                    string Fund_SC, 
+                    string Fund_GUID, 
+                    string Original_Current_ECC_Structure, 
+                    string Original_New_GL, 
+                    string Original_CC, 
+                    string Original_Current_GL_No_, 
+                    string Original_GL_Description, 
+                    string Original_TB_TYPE, 
+                    string Original_GRAP1_Cat, 
+                    string Original_Short_Code, 
+                    string Original_ITEM_GUID, 
+                    string Original_GL, 
+                    string Original_mSCOA_Account, 
+                    string Original_Costing_Desc, 
+                    string Original_Fund_Desc, 
+                    string Original_Project_SC, 
+                    string Original_Project_GUID, 
+                    string Original_Project_Desc, 
+                    string Original_Region_SC, 
+                    string Original_Region_GUID, 
+                    string Original_Region_Desc, 
+                    string Original_Costing_SC, 
+                    string Original_Costing_GUID, 
+                    string Original_ECC_Structure_Desc, 
+                    string Original_CC_Desc, 
+                    string Original_Function_GUID, 
+                    string Original_Function_Desc, 
+                    string Original_Fund_SC, 
+                    string Original_Fund_GUID, 
+                    int Original_Id_Lookup_Vault_Budget_2Segment_Combo, 
+                    int Id_Lookup_Vault_Budget_2Segment_Combo) {
+            if ((Current_ECC_Structure == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Current_ECC_Structure));
+            }
+            if ((New_GL == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(New_GL));
+            }
+            if ((CC == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(CC));
+            }
+            if ((Current_GL_No_ == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Current_GL_No_));
+            }
+            if ((GL_Description == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(GL_Description));
+            }
+            if ((TB_TYPE == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(TB_TYPE));
+            }
+            if ((GRAP1_Cat == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(GRAP1_Cat));
+            }
+            if ((Short_Code == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Short_Code));
+            }
+            if ((ITEM_GUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(ITEM_GUID));
+            }
+            if ((GL == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(GL));
+            }
+            if ((mSCOA_Account == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(mSCOA_Account));
+            }
+            if ((Costing_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Costing_Desc));
+            }
+            if ((Fund_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Fund_Desc));
+            }
+            if ((Project_SC == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Project_SC));
+            }
+            if ((Project_GUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Project_GUID));
+            }
+            if ((Project_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Project_Desc));
+            }
+            if ((Region_SC == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Region_SC));
+            }
+            if ((Region_GUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Region_GUID));
+            }
+            if ((Region_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Region_Desc));
+            }
+            if ((Costing_SC == null)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Costing_SC));
+            }
+            if ((Costing_GUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Costing_GUID));
+            }
+            if ((ECC_Structure_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(ECC_Structure_Desc));
+            }
+            if ((CC_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(CC_Desc));
+            }
+            if ((Function_GUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Function_GUID));
+            }
+            if ((Function_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Function_Desc));
+            }
+            if ((Fund_SC == null)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Fund_SC));
+            }
+            if ((Fund_GUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Fund_GUID));
+            }
+            if ((Original_Current_ECC_Structure == null)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Current_ECC_Structure));
+            }
+            if ((Original_New_GL == null)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_New_GL));
+            }
+            if ((Original_CC == null)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_CC));
+            }
+            if ((Original_Current_GL_No_ == null)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_Current_GL_No_));
+            }
+            if ((Original_GL_Description == null)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_GL_Description));
+            }
+            if ((Original_TB_TYPE == null)) {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_TB_TYPE));
+            }
+            if ((Original_GRAP1_Cat == null)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_GRAP1_Cat));
+            }
+            if ((Original_Short_Code == null)) {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_Short_Code));
+            }
+            if ((Original_ITEM_GUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_ITEM_GUID));
+            }
+            if ((Original_GL == null)) {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_GL));
+            }
+            if ((Original_mSCOA_Account == null)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_mSCOA_Account));
+            }
+            if ((Original_Costing_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_Costing_Desc));
+            }
+            if ((Original_Fund_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_Fund_Desc));
+            }
+            if ((Original_Project_SC == null)) {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_Project_SC));
+            }
+            if ((Original_Project_GUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_Project_GUID));
+            }
+            if ((Original_Project_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_Project_Desc));
+            }
+            if ((Original_Region_SC == null)) {
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((string)(Original_Region_SC));
+            }
+            if ((Original_Region_GUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((string)(Original_Region_GUID));
+            }
+            if ((Original_Region_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[64].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((string)(Original_Region_Desc));
+            }
+            if ((Original_Costing_SC == null)) {
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[66].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((string)(Original_Costing_SC));
+            }
+            if ((Original_Costing_GUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[68].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((string)(Original_Costing_GUID));
+            }
+            if ((Original_ECC_Structure_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[70].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[70].Value = ((string)(Original_ECC_Structure_Desc));
+            }
+            if ((Original_CC_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((string)(Original_CC_Desc));
+            }
+            if ((Original_Function_GUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[74].Value = ((string)(Original_Function_GUID));
+            }
+            if ((Original_Function_Desc == null)) {
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((string)(Original_Function_Desc));
+            }
+            if ((Original_Fund_SC == null)) {
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[78].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[78].Value = ((string)(Original_Fund_SC));
+            }
+            if ((Original_Fund_GUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[80].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((string)(Original_Fund_GUID));
+            }
+            this.Adapter.UpdateCommand.Parameters[81].Value = ((int)(Original_Id_Lookup_Vault_Budget_2Segment_Combo));
+            this.Adapter.UpdateCommand.Parameters[82].Value = ((int)(Id_Lookup_Vault_Budget_2Segment_Combo));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Current_ECC_Structure, 
+                    string New_GL, 
+                    string CC, 
+                    string Current_GL_No_, 
+                    string GL_Description, 
+                    string TB_TYPE, 
+                    string GRAP1_Cat, 
+                    string Short_Code, 
+                    string ITEM_GUID, 
+                    string GL, 
+                    string mSCOA_Account, 
+                    string Costing_Desc, 
+                    string Fund_Desc, 
+                    string Project_SC, 
+                    string Project_GUID, 
+                    string Project_Desc, 
+                    string Region_SC, 
+                    string Region_GUID, 
+                    string Region_Desc, 
+                    string Costing_SC, 
+                    string Costing_GUID, 
+                    string ECC_Structure_Desc, 
+                    string CC_Desc, 
+                    string Function_GUID, 
+                    string Function_Desc, 
+                    string Fund_SC, 
+                    string Fund_GUID, 
+                    string Original_Current_ECC_Structure, 
+                    string Original_New_GL, 
+                    string Original_CC, 
+                    string Original_Current_GL_No_, 
+                    string Original_GL_Description, 
+                    string Original_TB_TYPE, 
+                    string Original_GRAP1_Cat, 
+                    string Original_Short_Code, 
+                    string Original_ITEM_GUID, 
+                    string Original_GL, 
+                    string Original_mSCOA_Account, 
+                    string Original_Costing_Desc, 
+                    string Original_Fund_Desc, 
+                    string Original_Project_SC, 
+                    string Original_Project_GUID, 
+                    string Original_Project_Desc, 
+                    string Original_Region_SC, 
+                    string Original_Region_GUID, 
+                    string Original_Region_Desc, 
+                    string Original_Costing_SC, 
+                    string Original_Costing_GUID, 
+                    string Original_ECC_Structure_Desc, 
+                    string Original_CC_Desc, 
+                    string Original_Function_GUID, 
+                    string Original_Function_Desc, 
+                    string Original_Fund_SC, 
+                    string Original_Fund_GUID, 
+                    int Original_Id_Lookup_Vault_Budget_2Segment_Combo) {
+            return this.Update(Current_ECC_Structure, New_GL, CC, Current_GL_No_, GL_Description, TB_TYPE, GRAP1_Cat, Short_Code, ITEM_GUID, GL, mSCOA_Account, Costing_Desc, Fund_Desc, Project_SC, Project_GUID, Project_Desc, Region_SC, Region_GUID, Region_Desc, Costing_SC, Costing_GUID, ECC_Structure_Desc, CC_Desc, Function_GUID, Function_Desc, Fund_SC, Fund_GUID, Original_Current_ECC_Structure, Original_New_GL, Original_CC, Original_Current_GL_No_, Original_GL_Description, Original_TB_TYPE, Original_GRAP1_Cat, Original_Short_Code, Original_ITEM_GUID, Original_GL, Original_mSCOA_Account, Original_Costing_Desc, Original_Fund_Desc, Original_Project_SC, Original_Project_GUID, Original_Project_Desc, Original_Region_SC, Original_Region_GUID, Original_Region_Desc, Original_Costing_SC, Original_Costing_GUID, Original_ECC_Structure_Desc, Original_CC_Desc, Original_Function_GUID, Original_Function_Desc, Original_Fund_SC, Original_Fund_GUID, Original_Id_Lookup_Vault_Budget_2Segment_Combo, Original_Id_Lookup_Vault_Budget_2Segment_Combo);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateQuery(string Project_Guid, string Fund_Guid, string Item_Guid, string Region_Guid, string FunctionGUID, string Costing_GUID, int Id_Lookup_Vault_Budget_2Segment_Combo) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((Project_Guid == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Project_Guid));
+            }
+            if ((Fund_Guid == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Fund_Guid));
+            }
+            if ((Item_Guid == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Item_Guid));
+            }
+            if ((Region_Guid == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(Region_Guid));
+            }
+            if ((FunctionGUID == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(FunctionGUID));
+            }
+            if ((Costing_GUID == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(Costing_GUID));
+            }
+            command.Parameters[6].Value = ((int)(Id_Lookup_Vault_Budget_2Segment_Combo));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7293,6 +10423,8 @@ WHERE    (Id_Vault_HCM = @Id_Vault_HCM)";
         private Lookup_Vault_CashbookTableAdapter _lookup_Vault_CashbookTableAdapter;
         
         private Lookup_Vault_HCMTableAdapter _lookup_Vault_HCMTableAdapter;
+        
+        private Lookup_Vault_Budget_2Segment_ComboTableAdapter _lookup_Vault_Budget_2Segment_ComboTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -7353,6 +10485,20 @@ WHERE    (Id_Vault_HCM = @Id_Vault_HCM)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Lookup_Vault_Budget_2Segment_ComboTableAdapter Lookup_Vault_Budget_2Segment_ComboTableAdapter {
+            get {
+                return this._lookup_Vault_Budget_2Segment_ComboTableAdapter;
+            }
+            set {
+                this._lookup_Vault_Budget_2Segment_ComboTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -7382,6 +10528,10 @@ WHERE    (Id_Vault_HCM = @Id_Vault_HCM)";
                             && (this._lookup_Vault_HCMTableAdapter.Connection != null))) {
                     return this._lookup_Vault_HCMTableAdapter.Connection;
                 }
+                if (((this._lookup_Vault_Budget_2Segment_ComboTableAdapter != null) 
+                            && (this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Connection != null))) {
+                    return this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -7402,6 +10552,9 @@ WHERE    (Id_Vault_HCM = @Id_Vault_HCM)";
                     count = (count + 1);
                 }
                 if ((this._lookup_Vault_HCMTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._lookup_Vault_Budget_2Segment_ComboTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -7442,6 +10595,15 @@ WHERE    (Id_Vault_HCM = @Id_Vault_HCM)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._lookup_Vault_Budget_2Segment_ComboTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Lookup_Vault_Budget_2Segment_Combo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -7476,6 +10638,14 @@ WHERE    (Id_Vault_HCM = @Id_Vault_HCM)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._lookup_Vault_Budget_2Segment_ComboTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Lookup_Vault_Budget_2Segment_Combo.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -7486,6 +10656,14 @@ WHERE    (Id_Vault_HCM = @Id_Vault_HCM)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(mSCOA_VaultDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._lookup_Vault_Budget_2Segment_ComboTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Lookup_Vault_Budget_2Segment_Combo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._lookup_Vault_HCMTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Lookup_Vault_HCM.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -7564,6 +10742,11 @@ WHERE    (Id_Vault_HCM = @Id_Vault_HCM)";
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._lookup_Vault_Budget_2Segment_ComboTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -7621,6 +10804,15 @@ WHERE    (Id_Vault_HCM = @Id_Vault_HCM)";
                     if (this._lookup_Vault_HCMTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._lookup_Vault_HCMTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._lookup_Vault_HCMTableAdapter.Adapter);
+                    }
+                }
+                if ((this._lookup_Vault_Budget_2Segment_ComboTableAdapter != null)) {
+                    revertConnections.Add(this._lookup_Vault_Budget_2Segment_ComboTableAdapter, this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Connection);
+                    this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -7692,6 +10884,10 @@ WHERE    (Id_Vault_HCM = @Id_Vault_HCM)";
                 if ((this._lookup_Vault_HCMTableAdapter != null)) {
                     this._lookup_Vault_HCMTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._lookup_Vault_HCMTableAdapter]));
                     this._lookup_Vault_HCMTableAdapter.Transaction = null;
+                }
+                if ((this._lookup_Vault_Budget_2Segment_ComboTableAdapter != null)) {
+                    this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._lookup_Vault_Budget_2Segment_ComboTableAdapter]));
+                    this._lookup_Vault_Budget_2Segment_ComboTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
