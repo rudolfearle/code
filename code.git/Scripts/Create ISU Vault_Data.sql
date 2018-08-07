@@ -45,3 +45,19 @@ GROUP BY dbo.Lookup_ISU_ADID.RATE_CAT, dbo.Lookup_ISU_ADID.[DESC], dbo.Lookup_IS
                          dbo.Cons_Vault.Recommended_Invoice_Guid, dbo.Cons_Vault.Recommended_Invoice_Description, dbo.Cons_Vault.Recommended_Receipt_Guid, dbo.Cons_Vault.Recommended_Receipt_Description
 
 --Lookup_ISU_Vault
+
+delete from  Lookup_ISU_Vault
+  
+  where [RATE_CAT] is null
+      and[DESC] is null
+      and[Division] is null
+      and[Name] is null
+      and[Code] is null
+      and[MainCode] is null
+      and[Mains] is null
+      and[SubCode] is null
+      and[Sub] is null
+      and[Doc_Type] is null
+      and[Div__FiCa]is null
+      and[FiCa_Mains] is null
+      and[Subs_FiCa] is null
