@@ -6522,7 +6522,7 @@ namespace WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters {
 SET                Recommended_Invoice_Guid = @Recommended_Invoice_Guid, 
                         Recommended_Receipt_Guid = @Recommended_Receipt_Guid, 
                     Function_Guid = @Function_GUID ,Project_Guid = @Project_Guid, Fund_Guid = @Fund_Guid,
- Region_Guid = @Region_Guid
+ Region_Guid = @Region_Guid,costing_GUID= @Costing_GUID
 WHERE        (Id_ISU_Vault = @Original_Id_ISU_Vault);   
 
 
@@ -6534,6 +6534,7 @@ WHERE        (Id_ISU_Vault = @Original_Id_ISU_Vault);
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Project_Guid", global::System.Data.SqlDbType.VarChar, 36, global::System.Data.ParameterDirection.Input, 0, 0, "Project_Guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fund_Guid", global::System.Data.SqlDbType.NVarChar, 36, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_Guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Region_Guid", global::System.Data.SqlDbType.NVarChar, 36, global::System.Data.ParameterDirection.Input, 0, 0, "Region_Guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Costing_GUID", global::System.Data.SqlDbType.NVarChar, 36, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_Guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_ISU_Vault", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_ISU_Vault", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -6594,7 +6595,7 @@ WHERE        (Id_ISU_Vault = @Original_Id_ISU_Vault);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateQuery(string Recommended_Invoice_Guid, string Recommended_Receipt_Guid, string Function_GUID, string Project_Guid, string Fund_Guid, string Region_Guid, int Original_Id_ISU_Vault) {
+        public virtual int UpdateQuery(string Recommended_Invoice_Guid, string Recommended_Receipt_Guid, string Function_GUID, string Project_Guid, string Fund_Guid, string Region_Guid, string Costing_GUID, int Original_Id_ISU_Vault) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((Recommended_Invoice_Guid == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -6632,7 +6633,13 @@ WHERE        (Id_ISU_Vault = @Original_Id_ISU_Vault);
             else {
                 command.Parameters[5].Value = ((string)(Region_Guid));
             }
-            command.Parameters[6].Value = ((int)(Original_Id_ISU_Vault));
+            if ((Costing_GUID == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(Costing_GUID));
+            }
+            command.Parameters[7].Value = ((int)(Original_Id_ISU_Vault));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

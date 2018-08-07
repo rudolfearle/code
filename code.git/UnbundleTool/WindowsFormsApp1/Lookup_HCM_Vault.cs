@@ -87,7 +87,7 @@ namespace WindowsFormsApp1
                 LoadContra();
                 LoadDirect();
                 LoadFunction();
-                LoadCosting();
+               // LoadCosting();
                 LoadFund();
                 LoadProject();
                 LoadRegion();
@@ -105,7 +105,7 @@ namespace WindowsFormsApp1
                 General.Utilities.LoadSCOACombobox(cboContra, objTableContra);
                 General.Utilities.LoadSCOACombobox(cboFunction, objTableFunction);
 
-                General.Utilities.LoadSCOACombobox(cboCosting, objTableCosting);
+                //General.Utilities.LoadSCOACombobox(cboCosting, objTableCosting);
                 General.Utilities.LoadSCOACombobox(cboRegion, objTableRegional);
                 General.Utilities.LoadSCOACombobox(cboFund, objTableFund);
                 General.Utilities.LoadSCOACombobox(cboProject, objTableProject);
@@ -163,7 +163,7 @@ namespace WindowsFormsApp1
             cboDirect.Enabled = value;
             cboFunction.Enabled = value;
 
-            cboCosting.Enabled = value;
+           // cboCosting.Enabled = value;
             cboFund.Enabled = value;
             cboRegion.Enabled = value;
             cboProject.Enabled = value;
@@ -317,7 +317,7 @@ namespace WindowsFormsApp1
                         string sDirectGUID = cboDirect.SelectedValue.ToString();
                         string sContraGUID = cboContra.SelectedValue.ToString();
                         string sFunctionGUID = cboFunction.SelectedValue.ToString();
-                        string sCostingGUID = cboCosting.SelectedValue.ToString();
+                        string sCostingGUID = string.Empty;//cboCosting.SelectedValue.ToString();
                         string sFundGUID = cboFund.SelectedValue.ToString();
                         string sProjectGUID = cboProject.SelectedValue.ToString();
                         string sRegionGUID = cboRegion.SelectedValue.ToString();
