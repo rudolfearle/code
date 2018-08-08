@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Budget_2Segment));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.rATECATDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
@@ -92,6 +93,7 @@
             this.consVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lookupISUVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lookup_ISU_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters.Lookup_ISU_VaultTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -104,6 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -119,6 +122,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel2.Controls.Add(this.statusStrip1);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.btnUpdate);
@@ -134,7 +138,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.label7);
             this.splitContainer1.Panel2.Controls.Add(this.cboFunction);
-            this.splitContainer1.Size = new System.Drawing.Size(911, 542);
+            this.splitContainer1.Size = new System.Drawing.Size(1185, 542);
             this.splitContainer1.SplitterDistance = 253;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -187,7 +191,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(911, 253);
+            this.dataGridView1.Size = new System.Drawing.Size(1185, 253);
             this.dataGridView1.TabIndex = 34;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -540,7 +544,7 @@
             this.cboProject.FormattingEnabled = true;
             this.cboProject.Location = new System.Drawing.Point(72, 187);
             this.cboProject.Name = "cboProject";
-            this.cboProject.Size = new System.Drawing.Size(778, 21);
+            this.cboProject.Size = new System.Drawing.Size(1000, 21);
             this.cboProject.TabIndex = 49;
             // 
             // label8
@@ -557,7 +561,7 @@
             this.cboCosting.FormattingEnabled = true;
             this.cboCosting.Location = new System.Drawing.Point(72, 102);
             this.cboCosting.Name = "cboCosting";
-            this.cboCosting.Size = new System.Drawing.Size(778, 21);
+            this.cboCosting.Size = new System.Drawing.Size(1000, 21);
             this.cboCosting.TabIndex = 43;
             // 
             // label5
@@ -583,7 +587,7 @@
             this.cboRegion.FormattingEnabled = true;
             this.cboRegion.Location = new System.Drawing.Point(72, 133);
             this.cboRegion.Name = "cboRegion";
-            this.cboRegion.Size = new System.Drawing.Size(778, 21);
+            this.cboRegion.Size = new System.Drawing.Size(1000, 21);
             this.cboRegion.TabIndex = 45;
             // 
             // cboDirect
@@ -591,7 +595,7 @@
             this.cboDirect.FormattingEnabled = true;
             this.cboDirect.Location = new System.Drawing.Point(72, 42);
             this.cboDirect.Name = "cboDirect";
-            this.cboDirect.Size = new System.Drawing.Size(778, 21);
+            this.cboDirect.Size = new System.Drawing.Size(1000, 21);
             this.cboDirect.TabIndex = 36;
             // 
             // label6
@@ -608,7 +612,7 @@
             this.cboFund.FormattingEnabled = true;
             this.cboFund.Location = new System.Drawing.Point(72, 160);
             this.cboFund.Name = "cboFund";
-            this.cboFund.Size = new System.Drawing.Size(778, 21);
+            this.cboFund.Size = new System.Drawing.Size(1000, 21);
             this.cboFund.TabIndex = 47;
             // 
             // label4
@@ -634,7 +638,7 @@
             this.cboFunction.FormattingEnabled = true;
             this.cboFunction.Location = new System.Drawing.Point(72, 69);
             this.cboFunction.Name = "cboFunction";
-            this.cboFunction.Size = new System.Drawing.Size(778, 21);
+            this.cboFunction.Size = new System.Drawing.Size(1000, 21);
             this.cboFunction.TabIndex = 41;
             // 
             // mSCOA_VaultDataSet
@@ -665,11 +669,21 @@
             // 
             this.lookup_ISU_VaultTableAdapter.ClearBeforeFill = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(1098, 69);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(182, 87);
+            this.pictureBox1.TabIndex = 52;
+            this.pictureBox1.TabStop = false;
+            // 
             // Budget_2Segment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 542);
+            this.ClientSize = new System.Drawing.Size(1185, 542);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Budget_2Segment";
             this.Text = "Budget_2Segment";
@@ -688,6 +702,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -757,5 +772,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel filterStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel showAllLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

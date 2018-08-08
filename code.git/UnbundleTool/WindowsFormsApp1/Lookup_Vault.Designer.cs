@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lookup_Vault));
             this.mSCOA_VaultDataSet = new WindowsFormsApp1.mSCOA_VaultDataSet();
             this.consVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cons_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter();
@@ -82,6 +83,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cboDirect = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).BeginInit();
@@ -94,6 +96,7 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mSCOA_VaultDataSet
@@ -174,11 +177,12 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel2.Controls.Add(this.btnUpdate);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.cboDirect);
-            this.splitContainer1.Size = new System.Drawing.Size(899, 350);
+            this.splitContainer1.Size = new System.Drawing.Size(1092, 350);
             this.splitContainer1.SplitterDistance = 175;
             this.splitContainer1.TabIndex = 25;
             // 
@@ -231,7 +235,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(899, 175);
+            this.dataGridView1.Size = new System.Drawing.Size(1092, 175);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -556,14 +560,24 @@
             this.cboDirect.FormattingEnabled = true;
             this.cboDirect.Location = new System.Drawing.Point(74, 40);
             this.cboDirect.Name = "cboDirect";
-            this.cboDirect.Size = new System.Drawing.Size(813, 21);
+            this.cboDirect.Size = new System.Drawing.Size(1000, 21);
             this.cboDirect.TabIndex = 25;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(948, 81);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(182, 87);
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
             // 
             // Lookup_Vault
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 350);
+            this.ClientSize = new System.Drawing.Size(1092, 350);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Name = "Lookup_Vault";
@@ -583,6 +597,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -642,5 +657,6 @@
         private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn recommendedReceiptGuidDataGridViewTextBoxColumn;
         private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn recommendedReceiptDescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idISUVaultDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
