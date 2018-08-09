@@ -70,6 +70,11 @@
             this.idISUVaultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lookupISUVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mSCOA_VaultDataSet1 = new WindowsFormsApp1.mSCOA_VaultDataSet1();
+            this.rdoLaibilities = new System.Windows.Forms.RadioButton();
+            this.rdoAssets = new System.Windows.Forms.RadioButton();
+            this.rdoExpense = new System.Windows.Forms.RadioButton();
+            this.rdoItem = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.filterStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.showAllLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -93,7 +98,6 @@
             this.consVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lookupISUVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lookup_ISU_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters.Lookup_ISU_VaultTableAdapter();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -101,12 +105,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -122,6 +126,10 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.rdoLaibilities);
+            this.splitContainer1.Panel2.Controls.Add(this.rdoAssets);
+            this.splitContainer1.Panel2.Controls.Add(this.rdoExpense);
+            this.splitContainer1.Panel2.Controls.Add(this.rdoItem);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel2.Controls.Add(this.statusStrip1);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
@@ -493,6 +501,62 @@
             this.mSCOA_VaultDataSet1.DataSetName = "mSCOA_VaultDataSet1";
             this.mSCOA_VaultDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // rdoLaibilities
+            // 
+            this.rdoLaibilities.AutoSize = true;
+            this.rdoLaibilities.Location = new System.Drawing.Point(281, 19);
+            this.rdoLaibilities.Name = "rdoLaibilities";
+            this.rdoLaibilities.Size = new System.Drawing.Size(67, 17);
+            this.rdoLaibilities.TabIndex = 56;
+            this.rdoLaibilities.Text = "Laibilities";
+            this.rdoLaibilities.UseVisualStyleBackColor = true;
+            this.rdoLaibilities.Click += new System.EventHandler(this.rdoItem_Click);
+            // 
+            // rdoAssets
+            // 
+            this.rdoAssets.AutoSize = true;
+            this.rdoAssets.Location = new System.Drawing.Point(219, 20);
+            this.rdoAssets.Name = "rdoAssets";
+            this.rdoAssets.Size = new System.Drawing.Size(56, 17);
+            this.rdoAssets.TabIndex = 55;
+            this.rdoAssets.Text = "Assets";
+            this.rdoAssets.UseVisualStyleBackColor = true;
+            this.rdoAssets.Click += new System.EventHandler(this.rdoItem_Click);
+            // 
+            // rdoExpense
+            // 
+            this.rdoExpense.AutoSize = true;
+            this.rdoExpense.Location = new System.Drawing.Point(147, 19);
+            this.rdoExpense.Name = "rdoExpense";
+            this.rdoExpense.Size = new System.Drawing.Size(66, 17);
+            this.rdoExpense.TabIndex = 54;
+            this.rdoExpense.Text = "Expense";
+            this.rdoExpense.UseVisualStyleBackColor = true;
+            this.rdoExpense.Click += new System.EventHandler(this.rdoItem_Click);
+            // 
+            // rdoItem
+            // 
+            this.rdoItem.AutoSize = true;
+            this.rdoItem.Checked = true;
+            this.rdoItem.Location = new System.Drawing.Point(72, 20);
+            this.rdoItem.Name = "rdoItem";
+            this.rdoItem.Size = new System.Drawing.Size(69, 17);
+            this.rdoItem.TabIndex = 53;
+            this.rdoItem.TabStop = true;
+            this.rdoItem.Text = "Revenue";
+            this.rdoItem.UseVisualStyleBackColor = true;
+            this.rdoItem.Click += new System.EventHandler(this.rdoItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(1098, 69);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(182, 87);
+            this.pictureBox1.TabIndex = 52;
+            this.pictureBox1.TabStop = false;
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
@@ -524,7 +588,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(48, 12);
+            this.label3.Location = new System.Drawing.Point(12, 3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(246, 13);
             this.label3.TabIndex = 40;
@@ -541,6 +605,9 @@
             // 
             // cboProject
             // 
+            this.cboProject.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboProject.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboProject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProject.FormattingEnabled = true;
             this.cboProject.Location = new System.Drawing.Point(72, 187);
             this.cboProject.Name = "cboProject";
@@ -558,6 +625,9 @@
             // 
             // cboCosting
             // 
+            this.cboCosting.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboCosting.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboCosting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCosting.FormattingEnabled = true;
             this.cboCosting.Location = new System.Drawing.Point(72, 102);
             this.cboCosting.Name = "cboCosting";
@@ -584,6 +654,9 @@
             // 
             // cboRegion
             // 
+            this.cboRegion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboRegion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRegion.FormattingEnabled = true;
             this.cboRegion.Location = new System.Drawing.Point(72, 133);
             this.cboRegion.Name = "cboRegion";
@@ -592,6 +665,9 @@
             // 
             // cboDirect
             // 
+            this.cboDirect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboDirect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboDirect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDirect.FormattingEnabled = true;
             this.cboDirect.Location = new System.Drawing.Point(72, 42);
             this.cboDirect.Name = "cboDirect";
@@ -609,6 +685,9 @@
             // 
             // cboFund
             // 
+            this.cboFund.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboFund.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboFund.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFund.FormattingEnabled = true;
             this.cboFund.Location = new System.Drawing.Point(72, 160);
             this.cboFund.Name = "cboFund";
@@ -635,6 +714,9 @@
             // 
             // cboFunction
             // 
+            this.cboFunction.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboFunction.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboFunction.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFunction.FormattingEnabled = true;
             this.cboFunction.Location = new System.Drawing.Point(72, 69);
             this.cboFunction.Name = "cboFunction";
@@ -669,16 +751,6 @@
             // 
             this.lookup_ISU_VaultTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(1098, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 87);
-            this.pictureBox1.TabIndex = 52;
-            this.pictureBox1.TabStop = false;
-            // 
             // Budget_2Segment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -696,13 +768,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -773,5 +845,9 @@
         private System.Windows.Forms.ToolStripStatusLabel filterStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel showAllLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RadioButton rdoLaibilities;
+        private System.Windows.Forms.RadioButton rdoAssets;
+        private System.Windows.Forms.RadioButton rdoExpense;
+        private System.Windows.Forms.RadioButton rdoItem;
     }
 }

@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
         private mSCOA_VaultDataSet.Cons_VaultDataTable objTableRegional;
         private mSCOA_VaultDataSet.Cons_VaultDataTable objTableFund;
         private mSCOA_VaultDataSet.Cons_VaultDataTable objTableProject;
-
+        private string SCOATYPE = string.Empty; 
 
         private ToolTip toolTip1;
 
@@ -42,6 +42,7 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SCOATYPE = "IR";
             LoadOnce = false;
             toolTip1 = new ToolTip();
             // TODO: This line of code loads data into the 'mSCOA_VaultDataSet1.Lookup_ISU_Vault' table. You can move, or remove it, as needed.
@@ -174,6 +175,11 @@ namespace WindowsFormsApp1
 
             btnUpdate.Enabled = value;
 
+            rdoAssets.Enabled = value;
+            rdoLaibilities.Enabled = value;
+            rdoExpense.Enabled = value;
+            rdoItem.Enabled = value;
+
         }
 
 
@@ -185,7 +191,7 @@ namespace WindowsFormsApp1
                 using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
                 {
                     mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
-                    ta.FillByDirect(Tbl);
+                    ta.FillByDirect(Tbl, SCOATYPE);
                     objTableDirect = Tbl;
                 }
                 
@@ -397,5 +403,24 @@ namespace WindowsFormsApp1
             DataGridViewAutoFilterColumnHeaderCell.RemoveFilter(dataGridView1);
         }
 
+        private void rdoItem_Click(object sender, EventArgs e)
+        {
+            RadioButton btn = (RadioButton)sender;
+            switch (btn.Text)
+            {
+                case "Revenue":
+                    SCOATYPE = "IR";
+                    break;
+                case "Expense":
+                    SCOATYPE = "IE";
+                    break;
+                case "Assets":
+                    SCOATYPE = "IA";
+                    break;
+                case "Laibilities":
+                    SCOATYPE = "IL";
+                    break;
+            }
+        }
     }
 }
