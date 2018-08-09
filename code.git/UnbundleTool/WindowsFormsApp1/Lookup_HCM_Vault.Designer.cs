@@ -32,29 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lookup_HCM_Vault));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.filterStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.showAllLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.cboProject = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cboCosting = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboRegion = new System.Windows.Forms.ComboBox();
-            this.cboDirect = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cboContra = new System.Windows.Forms.ComboBox();
-            this.cboFund = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cboFunction = new System.Windows.Forms.ComboBox();
-            this.mSCOA_VaultDataSet = new WindowsFormsApp1.mSCOA_VaultDataSet();
-            this.consVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cons_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter();
-            this.consVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.rATECATDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
             this.dESCDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
             this.divisionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
@@ -93,22 +70,49 @@
             this.idISUVaultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lookupISUVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mSCOA_VaultDataSet1 = new WindowsFormsApp1.mSCOA_VaultDataSet1();
+            this.rdoLaibilities = new System.Windows.Forms.RadioButton();
+            this.rdoAssets = new System.Windows.Forms.RadioButton();
+            this.rdoExpense = new System.Windows.Forms.RadioButton();
+            this.rdoItem = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.filterStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.showAllLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.cboProject = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cboCosting = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboRegion = new System.Windows.Forms.ComboBox();
+            this.cboDirect = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboContra = new System.Windows.Forms.ComboBox();
+            this.cboFund = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cboFunction = new System.Windows.Forms.ComboBox();
+            this.mSCOA_VaultDataSet = new WindowsFormsApp1.mSCOA_VaultDataSet();
+            this.consVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cons_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter();
+            this.consVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lookupISUVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lookup_ISU_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters.Lookup_ISU_VaultTableAdapter();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -124,6 +128,10 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.rdoLaibilities);
+            this.splitContainer1.Panel2.Controls.Add(this.rdoAssets);
+            this.splitContainer1.Panel2.Controls.Add(this.rdoExpense);
+            this.splitContainer1.Panel2.Controls.Add(this.rdoItem);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel2.Controls.Add(this.statusStrip1);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
@@ -198,206 +206,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1288, 268);
             this.dataGridView1.TabIndex = 34;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filterStatusLabel,
-            this.showAllLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(730, 3);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(202, 22);
-            this.statusStrip1.TabIndex = 51;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // filterStatusLabel
-            // 
-            this.filterStatusLabel.Name = "filterStatusLabel";
-            this.filterStatusLabel.Size = new System.Drawing.Size(0, 17);
-            this.filterStatusLabel.Visible = false;
-            // 
-            // showAllLabel
-            // 
-            this.showAllLabel.IsLink = true;
-            this.showAllLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.showAllLabel.Name = "showAllLabel";
-            this.showAllLabel.Size = new System.Drawing.Size(53, 17);
-            this.showAllLabel.Text = "Show &All";
-            this.showAllLabel.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(48, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(246, 13);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Hold CTRL key down to select multiple rows in grid";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(359, 265);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 39;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // cboProject
-            // 
-            this.cboProject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboProject.DropDownWidth = 1000;
-            this.cboProject.FormattingEnabled = true;
-            this.cboProject.Location = new System.Drawing.Point(72, 223);
-            this.cboProject.Name = "cboProject";
-            this.cboProject.Size = new System.Drawing.Size(1000, 21);
-            this.cboProject.TabIndex = 49;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 231);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
-            this.label8.TabIndex = 50;
-            this.label8.Text = "Project";
-            // 
-            // cboCosting
-            // 
-            this.cboCosting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCosting.DropDownWidth = 1000;
-            this.cboCosting.FormattingEnabled = true;
-            this.cboCosting.Location = new System.Drawing.Point(72, 138);
-            this.cboCosting.Name = "cboCosting";
-            this.cboCosting.Size = new System.Drawing.Size(1000, 21);
-            this.cboCosting.TabIndex = 43;
-            this.cboCosting.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "Contra";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 146);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "Costing";
-            this.label5.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Direct";
-            // 
-            // cboRegion
-            // 
-            this.cboRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRegion.DropDownWidth = 1000;
-            this.cboRegion.FormattingEnabled = true;
-            this.cboRegion.Location = new System.Drawing.Point(72, 169);
-            this.cboRegion.Name = "cboRegion";
-            this.cboRegion.Size = new System.Drawing.Size(1000, 21);
-            this.cboRegion.TabIndex = 45;
-            // 
-            // cboDirect
-            // 
-            this.cboDirect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDirect.DropDownWidth = 1000;
-            this.cboDirect.FormattingEnabled = true;
-            this.cboDirect.Location = new System.Drawing.Point(72, 42);
-            this.cboDirect.Name = "cboDirect";
-            this.cboDirect.Size = new System.Drawing.Size(1000, 21);
-            this.cboDirect.TabIndex = 36;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 177);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 13);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "Region";
-            // 
-            // cboContra
-            // 
-            this.cboContra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboContra.DropDownWidth = 1000;
-            this.cboContra.FormattingEnabled = true;
-            this.cboContra.Location = new System.Drawing.Point(72, 72);
-            this.cboContra.Name = "cboContra";
-            this.cboContra.Size = new System.Drawing.Size(1000, 21);
-            this.cboContra.TabIndex = 35;
-            // 
-            // cboFund
-            // 
-            this.cboFund.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboFund.DropDownWidth = 1000;
-            this.cboFund.FormattingEnabled = true;
-            this.cboFund.Location = new System.Drawing.Point(72, 196);
-            this.cboFund.Name = "cboFund";
-            this.cboFund.Size = new System.Drawing.Size(1000, 21);
-            this.cboFund.TabIndex = 47;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 113);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "Function";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 204);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
-            this.label7.TabIndex = 48;
-            this.label7.Text = "Fund";
-            // 
-            // cboFunction
-            // 
-            this.cboFunction.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboFunction.DropDownWidth = 1000;
-            this.cboFunction.FormattingEnabled = true;
-            this.cboFunction.Location = new System.Drawing.Point(72, 105);
-            this.cboFunction.Name = "cboFunction";
-            this.cboFunction.Size = new System.Drawing.Size(1000, 21);
-            this.cboFunction.TabIndex = 41;
-            // 
-            // mSCOA_VaultDataSet
-            // 
-            this.mSCOA_VaultDataSet.DataSetName = "mSCOA_VaultDataSet";
-            this.mSCOA_VaultDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // consVaultBindingSource
-            // 
-            this.consVaultBindingSource.DataMember = "Cons_Vault";
-            this.consVaultBindingSource.DataSource = this.mSCOA_VaultDataSet;
-            // 
-            // cons_VaultTableAdapter
-            // 
-            this.cons_VaultTableAdapter.ClearBeforeFill = true;
-            // 
-            // consVaultBindingSource1
-            // 
-            this.consVaultBindingSource1.DataMember = "Cons_Vault";
-            this.consVaultBindingSource1.DataSource = this.mSCOA_VaultDataSet;
             // 
             // rATECATDataGridViewTextBoxColumn
             // 
@@ -697,14 +505,53 @@
             this.mSCOA_VaultDataSet1.DataSetName = "mSCOA_VaultDataSet1";
             this.mSCOA_VaultDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // lookupISUVaultBindingSource
+            // rdoLaibilities
             // 
-            this.lookupISUVaultBindingSource.DataMember = "Lookup_ISU_Vault";
-            this.lookupISUVaultBindingSource.DataSource = this.mSCOA_VaultDataSet1;
+            this.rdoLaibilities.AutoSize = true;
+            this.rdoLaibilities.Location = new System.Drawing.Point(281, 18);
+            this.rdoLaibilities.Name = "rdoLaibilities";
+            this.rdoLaibilities.Size = new System.Drawing.Size(67, 17);
+            this.rdoLaibilities.TabIndex = 64;
+            this.rdoLaibilities.Text = "Laibilities";
+            this.rdoLaibilities.UseVisualStyleBackColor = true;
+            this.rdoLaibilities.Visible = false;
+            this.rdoLaibilities.Click += new System.EventHandler(this.rdoItem_Click);
             // 
-            // lookup_ISU_VaultTableAdapter
+            // rdoAssets
             // 
-            this.lookup_ISU_VaultTableAdapter.ClearBeforeFill = true;
+            this.rdoAssets.AutoSize = true;
+            this.rdoAssets.Location = new System.Drawing.Point(219, 19);
+            this.rdoAssets.Name = "rdoAssets";
+            this.rdoAssets.Size = new System.Drawing.Size(56, 17);
+            this.rdoAssets.TabIndex = 63;
+            this.rdoAssets.Text = "Assets";
+            this.rdoAssets.UseVisualStyleBackColor = true;
+            this.rdoAssets.Visible = false;
+            this.rdoAssets.Click += new System.EventHandler(this.rdoItem_Click);
+            // 
+            // rdoExpense
+            // 
+            this.rdoExpense.AutoSize = true;
+            this.rdoExpense.Location = new System.Drawing.Point(147, 18);
+            this.rdoExpense.Name = "rdoExpense";
+            this.rdoExpense.Size = new System.Drawing.Size(66, 17);
+            this.rdoExpense.TabIndex = 62;
+            this.rdoExpense.Text = "Expense";
+            this.rdoExpense.UseVisualStyleBackColor = true;
+            this.rdoExpense.Click += new System.EventHandler(this.rdoItem_Click);
+            // 
+            // rdoItem
+            // 
+            this.rdoItem.AutoSize = true;
+            this.rdoItem.Checked = true;
+            this.rdoItem.Location = new System.Drawing.Point(72, 19);
+            this.rdoItem.Name = "rdoItem";
+            this.rdoItem.Size = new System.Drawing.Size(69, 17);
+            this.rdoItem.TabIndex = 61;
+            this.rdoItem.TabStop = true;
+            this.rdoItem.Text = "Revenue";
+            this.rdoItem.UseVisualStyleBackColor = true;
+            this.rdoItem.Click += new System.EventHandler(this.rdoItem_Click);
             // 
             // pictureBox1
             // 
@@ -715,6 +562,229 @@
             this.pictureBox1.Size = new System.Drawing.Size(182, 87);
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filterStatusLabel,
+            this.showAllLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(730, 3);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(202, 22);
+            this.statusStrip1.TabIndex = 51;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // filterStatusLabel
+            // 
+            this.filterStatusLabel.Name = "filterStatusLabel";
+            this.filterStatusLabel.Size = new System.Drawing.Size(0, 17);
+            this.filterStatusLabel.Visible = false;
+            // 
+            // showAllLabel
+            // 
+            this.showAllLabel.IsLink = true;
+            this.showAllLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.showAllLabel.Name = "showAllLabel";
+            this.showAllLabel.Size = new System.Drawing.Size(53, 17);
+            this.showAllLabel.Text = "Show &All";
+            this.showAllLabel.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(12, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(246, 13);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Hold CTRL key down to select multiple rows in grid";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(359, 265);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 39;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // cboProject
+            // 
+            this.cboProject.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboProject.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboProject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboProject.DropDownWidth = 1000;
+            this.cboProject.FormattingEnabled = true;
+            this.cboProject.Location = new System.Drawing.Point(72, 223);
+            this.cboProject.Name = "cboProject";
+            this.cboProject.Size = new System.Drawing.Size(1000, 21);
+            this.cboProject.TabIndex = 49;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 231);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 13);
+            this.label8.TabIndex = 50;
+            this.label8.Text = "Project";
+            // 
+            // cboCosting
+            // 
+            this.cboCosting.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboCosting.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboCosting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCosting.DropDownWidth = 1000;
+            this.cboCosting.FormattingEnabled = true;
+            this.cboCosting.Location = new System.Drawing.Point(72, 138);
+            this.cboCosting.Name = "cboCosting";
+            this.cboCosting.Size = new System.Drawing.Size(1000, 21);
+            this.cboCosting.TabIndex = 43;
+            this.cboCosting.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Contra";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 146);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Costing";
+            this.label5.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Direct";
+            // 
+            // cboRegion
+            // 
+            this.cboRegion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboRegion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboRegion.DropDownWidth = 1000;
+            this.cboRegion.FormattingEnabled = true;
+            this.cboRegion.Location = new System.Drawing.Point(72, 169);
+            this.cboRegion.Name = "cboRegion";
+            this.cboRegion.Size = new System.Drawing.Size(1000, 21);
+            this.cboRegion.TabIndex = 45;
+            // 
+            // cboDirect
+            // 
+            this.cboDirect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboDirect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboDirect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDirect.DropDownWidth = 1000;
+            this.cboDirect.FormattingEnabled = true;
+            this.cboDirect.Location = new System.Drawing.Point(72, 42);
+            this.cboDirect.Name = "cboDirect";
+            this.cboDirect.Size = new System.Drawing.Size(1000, 21);
+            this.cboDirect.TabIndex = 36;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 177);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 13);
+            this.label6.TabIndex = 46;
+            this.label6.Text = "Region";
+            // 
+            // cboContra
+            // 
+            this.cboContra.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboContra.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboContra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboContra.DropDownWidth = 1000;
+            this.cboContra.FormattingEnabled = true;
+            this.cboContra.Location = new System.Drawing.Point(72, 72);
+            this.cboContra.Name = "cboContra";
+            this.cboContra.Size = new System.Drawing.Size(1000, 21);
+            this.cboContra.TabIndex = 35;
+            // 
+            // cboFund
+            // 
+            this.cboFund.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboFund.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboFund.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFund.DropDownWidth = 1000;
+            this.cboFund.FormattingEnabled = true;
+            this.cboFund.Location = new System.Drawing.Point(72, 196);
+            this.cboFund.Name = "cboFund";
+            this.cboFund.Size = new System.Drawing.Size(1000, 21);
+            this.cboFund.TabIndex = 47;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 113);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "Function";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 204);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 48;
+            this.label7.Text = "Fund";
+            // 
+            // cboFunction
+            // 
+            this.cboFunction.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboFunction.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboFunction.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFunction.DropDownWidth = 1000;
+            this.cboFunction.FormattingEnabled = true;
+            this.cboFunction.Location = new System.Drawing.Point(72, 105);
+            this.cboFunction.Name = "cboFunction";
+            this.cboFunction.Size = new System.Drawing.Size(1000, 21);
+            this.cboFunction.TabIndex = 41;
+            // 
+            // mSCOA_VaultDataSet
+            // 
+            this.mSCOA_VaultDataSet.DataSetName = "mSCOA_VaultDataSet";
+            this.mSCOA_VaultDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // consVaultBindingSource
+            // 
+            this.consVaultBindingSource.DataMember = "Cons_Vault";
+            this.consVaultBindingSource.DataSource = this.mSCOA_VaultDataSet;
+            // 
+            // cons_VaultTableAdapter
+            // 
+            this.cons_VaultTableAdapter.ClearBeforeFill = true;
+            // 
+            // consVaultBindingSource1
+            // 
+            this.consVaultBindingSource1.DataMember = "Cons_Vault";
+            this.consVaultBindingSource1.DataSource = this.mSCOA_VaultDataSet;
+            // 
+            // lookupISUVaultBindingSource
+            // 
+            this.lookupISUVaultBindingSource.DataMember = "Lookup_ISU_Vault";
+            this.lookupISUVaultBindingSource.DataSource = this.mSCOA_VaultDataSet1;
+            // 
+            // lookup_ISU_VaultTableAdapter
+            // 
+            this.lookup_ISU_VaultTableAdapter.ClearBeforeFill = true;
             // 
             // Lookup_HCM_Vault
             // 
@@ -731,15 +801,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -812,5 +882,9 @@
         private System.Windows.Forms.ToolStripStatusLabel filterStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel showAllLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RadioButton rdoLaibilities;
+        private System.Windows.Forms.RadioButton rdoAssets;
+        private System.Windows.Forms.RadioButton rdoExpense;
+        private System.Windows.Forms.RadioButton rdoItem;
     }
 }

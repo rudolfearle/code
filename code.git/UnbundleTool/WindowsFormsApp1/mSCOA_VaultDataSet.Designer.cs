@@ -9492,7 +9492,7 @@ namespace WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters {
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = " SELECT distinct Account_Number_LongCode, GUID, Posting_Allowed, Account_Name FRO" +
                 "M [mSCOA_Vault].[dbo].[Cons_Vault]\r\n  where  substring(Account_Number_LongCode,1" +
-                ",2) in (\'IA\') and Posting_Allowed = \'Y\'\r\n   order by Account_Name";
+                ",2) in (\'IA\',\'IL\') and Posting_Allowed = \'Y\'\r\n   order by Account_Name";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
@@ -9504,8 +9504,10 @@ namespace WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters {
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT distinct  Account_Number_LongCode, GUID, Posting_Allowed, Account_Name FRO" +
                 "M [mSCOA_Vault].[dbo].[Cons_Vault]\r\n  where  substring(Account_Number_LongCode,1" +
-                ",2) in (\'IR\') and Posting_Allowed = \'Y\'\r\n  order by Account_Name";
+                ",2) in (\'\' + @SCOATYPE + \' \') and Posting_Allowed = \'Y\'\r\n  order by Account_Name" +
+                "";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SCOATYPE", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = " SELECT distinct Account_Number_LongCode, GUID, Posting_Allowed, Account_Name FRO" +
@@ -9608,8 +9610,14 @@ namespace WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByDirect(mSCOA_VaultDataSet.Cons_VaultDataTable dataTable) {
+        public virtual int FillByDirect(mSCOA_VaultDataSet.Cons_VaultDataTable dataTable, string SCOATYPE) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((SCOATYPE == null)) {
+                throw new global::System.ArgumentNullException("SCOATYPE");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(SCOATYPE));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -9621,8 +9629,14 @@ namespace WindowsFormsApp1.mSCOA_VaultDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual mSCOA_VaultDataSet.Cons_VaultDataTable GetDataByDirect() {
+        public virtual mSCOA_VaultDataSet.Cons_VaultDataTable GetDataByDirect(string SCOATYPE) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((SCOATYPE == null)) {
+                throw new global::System.ArgumentNullException("SCOATYPE");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(SCOATYPE));
+            }
             mSCOA_VaultDataSet.Cons_VaultDataTable dataTable = new mSCOA_VaultDataSet.Cons_VaultDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

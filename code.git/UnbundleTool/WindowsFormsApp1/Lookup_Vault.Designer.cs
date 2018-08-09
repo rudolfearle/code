@@ -79,11 +79,15 @@
             this.recommendedReceiptGuidDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
             this.recommendedReceiptDescriptionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
             this.idISUVaultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rdoLaibilities = new System.Windows.Forms.RadioButton();
+            this.rdoAssets = new System.Windows.Forms.RadioButton();
+            this.rdoExpense = new System.Windows.Forms.RadioButton();
+            this.rdoItem = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cboDirect = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).BeginInit();
@@ -177,6 +181,10 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.rdoLaibilities);
+            this.splitContainer1.Panel2.Controls.Add(this.rdoAssets);
+            this.splitContainer1.Panel2.Controls.Add(this.rdoExpense);
+            this.splitContainer1.Panel2.Controls.Add(this.rdoItem);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel2.Controls.Add(this.btnUpdate);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
@@ -527,41 +535,51 @@
             this.idISUVaultDataGridViewTextBoxColumn.ReadOnly = true;
             this.idISUVaultDataGridViewTextBoxColumn.Visible = false;
             // 
-            // btnUpdate
+            // rdoLaibilities
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(366, 81);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 27;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.rdoLaibilities.AutoSize = true;
+            this.rdoLaibilities.Location = new System.Drawing.Point(278, 29);
+            this.rdoLaibilities.Name = "rdoLaibilities";
+            this.rdoLaibilities.Size = new System.Drawing.Size(67, 17);
+            this.rdoLaibilities.TabIndex = 64;
+            this.rdoLaibilities.Text = "Laibilities";
+            this.rdoLaibilities.UseVisualStyleBackColor = true;
+            this.rdoLaibilities.Click += new System.EventHandler(this.rdoItem_Click);
             // 
-            // label3
+            // rdoAssets
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(12, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(246, 13);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Hold CTRL key down to select multiple rows in grid";
+            this.rdoAssets.AutoSize = true;
+            this.rdoAssets.Location = new System.Drawing.Point(216, 30);
+            this.rdoAssets.Name = "rdoAssets";
+            this.rdoAssets.Size = new System.Drawing.Size(56, 17);
+            this.rdoAssets.TabIndex = 63;
+            this.rdoAssets.Text = "Assets";
+            this.rdoAssets.UseVisualStyleBackColor = true;
+            this.rdoAssets.Click += new System.EventHandler(this.rdoItem_Click);
             // 
-            // label1
+            // rdoExpense
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Direct";
+            this.rdoExpense.AutoSize = true;
+            this.rdoExpense.Location = new System.Drawing.Point(144, 29);
+            this.rdoExpense.Name = "rdoExpense";
+            this.rdoExpense.Size = new System.Drawing.Size(66, 17);
+            this.rdoExpense.TabIndex = 62;
+            this.rdoExpense.Text = "Expense";
+            this.rdoExpense.UseVisualStyleBackColor = true;
+            this.rdoExpense.Click += new System.EventHandler(this.rdoItem_Click);
             // 
-            // cboDirect
+            // rdoItem
             // 
-            this.cboDirect.FormattingEnabled = true;
-            this.cboDirect.Location = new System.Drawing.Point(74, 40);
-            this.cboDirect.Name = "cboDirect";
-            this.cboDirect.Size = new System.Drawing.Size(1000, 21);
-            this.cboDirect.TabIndex = 25;
+            this.rdoItem.AutoSize = true;
+            this.rdoItem.Checked = true;
+            this.rdoItem.Location = new System.Drawing.Point(69, 30);
+            this.rdoItem.Name = "rdoItem";
+            this.rdoItem.Size = new System.Drawing.Size(69, 17);
+            this.rdoItem.TabIndex = 61;
+            this.rdoItem.TabStop = true;
+            this.rdoItem.Text = "Revenue";
+            this.rdoItem.UseVisualStyleBackColor = true;
+            this.rdoItem.Click += new System.EventHandler(this.rdoItem_Click);
             // 
             // pictureBox1
             // 
@@ -572,6 +590,45 @@
             this.pictureBox1.Size = new System.Drawing.Size(182, 87);
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(366, 100);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 27;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(246, 13);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Hold CTRL key down to select multiple rows in grid";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Direct";
+            // 
+            // cboDirect
+            // 
+            this.cboDirect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboDirect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboDirect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDirect.FormattingEnabled = true;
+            this.cboDirect.Location = new System.Drawing.Point(74, 59);
+            this.cboDirect.Name = "cboDirect";
+            this.cboDirect.Size = new System.Drawing.Size(1000, 21);
+            this.cboDirect.TabIndex = 25;
             // 
             // Lookup_Vault
             // 
@@ -658,5 +715,9 @@
         private DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn recommendedReceiptDescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idISUVaultDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RadioButton rdoLaibilities;
+        private System.Windows.Forms.RadioButton rdoAssets;
+        private System.Windows.Forms.RadioButton rdoExpense;
+        private System.Windows.Forms.RadioButton rdoItem;
     }
 }
