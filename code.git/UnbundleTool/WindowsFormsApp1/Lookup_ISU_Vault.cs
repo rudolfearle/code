@@ -333,6 +333,7 @@ namespace WindowsFormsApp1
                         string sRegionGUID = cboRegion.SelectedValue.ToString();
 
                         lookup_ISU_VaultTableAdapter.UpdateQuery(sDirectGUID, sContraGUID, sFunctionGUID,sProjectGUID,sFundGUID,sRegionGUID, sCostingGUID, nID);
+                        
                     }
                 }
                 LoadData();

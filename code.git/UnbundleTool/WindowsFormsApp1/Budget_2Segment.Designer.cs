@@ -602,6 +602,7 @@
             this.btnUpdate.TabIndex = 39;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // cboProject
             // 
