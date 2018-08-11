@@ -262,7 +262,7 @@ namespace ReportTool.GeneratedReport
                 using (GetC4DataTableAdapter ta = new GetC4DataTableAdapter())
                 {
                     mSCOA_VaultDataSet.GetC4DataDataTable tblC4 = new mSCOA_VaultDataSet.GetC4DataDataTable();
-                    ta.Fill(tblC3C);
+                    ta.Fill(tblC4);
                     tblResult = (DataTable)tblC4;
                 }
 
@@ -332,7 +332,13 @@ namespace ReportTool.GeneratedReport
 
 
                 //C5
-                tblResult = DBCall.GetC5Data(inputMonth);
+                using (GetC5DataTableAdapter ta = new GetC5DataTableAdapter())
+                {
+                    mSCOA_VaultDataSet.GetC5DataDataTable tblC5 = new mSCOA_VaultDataSet.GetC5DataDataTable();
+                    ta.Fill(tblC5);
+                    tblResult = (DataTable)tblC5;
+                }
+
                 rowCount = 0;
                 if (tblResult.Rows.Count > 0)
                 {
