@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReportTool.GeneratedReport;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,18 @@ namespace ReportTool.ReportTypes
 {
     public partial class GenerateCSchedule : Form
     {
+        BackgroundWorker workerLoad = new BackgroundWorker();
+        string sReturnFile = string.Empty;
+
+        private string _Month = string.Empty;
+
         public GenerateCSchedule()
         {
             InitializeComponent();
             LoadMonthList();
+            lblSavedFile.Text = string.Empty;
+            workerLoad.DoWork += workerLoad_DoWork;
+            workerLoad.RunWorkerCompleted += workerLoad_RunWorkerCompleted;
         }
 
         private void LoadMonthList()
@@ -44,18 +53,29 @@ namespace ReportTool.ReportTypes
 
         }
 
-
-        private void btnGenerate_Click(object sender, EventArgs e)
+        void workerLoad_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            lblSavedFile.Text = sReturnFile;
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void btnGenerate_Click_1(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            workerLoad.RunWorkerAsync();
 
         }
 
-        private void btnExport_Click(object sender, EventArgs e)
+        void workerLoad_DoWork(object sender, DoWorkEventArgs e)
         {
+            _Month = cboMonth.SelectedValue.ToString();
+            string _templatePath = AppDomain.CurrentDomain.BaseDirectory + "Template";
 
+            string sFile = _templatePath + "\\" + System.Configuration.ConfigurationManager.AppSettings.Get("C1Template").ToString();
+            using (CSchedule objSheet = new CSchedule(sFile, _Month,txtMuniciplaIdentifier.Text.ToString()))
+            {
+                sReturnFile = objSheet.RunPopulation();
+            }
         }
-
-
-
     }
 }
