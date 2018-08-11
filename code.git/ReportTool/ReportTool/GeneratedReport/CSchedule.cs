@@ -297,38 +297,38 @@ namespace ReportTool.GeneratedReport
                 }
                 UpdateSheet();
 
+                // may not be required!
+                //tblResult = DBCall.GetC4FromSA1Data(inputMonth);
+                //if (tblResult.Rows.Count > 0)
+                //{
+                //    xlSheet = xlControl.Document.Worksheets["C4-FinPerf RE"];
+                //    //xlWorkSheet.Activate();
+                //    xlSheet.Workbook.BeginUpdate();
+                //    xlRange = xlSheet.GetDataRange();
+                //    rowCount = xlRange.RowCount;
+                //}
+                //for (int i = 0; i < tblResult.Rows.Count; i++)
+                //{
+                //    row = tblResult.Rows[i];
+                //    if (!string.IsNullOrEmpty(row["C4"].ToString()))
+                //    {
+                //        index = row["C4"].ToString() + "|L";
 
-                tblResult = DBCall.GetC4FromSA1Data(inputMonth);
-                if (tblResult.Rows.Count > 0)
-                {
-                    xlSheet = xlControl.Document.Worksheets["C4-FinPerf RE"];
-                    //xlWorkSheet.Activate();
-                    xlSheet.Workbook.BeginUpdate();
-                    xlRange = xlSheet.GetDataRange();
-                    rowCount = xlRange.RowCount;
-                }
-                for (int i = 0; i < tblResult.Rows.Count; i++)
-                {
-                    row = tblResult.Rows[i];
-                    if (!string.IsNullOrEmpty(row["C4"].ToString()))
-                    {
-                        index = row["C4"].ToString() + "|L";
+                //        FieldVal = new string[6];
 
-                        FieldVal = new string[6];
-
-                        FieldVal[0] = row["AuditOutcome_1"].ToString() + "|C";
-                        FieldVal[1] = row["Original Budget"].ToString() + "|D";
-                        FieldVal[2] = row["Adjusted Budget"].ToString() + "|E";
-                        FieldVal[3] = row[inputMonth].ToString() + "|F";
-                        FieldVal[4] = CalcYTD(row) + "|G";
-                        FieldVal[5] = GetYTDValue(row["YearTDBudget"].ToString(), inputMonth) + "|H";
-                        //FieldVal[6] = row["Full Year Forecast"].ToString() + "|K";
-                        FindExcelField("C4-FinPerf RE", index, FieldVal, rowCount);
-                    }
+                //        FieldVal[0] = row["AuditOutcome_1"].ToString() + "|C";
+                //        FieldVal[1] = row["Original Budget"].ToString() + "|D";
+                //        FieldVal[2] = row["Adjusted Budget"].ToString() + "|E";
+                //        FieldVal[3] = row[inputMonth].ToString() + "|F";
+                //        FieldVal[4] = CalcYTD(row) + "|G";
+                //        FieldVal[5] = GetYTDValue(row["YearTDBudget"].ToString(), inputMonth) + "|H";
+                //        //FieldVal[6] = row["Full Year Forecast"].ToString() + "|K";
+                //        FindExcelField("C4-FinPerf RE", index, FieldVal, rowCount);
+                //    }
 
 
-                }
-                UpdateSheet();
+                //}
+                //UpdateSheet();
 
 
                 //C5
