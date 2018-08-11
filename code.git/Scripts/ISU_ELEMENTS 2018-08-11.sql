@@ -100,12 +100,39 @@ SELECT [RYEAR] as [FINYEAR]
       ,[RFAREA_GUID]
 	
 
+
+Update dbo.Lookup_Vault 
+SET       dbo.Lookup_Vault.G_L_Account = dbo.Lookup_Vault_Budget_2Segment_Combo.New_GL
+FROM            dbo.Lookup_Vault INNER JOIN
+                         dbo.Lookup_Vault_Budget_2Segment_Combo ON dbo.Lookup_Vault.Short_Code = dbo.Lookup_Vault_Budget_2Segment_Combo.Short_Code
+ Where dbo.Lookup_Vault.G_L_Account is null
+
+
+	Update [mSCOA_Vault].[dbo].[Stageing_SPL]
+	SET        dbo.Stageing_SPL.mSCOA_Item_Guid = dbo.Cons_Vault.GUID
+FROM            dbo.Stageing_SPL INNER JOIN
+                         dbo.Cons_Vault ON dbo.Stageing_SPL.[Old Account] = dbo.Cons_Vault.SAP_Code
+
+						 
+	Update [mSCOA_Vault].[dbo].[Stageing_SPL]
+	SET        dbo.Stageing_SPL.mSCOA_Item_Guid =  dbo.Lookup_Vault.mSCOA_GUID
+FROM            dbo.Stageing_SPL INNER JOIN
+                         dbo.Lookup_Vault ON dbo.Stageing_SPL.[Old Account] = dbo.Lookup_Vault.[G_L_Account]
+
+	Update [mSCOA_Vault].[dbo].[Stageing_SPL]
+	SET        dbo.Stageing_SPL.mSCOA_Item_Guid =  dbo.Lookup_Vault.mSCOA_GUID
+FROM            dbo.Stageing_SPL INNER JOIN
+                         dbo.Lookup_Vault ON dbo.Stageing_SPL.mSCOA_SCode_Item = dbo.Lookup_Vault.Short_Code
+
+
+
 -----[get recon key to be removed]
 drop table Temp_ReconKeyDelete
+
 SELECT [Recon_Key]
       ,[DbtCnt_GL]
       ,[Revenue_GL]
-      ,[FiCA_Amount] AS Amount
+	  ,[FiCA_Amount] AS Amount
   into Temp_ReconKeyDelete
   FROM [mSCOA_Vault].[dbo].[FACT_ISU]
 where Recon_Key in 
@@ -405,6 +432,10 @@ Group BY  [RECONKEY],[Old Account]
 			,[mSCOA_SCode_Costing]
 			,[mSCOA_Costing_Guid] 
 
+			UPDATE Reporting SET 
+				[M01] = 0
+
+
 			 UPDATE R SET 
 				[M01] = S.AMOUNT
 				, mSCOA_Project_Guid  = S.mSCOA_Project_Guid
@@ -419,7 +450,7 @@ Group BY  [RECONKEY],[Old Account]
 				-- SELECT COUNT(*)
 			 FROM  [mSCOA_Vault].[dbo].[Stageing_SPL_G] S
 
-			 INNER JOIN dbo.Reporting R
+			 Left  JOIN dbo.Reporting R
 			 ON S.[MSC_Code] = R.MSC_Code
 			 AND S.[Old Account] = R.GL_Code
 			 WHERE FINYEAR = 2019
@@ -449,7 +480,7 @@ Group BY  [RECONKEY],[Old Account]
 				  ,S.[Old Account]
 				  FROM
 				  [mSCOA_Vault].[dbo].[Stageing_SPL_G] S
-				 LEFT JOIN dbo.Reporting R
+				Right JOIN dbo.Reporting R
 				 ON S.[MSC_Code] = R.MSC_Code
 				 AND S.[Old Account] = R.GL_Code
 				 WHERE  R.MSC_Code IS NULL
