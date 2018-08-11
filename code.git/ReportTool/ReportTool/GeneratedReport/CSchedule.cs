@@ -262,7 +262,7 @@ namespace ReportTool.GeneratedReport
                 using (GetC4DataTableAdapter ta = new GetC4DataTableAdapter())
                 {
                     mSCOA_VaultDataSet.GetC4DataDataTable tblC4 = new mSCOA_VaultDataSet.GetC4DataDataTable();
-                    ta.Fill(tblC3C);
+                    ta.Fill(tblC4);
                     tblResult = (DataTable)tblC4;
                 }
 
@@ -297,42 +297,48 @@ namespace ReportTool.GeneratedReport
                 }
                 UpdateSheet();
 
+                // may not be required!
+                //tblResult = DBCall.GetC4FromSA1Data(inputMonth);
+                //if (tblResult.Rows.Count > 0)
+                //{
+                //    xlSheet = xlControl.Document.Worksheets["C4-FinPerf RE"];
+                //    //xlWorkSheet.Activate();
+                //    xlSheet.Workbook.BeginUpdate();
+                //    xlRange = xlSheet.GetDataRange();
+                //    rowCount = xlRange.RowCount;
+                //}
+                //for (int i = 0; i < tblResult.Rows.Count; i++)
+                //{
+                //    row = tblResult.Rows[i];
+                //    if (!string.IsNullOrEmpty(row["C4"].ToString()))
+                //    {
+                //        index = row["C4"].ToString() + "|L";
 
-                tblResult = DBCall.GetC4FromSA1Data(inputMonth);
-                if (tblResult.Rows.Count > 0)
-                {
-                    xlSheet = xlControl.Document.Worksheets["C4-FinPerf RE"];
-                    //xlWorkSheet.Activate();
-                    xlSheet.Workbook.BeginUpdate();
-                    xlRange = xlSheet.GetDataRange();
-                    rowCount = xlRange.RowCount;
-                }
-                for (int i = 0; i < tblResult.Rows.Count; i++)
-                {
-                    row = tblResult.Rows[i];
-                    if (!string.IsNullOrEmpty(row["C4"].ToString()))
-                    {
-                        index = row["C4"].ToString() + "|L";
+                //        FieldVal = new string[6];
 
-                        FieldVal = new string[6];
-
-                        FieldVal[0] = row["AuditOutcome_1"].ToString() + "|C";
-                        FieldVal[1] = row["Original Budget"].ToString() + "|D";
-                        FieldVal[2] = row["Adjusted Budget"].ToString() + "|E";
-                        FieldVal[3] = row[inputMonth].ToString() + "|F";
-                        FieldVal[4] = CalcYTD(row) + "|G";
-                        FieldVal[5] = GetYTDValue(row["YearTDBudget"].ToString(), inputMonth) + "|H";
-                        //FieldVal[6] = row["Full Year Forecast"].ToString() + "|K";
-                        FindExcelField("C4-FinPerf RE", index, FieldVal, rowCount);
-                    }
+                //        FieldVal[0] = row["AuditOutcome_1"].ToString() + "|C";
+                //        FieldVal[1] = row["Original Budget"].ToString() + "|D";
+                //        FieldVal[2] = row["Adjusted Budget"].ToString() + "|E";
+                //        FieldVal[3] = row[inputMonth].ToString() + "|F";
+                //        FieldVal[4] = CalcYTD(row) + "|G";
+                //        FieldVal[5] = GetYTDValue(row["YearTDBudget"].ToString(), inputMonth) + "|H";
+                //        //FieldVal[6] = row["Full Year Forecast"].ToString() + "|K";
+                //        FindExcelField("C4-FinPerf RE", index, FieldVal, rowCount);
+                //    }
 
 
-                }
-                UpdateSheet();
+                //}
+                //UpdateSheet();
 
 
                 //C5
-                tblResult = DBCall.GetC5Data(inputMonth);
+                using (GetC5DataTableAdapter ta = new GetC5DataTableAdapter())
+                {
+                    mSCOA_VaultDataSet.GetC5DataDataTable tblC5 = new mSCOA_VaultDataSet.GetC5DataDataTable();
+                    ta.Fill(tblC5);
+                    tblResult = (DataTable)tblC5;
+                }
+
                 rowCount = 0;
                 if (tblResult.Rows.Count > 0)
                 {
