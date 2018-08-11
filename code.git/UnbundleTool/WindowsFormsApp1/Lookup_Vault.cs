@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
             {
                 //gridControlIDPMaster.Visible = false;
                 // edtLoadingPanel.Show();
-
+                Cursor.Current = Cursors.WaitCursor;
                 workerLoad.RunWorkerAsync();
                 //gridControlIDPMaster.Enabled = false;
                 // marqueeProgressBarControl1.Properties.Stopped = false;
@@ -98,7 +98,7 @@ namespace WindowsFormsApp1
                 LoadOnce = true;
             }
             dataGridView1.Enabled = true;
-
+            Cursor.Current = Cursors.Default;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -178,7 +178,8 @@ namespace WindowsFormsApp1
                     // do something with the row..
                     if (row.Selected == true)
                     {
-                        int nID = Convert.ToInt32(row.Cells["Id_Lookup_Vault_Cashbook"].Value);
+                        //int nID = Convert.ToInt32(row.Cells["Id_Lookup_Vault_Cashbook"].Value);
+                        int nID = Convert.ToInt32(row.Cells[row.Cells.Count - 1].Value);
                         string sDirectGUID = cboDirect.SelectedValue.ToString();
 
                         Lookup_Vault_CashbookTableAdapter Ta = new Lookup_Vault_CashbookTableAdapter();
