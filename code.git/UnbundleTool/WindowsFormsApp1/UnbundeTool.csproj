@@ -90,6 +90,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>mSCOA_VaultDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="mSCOA_VaultDataSet1.cs">
+      <DependentUpon>mSCOA_VaultDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="mSCOA_VaultDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
