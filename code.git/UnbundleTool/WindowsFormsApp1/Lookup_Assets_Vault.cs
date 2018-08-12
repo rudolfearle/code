@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters;
 
 namespace WindowsFormsApp1
 {
@@ -82,7 +83,7 @@ namespace WindowsFormsApp1
             RefreshGrid();
             if (LoadOnce == false)
             {
-                LoadContra();
+              //  LoadContra();
                 LoadDirect();
                 
                 LoadFunction();
@@ -101,7 +102,7 @@ namespace WindowsFormsApp1
             {
 
                 General.Utilities.LoadSCOACombobox(cboDirect, objTableDirect);
-                General.Utilities.LoadSCOACombobox(cboContra, objTableContra);
+                //General.Utilities.LoadSCOACombobox(cboContra, objTableContra);
                 General.Utilities.LoadSCOACombobox(cboFunction, objTableFunction);
 
                 General.Utilities.LoadSCOACombobox(cboCosting, objTableCosting);
@@ -127,12 +128,15 @@ namespace WindowsFormsApp1
         {
             try
             {
-                this.lookup_ISU_VaultTableAdapter.Fill(this.mSCOA_VaultDataSet1.Lookup_ISU_Vault);
-                BeginInvoke((MethodInvoker)delegate
+                using (Lookup_Vault_ISU_RevenueTableAdapter ta = new Lookup_Vault_ISU_RevenueTableAdapter())
                 {
-                    dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_ISU_Vault;
-                    dataGridView1.Refresh();
-                });
+                    ta.Fill(this.mSCOA_VaultDataSet1.Lookup_Vault_ISU_Revenue);
+                    BeginInvoke((MethodInvoker)delegate
+                    {
+                        dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_Vault_ISU_Revenue;
+                        dataGridView1.Refresh();
+                    });
+                }
             }
             catch (Exception ex)
             {
@@ -313,9 +317,17 @@ namespace WindowsFormsApp1
                         int nID = Convert.ToInt32(row.Cells[row.Cells.Count - 1].Value);
                         //int nID = Convert.ToInt32(row.Cells["Id_ISU_Vault"].Value);
                         string sDirectGUID = cboDirect.SelectedValue.ToString();
-                        string sContraGUID = cboContra.SelectedValue.ToString();
+                       // string sContraGUID = cboContra.SelectedValue.ToString();
                         string sFunctionGUID = cboFunction.SelectedValue.ToString();
-                        //lookup_ISU_VaultTableAdapter.UpdateQuery(sDirectGUID, sContraGUID, sFunctionGUID, nID);
+                        
+                        string sCostingGUID = cboCosting.SelectedValue.ToString();
+                        string sFundGUID = cboFund.SelectedValue.ToString();
+                        string sProjectGUID = cboProject.SelectedValue.ToString();
+                        string sRegionGUID = cboRegion.SelectedValue.ToString();
+                        using (Lookup_Vault_ISU_RevenueTableAdapter ta = new Lookup_Vault_ISU_RevenueTableAdapter())
+                        {
+                            ta.UpdateQuery(sDirectGUID, sFunctionGUID,sProjectGUID ,sFundGUID,sRegionGUID ,sCostingGUID, nID);
+                        }
                     }
                 }
                 LoadData();

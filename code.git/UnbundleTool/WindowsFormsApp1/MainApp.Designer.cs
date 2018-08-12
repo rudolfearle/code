@@ -119,13 +119,12 @@
             // 
             // toolStripButton4
             // 
-            this.toolStripButton4.Enabled = false;
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(105, 36);
+            this.toolStripButton4.Size = new System.Drawing.Size(137, 36);
             this.toolStripButton4.Tag = "4";
-            this.toolStripButton4.Text = "Assets Vault";
+            this.toolStripButton4.Text = "ISU Revenue Vault";
             // 
             // pictureBox1
             // 
