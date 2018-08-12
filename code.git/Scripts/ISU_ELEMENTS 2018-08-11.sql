@@ -36,7 +36,8 @@ FIELDTERMINATOR = '|',
  )
 GO
 
-
+--Select sum(FiCa_Amount) from FACT_ISU --227192854.75
+--Select * from FACT_ISU  WHERE [Recon_Key] like '%+%' AND ISNUMERIC([Recon_Key]) = 1
 UPDATE  [dbo].[FACT_ISU] SET [Recon_Key] = CAST(CAST(CAST([Recon_Key] AS FLOAT) AS NUMERIC(18,0)) AS VARCHAR(100))  WHERE [Recon_Key] like '%+%' AND ISNUMERIC([Recon_Key]) = 1
  
 
@@ -98,8 +99,10 @@ SELECT [RYEAR] as [FINYEAR]
 	  ,[AWORG]
 	  ,[RFAREA]
       ,[RFAREA_GUID]
-	
 
+-- Select * from [mSCOA_Vault].[dbo].[Stageing_SPL]
+--Select sum(Amount) from [mSCOA_Vault].[dbo].[Stageing_SPL] ---0.04
+--Select Sum([TSL])  FROM [mSCOA_Vault].[dbo].[Fact_SPL] --- -0.04
 
 Update dbo.Lookup_Vault 
 SET       dbo.Lookup_Vault.G_L_Account = dbo.Lookup_Vault_Budget_2Segment_Combo.New_GL
@@ -128,7 +131,10 @@ FROM            dbo.Stageing_SPL INNER JOIN
 
 -----[get recon key to be removed]
 drop table Temp_ReconKeyDelete
-
+--Select * from Temp_ReconKeyDelete
+--Select sum(FiCa_Amount) from FACT_ISU       -- 227 192 854.75
+--Select Sum(Amount) from Temp_ReconKeyDelete -- 239 915 928.78 
+--Select * from  [mSCOA_Vault].[dbo].[FACT_ISU] where Recon_Key not in (Select Recon_Key from Temp_ReconKeyDelete)
 SELECT [Recon_Key]
       ,[DbtCnt_GL]
       ,[Revenue_GL]
@@ -136,8 +142,8 @@ SELECT [Recon_Key]
   into Temp_ReconKeyDelete
   FROM [mSCOA_Vault].[dbo].[FACT_ISU]
 where Recon_Key in 
-	(SELECT [RECONKEY]--,[FINYEAR],[FINMONTH],[Old Account] 
-		FROM [mSCOA_Vault].[dbo].[Stageing_SPL] where [RECONKEY] is not null)
+	(SELECT distinct [RECONKEY]--,[FINYEAR],[FINMONTH],[Old Account] 
+		FROM [mSCOA_Vault].[dbo].[Stageing_SPL] where [RECONKEY] is not null) --326366 rows - distinct rows: 88976
 go
 
 -----[delete records in staging with selected reconkey from temp table]

@@ -10,3 +10,15 @@ C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.csproj.GenerateR
 C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.csproj.CoreCompileInputs.cache
 C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.exe
 C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.pdb
+C:\EOH\code\code.git\ReportTool\ReportTool\bin\Debug\DevExpress.Data.v17.1.dll
+C:\EOH\code\code.git\ReportTool\ReportTool\bin\Debug\DevExpress.Office.v17.1.Core.dll
+C:\EOH\code\code.git\ReportTool\ReportTool\bin\Debug\DevExpress.Spreadsheet.v17.1.Core.dll
+C:\EOH\code\code.git\ReportTool\ReportTool\bin\Debug\DevExpress.XtraSpreadsheet.v17.1.dll
+C:\EOH\code\code.git\ReportTool\ReportTool\bin\Debug\Newtonsoft.Json.dll
+C:\EOH\code\code.git\ReportTool\ReportTool\bin\Debug\DevExpress.Data.v17.1.xml
+C:\EOH\code\code.git\ReportTool\ReportTool\bin\Debug\DevExpress.Office.v17.1.Core.xml
+C:\EOH\code\code.git\ReportTool\ReportTool\bin\Debug\DevExpress.Spreadsheet.v17.1.Core.xml
+C:\EOH\code\code.git\ReportTool\ReportTool\bin\Debug\DevExpress.XtraSpreadsheet.v17.1.xml
+C:\EOH\code\code.git\ReportTool\ReportTool\bin\Debug\Newtonsoft.Json.xml
+C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.ReportTypes.GenarateDemarcation.resources
+C:\EOH\code\code.git\ReportTool\ReportTool\obj\Debug\ReportTool.csproj.CopyComplete

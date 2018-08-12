@@ -373,7 +373,12 @@ namespace ReportTool.GeneratedReport
 
 
                 //C5C
-                tblResult = DBCall.GetC5CData(inputMonth);
+                using (GetC5CDataTableAdapter ta = new GetC5CDataTableAdapter())
+                {
+                    mSCOA_VaultDataSet.GetC5CDataDataTable tblC5C = new mSCOA_VaultDataSet.GetC5CDataDataTable();
+                    ta.Fill(tblC5C);
+                    tblResult = (DataTable)tblC5C;
+                }
                 if (tblResult.Rows.Count > 0)
                 {
                     xlSheet = xlControl.Document.Worksheets["C5C"];
@@ -401,7 +406,12 @@ namespace ReportTool.GeneratedReport
                 UpdateSheet();
 
                 //C6-FinPos
-                tblResult = DBCall.GetC6Data(inputMonth);
+                using (GetC6DataTableAdapter ta = new GetC6DataTableAdapter())
+                {
+                    mSCOA_VaultDataSet.GetC6DataDataTable tblC6 = new mSCOA_VaultDataSet.GetC6DataDataTable();
+                    ta.Fill(tblC6);
+                    tblResult = (DataTable)tblC6;
+                }
                 if (tblResult.Rows.Count > 0)
                 {
                     xlSheet = xlControl.Document.Worksheets["C6-FinPos"];
@@ -432,7 +442,12 @@ namespace ReportTool.GeneratedReport
                 UpdateSheet();
 
                 //C7-CFlow
-                tblResult = DBCall.GetC7Data(inputMonth);
+                using (GetC7DataTableAdapter ta = new GetC7DataTableAdapter())
+                {
+                    mSCOA_VaultDataSet.GetC7DataDataTable tblC7 = new mSCOA_VaultDataSet.GetC7DataDataTable();
+                    ta.Fill(tblC7);
+                    tblResult = (DataTable)tblC7;
+                }
                 if (tblResult.Rows.Count > 0)
                 {
                     xlSheet = xlControl.Document.Worksheets["C7-CFlow"];
@@ -463,46 +478,15 @@ namespace ReportTool.GeneratedReport
                 UpdateSheet();
 
                 //SC3
-                tblResult = DBCall.GetSC3Data(inputMonth, 2018);
+                using (gen_ADStringTableAdapter  ta = new gen_ADStringTableAdapter())
+                {
+                    mSCOA_VaultDataSet.gen_ADStringDataTable  tblSC3 = new mSCOA_VaultDataSet.gen_ADStringDataTable();
+                    ta.Fill(tblSC3,_regionalIdentifier, inputMonth);
+                    tblResult = (DataTable)tblSC3;
+                }
                 if (tblResult.Rows.Count > 0)
                 {
                     xlSheet = xlControl.Document.Worksheets["SC3"];
-                    xlSheet.Workbook.BeginUpdate();
-                    //xlWorkSheet.Activate();
-                    xlRange = xlSheet.GetDataRange();
-                    rowCount = xlRange.RowCount;
-                }
-                for (int i = 0; i < tblResult.Rows.Count; i++)
-                {
-                    row = tblResult.Rows[i];
-                    if (!string.IsNullOrEmpty(row["NTCode"].ToString()))
-                    {
-                        index = row["NTCOde"].ToString() + "|B";
-                        FieldVal = new string[7];
-
-                        FieldVal[0] = row["Days30"].ToString() + "|C";
-                        FieldVal[1] = row["Days60"].ToString() + "|D";
-                        FieldVal[2] = row["Days90"].ToString() + "|E";
-                        FieldVal[3] = row["Days120"].ToString() + "|F";
-                        FieldVal[4] = row["Days150"].ToString() + "|G";
-                        FieldVal[5] = row["Days180"].ToString() + "|H";
-                        FieldVal[6] = row["Days360"].ToString() + "|I";
-                        FieldVal[6] = row["Daysover"].ToString() + "|J";
-
-                        FieldVal[6] = row["ActualBadDebtsWrittenOff"].ToString() + "|M";
-                        FieldVal[6] = row["Impairment"].ToString() + "|N";
-
-                        FindExcelField("SC3", index, FieldVal, rowCount);
-                    }
-
-                }
-                UpdateSheet();
-
-                //SC4
-                tblResult = DBCall.GetSC4Data(inputMonth + 6, 17);
-                if (tblResult.Rows.Count > 0)
-                {
-                    xlSheet = xlControl.Document.Worksheets["SC4"];
                     xlSheet.Workbook.BeginUpdate();
                     //xlWorkSheet.Activate();
                     xlRange = xlSheet.GetDataRange();
@@ -525,6 +509,47 @@ namespace ReportTool.GeneratedReport
                         FieldVal[6] = row["Days360"].ToString() + "|I";
                         FieldVal[6] = row["Daysover"].ToString() + "|J";
 
+                        FieldVal[6] = row["ActualBadDebtsWrittenOff"].ToString() + "|M";
+                        FieldVal[6] = row["Impairment"].ToString() + "|N";
+
+                        FindExcelField("SC3", index, FieldVal, rowCount);
+                    }
+
+                }
+                UpdateSheet();
+
+                //SC4
+                using (gen_ACStringTableAdapter ta = new gen_ACStringTableAdapter())
+                {
+                    mSCOA_VaultDataSet.gen_ACStringDataTable tblSC4 = new mSCOA_VaultDataSet.gen_ACStringDataTable();
+                    ta.Fill(tblSC4, _regionalIdentifier, inputMonth);
+                    tblResult = (DataTable)tblSC4;
+                }
+                if (tblResult.Rows.Count > 0)
+                {
+                    xlSheet = xlControl.Document.Worksheets["SC4"];
+                    xlSheet.Workbook.BeginUpdate();
+                    //xlWorkSheet.Activate();
+                    xlRange = xlSheet.GetDataRange();
+                    rowCount = xlRange.RowCount;
+                }
+                for (int i = 0; i < tblResult.Rows.Count; i++)
+                {
+                    row = tblResult.Rows[i];
+                    if (!string.IsNullOrEmpty(row["ItemCDE"].ToString()))
+                    {
+                        index = row["ItemCDE"].ToString() + "|B";
+                        FieldVal = new string[7];
+
+                        FieldVal[0] = row["Days30"].ToString() + "|C";
+                        FieldVal[1] = row["Days60"].ToString() + "|D";
+                        FieldVal[2] = row["Days90"].ToString() + "|E";
+                        FieldVal[3] = row["Days120"].ToString() + "|F";
+                        FieldVal[4] = row["Days150"].ToString() + "|G";
+                        FieldVal[5] = row["Days180"].ToString() + "|H";
+                        FieldVal[6] = row["Days360"].ToString() + "|I";
+                        FieldVal[6] = row["Daysover"].ToString() + "|J";
+
                         FieldVal[6] = row["PriorYearTotals"].ToString() + "|L";
 
                         FindExcelField("SC4", index, FieldVal, rowCount);
@@ -532,7 +557,14 @@ namespace ReportTool.GeneratedReport
 
                 }
                 UpdateSheet();
-                tblResult = DBCall.GetSC13AData(inputMonth);
+
+
+                using (GetSC13ADataTableAdapter ta = new GetSC13ADataTableAdapter())
+                {
+                    mSCOA_VaultDataSet.GetSC13ADataDataTable tblSC13A = new mSCOA_VaultDataSet.GetSC13ADataDataTable();
+                    ta.Fill(tblSC13A);
+                    tblResult = (DataTable)tblSC13A;
+                }
                 if (tblResult.Rows.Count > 0)
                 {
                     xlSheet = xlControl.Document.Worksheets["SC13a"];
@@ -564,7 +596,12 @@ namespace ReportTool.GeneratedReport
                 UpdateSheet();
 
 
-                tblResult = DBCall.GetSC13BData(inputMonth);
+                using (GetSC13BDataTableAdapter ta = new GetSC13BDataTableAdapter())
+                {
+                    mSCOA_VaultDataSet.GetSC13BDataDataTable tblSC13B = new mSCOA_VaultDataSet.GetSC13BDataDataTable();
+                    ta.Fill(tblSC13B);
+                    tblResult = (DataTable)tblSC13B;
+                }
                 if (tblResult.Rows.Count > 0)
                 {
                     xlSheet = xlControl.Document.Worksheets["SC13b"];
@@ -595,7 +632,13 @@ namespace ReportTool.GeneratedReport
                 }
                 UpdateSheet();
 
-                tblResult = DBCall.GetSC13CData(inputMonth);
+
+                using (GetSC13CDataTableAdapter ta = new GetSC13CDataTableAdapter())
+                {
+                    mSCOA_VaultDataSet.GetSC13CDataDataTable tblSC13C = new mSCOA_VaultDataSet.GetSC13CDataDataTable();
+                    ta.Fill(tblSC13C);
+                    tblResult = (DataTable)tblSC13C;
+                }
                 if (tblResult.Rows.Count > 0)
                 {
                     xlSheet = xlControl.Document.Worksheets["SC13C"];
@@ -628,7 +671,12 @@ namespace ReportTool.GeneratedReport
 
 
 
-                tblResult = DBCall.GetSC13EData(inputMonth);
+                using (GetSC13EDataTableAdapter ta = new GetSC13EDataTableAdapter())
+                {
+                    mSCOA_VaultDataSet.GetSC13EDataDataTable tblSC13E = new mSCOA_VaultDataSet.GetSC13EDataDataTable();
+                    ta.Fill(tblSC13E);
+                    tblResult = (DataTable)tblSC13E;
+                }
                 if (tblResult.Rows.Count > 0)
                 {
                     xlSheet = xlControl.Document.Worksheets["SC13E"];
@@ -640,9 +688,9 @@ namespace ReportTool.GeneratedReport
                 for (int i = 0; i < tblResult.Rows.Count; i++)
                 {
                     row = tblResult.Rows[i];
-                    if (!string.IsNullOrEmpty(row["SC13E"].ToString()))
+                    if (!string.IsNullOrEmpty(row["SC13e"].ToString()))
                     {
-                        index = row["SC13E"].ToString() + "|L";
+                        index = row["SC13e"].ToString() + "|L";
 
                         FieldVal = new string[6];
 
@@ -659,7 +707,12 @@ namespace ReportTool.GeneratedReport
                 }
                 UpdateSheet();
 
-                tblResult = DBCall.GetSC13DData(inputMonth);
+                using (GetSC13DDataTableAdapter ta = new GetSC13DDataTableAdapter())
+                {
+                    mSCOA_VaultDataSet.GetSC13DDataDataTable tblSC13D = new mSCOA_VaultDataSet.GetSC13DDataDataTable();
+                    ta.Fill(tblSC13D);
+                    tblResult = (DataTable)tblSC13D;
+                }
                 if (tblResult.Rows.Count > 0)
                 {
                     xlSheet = xlControl.Document.Worksheets["SC13D"];
@@ -690,7 +743,12 @@ namespace ReportTool.GeneratedReport
                 }
                 UpdateSheet();
 
-                tblResult = DBCall.GetSC8Data(inputMonth);
+                using (GetSC8DataTableAdapter ta = new GetSC8DataTableAdapter())
+                {
+                    mSCOA_VaultDataSet.GetSC8DataDataTable tblSC8 = new mSCOA_VaultDataSet.GetSC8DataDataTable();
+                    ta.Fill(tblSC8);
+                    tblResult = (DataTable)tblSC8;
+                }
                 if (tblResult.Rows.Count > 0)
                 {
                     xlSheet = xlControl.Document.Worksheets["SC8"];
@@ -716,84 +774,86 @@ namespace ReportTool.GeneratedReport
                         FieldVal[4] = CalcYTD(row) + "|G";
                         FieldVal[5] = GetYTDValue(row["YearTDBudget"].ToString(), inputMonth) + "|H";
                         //FieldVal[6] = row["Full Year Forecast"].ToString() + "|K";
-                        FindExcelField("SC13D", index, FieldVal, sLedgerType, rowCount);
+                        FindExcelField("SC8", index, FieldVal, sLedgerType, rowCount);
                     }
 
                 }
                 UpdateSheet();
 
-                tblResult = DBCall.GetSC9Data(inputMonth);
-                if (tblResult.Rows.Count > 0)
-                {
-                    xlSheet = xlControl.Document.Worksheets["SC9"];
-                    xlSheet.Workbook.BeginUpdate();
-                    //xlWorkSheet.Activate();
-                    xlRange = xlSheet.GetDataRange();
-                    rowCount = xlRange.RowCount;
-                }
-                for (int i = 0; i < tblResult.Rows.Count; i++)
-                {
+                //using (GetSC9DataTableAdapter ta = new GetSC9DataTableAdapter())
+                //{
+                //    mSCOA_VaultDataSet.GetSC9DataDataTable tblSC9 = new mSCOA_VaultDataSet.GetSC9DataDataTable();
+                //    ta.Fill(tblSC9);
+                //    tblResult = (DataTable)tblSC9;
+                //}
+                //if (tblResult.Rows.Count > 0)
+                //{
+                //    xlSheet = xlControl.Document.Worksheets["SC9"];
+                //    xlSheet.Workbook.BeginUpdate();
+                //    //xlWorkSheet.Activate();
+                //    xlRange = xlSheet.GetDataRange();
+                //    rowCount = xlRange.RowCount;
+                //}
+                //for (int i = 0; i < tblResult.Rows.Count; i++)
+                //{
 
-                    row = tblResult.Rows[i];
-                    if (!string.IsNullOrEmpty(row["SC9"].ToString()))
-                    {
-                        sLedgerType = row["Ledger_type"].ToString();
-                        index = row["SC9"].ToString() + "|R";
-                        FieldVal = new string[14];
-                        //FieldVal[0] = row["JulyMP2017"].ToString() + "|B";
-                        //FieldVal[1] = row["AugustMP2017"].ToString() + "|C";
-                        //FieldVal[2] = row["SeptemberMP2017"].ToString() + "|D";
-                        //FieldVal[3] = row["OctoberMP2017"].ToString() + "|E";
-                        //FieldVal[4] = row["NovemberMP2017"].ToString() + "|F";
-                        //FieldVal[5] = row["DecemberMP2017"].ToString() + "|G";
-                        FieldVal[6] = row["JanuaryMP2018"].ToString() + "|I";
-                        FieldVal[7] = row["FebruaryMP2018"].ToString() + "|J";
-                        FieldVal[8] = row["MarchMP2018"].ToString() + "|K";
-                        FieldVal[9] = row["AprilMP2018"].ToString() + "|L";
-                        FieldVal[10] = row["MayMP2018"].ToString() + "|M";
+                //    row = tblResult.Rows[i];
+                //    if (!string.IsNullOrEmpty(row["SC9"].ToString()))
+                //    {
+                //        sLedgerType = row["Ledger_type"].ToString();
+                //        index = row["SC9"].ToString() + "|R";
+                //        FieldVal = new string[14];
+                //        //FieldVal[0] = row["JulyMP2017"].ToString() + "|B";
+                //        //FieldVal[1] = row["AugustMP2017"].ToString() + "|C";
+                //        //FieldVal[2] = row["SeptemberMP2017"].ToString() + "|D";
+                //        //FieldVal[3] = row["OctoberMP2017"].ToString() + "|E";
+                //        //FieldVal[4] = row["NovemberMP2017"].ToString() + "|F";
+                //        //FieldVal[5] = row["DecemberMP2017"].ToString() + "|G";
+                //        //FieldVal[6] = row["JanuaryMP2018"].ToString() + "|I";
+                //        //FieldVal[7] = row["FebruaryMP2018"].ToString() + "|J";
+                //        //FieldVal[8] = row["MarchMP2018"].ToString() + "|K";
+                //        //FieldVal[9] = row["AprilMP2018"].ToString() + "|L";
+                //        //FieldVal[10] = row["MayMP2018"].ToString() + "|M";
 
-                        FieldVal[11] = row["BudgetYear1718"].ToString() + "|O";
-                        FieldVal[12] = row["BudgetYear1_1819"].ToString() + "|P";
-                        FieldVal[13] = row["BudgetYear2_1920"].ToString() + "|Q";
-                        FindExcelField("SC9", index, FieldVal, sLedgerType, rowCount);
-                    }
+                //        //FieldVal[11] = row["BudgetYear1718"].ToString() + "|O";
+                //        //FieldVal[12] = row["BudgetYear1_1819"].ToString() + "|P";
+                //        //FieldVal[13] = row["BudgetYear2_1920"].ToString() + "|Q";
+                //        FindExcelField("SC9", index, FieldVal, sLedgerType, rowCount);
+                //    }
 
-                }
-                UpdateSheet();
+                //}
+                //UpdateSheet();
 
-                tblResult = DBCall.GetSC2Data();
-                if (tblResult.Rows.Count > 0)
-                {
-                    xlSheet = xlControl.Document.Worksheets["SC2"];
-                    xlSheet.Workbook.BeginUpdate();
-                    //xlWorkSheet.Activate();
-                    //xlRange = xlSheet.GetDataRange();
-                    // rowCount = xlRange.RowCount;
+                //tblResult = DBCall.GetSC2Data();
+                //if (tblResult.Rows.Count > 0)
+                //{
+                //    xlSheet = xlControl.Document.Worksheets["SC2"];
+                //    xlSheet.Workbook.BeginUpdate();
+                
+                //    for (int i = 0; i < tblResult.Rows.Count; i++)
+                //    {
+                //        row = tblResult.Rows[i];
+                //        switch (row["Line"].ToString())
+                //        {
+                //            case "30":
+                //                xlSheet.Cells[29, 3].Value = row["D"].ToString();
+                //                xlSheet.Cells[29, 4].Value = row["E"].ToString();
+                //                xlSheet.Cells[29, 5].Value = row["F"].ToString();
+                //                xlSheet.Cells[29, 6].Value = row["G"].ToString();
+                //                xlSheet.Cells[29, 7].Value = row["H"].ToString();
+                //                break;
+                //            case "31":
+                //                xlSheet.Cells[30, 3].Value = row["D"].ToString();
+                //                xlSheet.Cells[30, 4].Value = row["E"].ToString();
+                //                xlSheet.Cells[30, 5].Value = row["F"].ToString();
+                //                xlSheet.Cells[30, 6].Value = row["G"].ToString();
+                //                xlSheet.Cells[30, 7].Value = row["H"].ToString();
+                //                break;
+                //        }
+                //    }
+                //}
 
-                    for (int i = 0; i < tblResult.Rows.Count; i++)
-                    {
-                        row = tblResult.Rows[i];
-                        switch (row["Line"].ToString())
-                        {
-                            case "30":
-                                xlSheet.Cells[29, 3].Value = row["D"].ToString();
-                                xlSheet.Cells[29, 4].Value = row["E"].ToString();
-                                xlSheet.Cells[29, 5].Value = row["F"].ToString();
-                                xlSheet.Cells[29, 6].Value = row["G"].ToString();
-                                xlSheet.Cells[29, 7].Value = row["H"].ToString();
-                                break;
-                            case "31":
-                                xlSheet.Cells[30, 3].Value = row["D"].ToString();
-                                xlSheet.Cells[30, 4].Value = row["E"].ToString();
-                                xlSheet.Cells[30, 5].Value = row["F"].ToString();
-                                xlSheet.Cells[30, 6].Value = row["G"].ToString();
-                                xlSheet.Cells[30, 7].Value = row["H"].ToString();
-                                break;
-                        }
-                    }
-                }
-
-                UpdateSheet();
+                //UpdateSheet();
 
                 PopulateContactInformation();
                 xlControl.EndUpdate();
