@@ -135,7 +135,11 @@ namespace WindowsFormsApp1
                     ta.Fill(this.mSCOA_VaultDataSet1.Lookup_Vault_ISU_Revenue);
                     BeginInvoke((MethodInvoker)delegate
                     {
-                        dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_Vault_ISU_Revenue;
+                        BindingSource bs = new BindingSource();
+                        bs.DataSource = this.mSCOA_VaultDataSet1.Lookup_Vault_ISU_Revenue;
+                        dataGridView1.DataSource = bs;
+                        bs.ResetBindings(false);
+                        //dataGridView1.DataSource = this.mSCOA_VaultDataSet1.Lookup_Vault_ISU_Revenue;
                         dataGridView1.Refresh();
                     });
                 }
