@@ -313,7 +313,7 @@ namespace WindowsFormsApp1
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (cboDirect.SelectedIndex > 0 && cboContra.SelectedIndex > 0)
+            if (cboDirect.SelectedIndex > 0 )
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
