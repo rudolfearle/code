@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="mSCOA_VaultDataSet2" targetNamespace="http://tempuri.org/mSCOA_VaultDataSet2.xsd" xmlns:mstns="http://tempuri.org/mSCOA_VaultDataSet2.xsd" xmlns="http://tempuri.org/mSCOA_VaultDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="mSCOA_VaultConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="mSCOA_VaultConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.mSCOA_VaultConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Lookup_Vault_ISU_RevenueTableAdapter" GeneratorDataComponentClassName="Lookup_Vault_ISU_RevenueTableAdapter" Name="Lookup_Vault_ISU_Revenue" UserDataComponentName="Lookup_Vault_ISU_RevenueTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mSCOA_VaultConnectionString (Settings)" DbObjectName="mSCOA_Vault.dbo.Lookup_Vault_ISU_Revenue" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Lookup_Vault_ISU_Revenue] WHERE (((@IsNull_Division = 1 AND [Division] IS NULL) OR ([Division] = @Original_Division)) AND ((@IsNull_Division_Name = 1 AND [Division_Name] IS NULL) OR ([Division_Name] = @Original_Division_Name)) AND ((@IsNull_RATE_CAT = 1 AND [RATE_CAT] IS NULL) OR ([RATE_CAT] = @Original_RATE_CAT)) AND ((@IsNull_RATE_CAT_DESC = 1 AND [RATE_CAT_DESC] IS NULL) OR ([RATE_CAT_DESC] = @Original_RATE_CAT_DESC)) AND ((@IsNull_Item_Guid = 1 AND [Item_Guid] IS NULL) OR ([Item_Guid] = @Original_Item_Guid)) AND ((@IsNull_Item_Description = 1 AND [Item_Description] IS NULL) OR ([Item_Description] = @Original_Item_Description)) AND ((@IsNull_Item_Contra_Parent_Guid = 1 AND [Item_Contra_Parent_Guid] IS NULL) OR ([Item_Contra_Parent_Guid] = @Original_Item_Contra_Parent_Guid)) AND ((@IsNull_Item_Contra_Parent_Description = 1 AND [Item_Contra_Parent_Description] IS NULL) OR ([Item_Contra_Parent_Description] = @Original_Item_Contra_Parent_Description)) AND ((@IsNull_Revenue_GL = 1 AND [Revenue_GL] IS NULL) OR ([Revenue_GL] = @Original_Revenue_GL)) AND ((@IsNull_Project_Guid = 1 AND [Project_Guid] IS NULL) OR ([Project_Guid] = @Original_Project_Guid)) AND ((@IsNull_Project_Description = 1 AND [Project_Description] IS NULL) OR ([Project_Description] = @Original_Project_Description)) AND ((@IsNull_MSC = 1 AND [MSC] IS NULL) OR ([MSC] = @Original_MSC)) AND ((@IsNull_Function_Guid = 1 AND [Function_Guid] IS NULL) OR ([Function_Guid] = @Original_Function_Guid)) AND ((@IsNull_Function_Description = 1 AND [Function_Description] IS NULL) OR ([Function_Description] = @Original_Function_Description)) AND ((@IsNull_Fund_Guid = 1 AND [Fund_Guid] IS NULL) OR ([Fund_Guid] = @Original_Fund_Guid)) AND ((@IsNull_Fund_Description = 1 AND [Fund_Description] IS NULL) OR ([Fund_Description] = @Original_Fund_Description)) AND ((@IsNull_Region_Guid = 1 AND [Region_Guid] IS NULL) OR ([Region_Guid] = @Original_Region_Guid)) AND ((@IsNull_Region_Description = 1 AND [Region_Description] IS NULL) OR ([Region_Description] = @Original_Region_Description)) AND ((@IsNull_Costing_Guid = 1 AND [Costing_Guid] IS NULL) OR ([Costing_Guid] = @Original_Costing_Guid)) AND ((@IsNull_Costing_Description = 1 AND [Costing_Description] IS NULL) OR ([Costing_Description] = @Original_Costing_Description)) AND ((@IsNull_Item_Parent_Guid = 1 AND [Item_Parent_Guid] IS NULL) OR ([Item_Parent_Guid] = @Original_Item_Parent_Guid)) AND ((@IsNull_Item_Parent_Description = 1 AND [Item_Parent_Description] IS NULL) OR ([Item_Parent_Description] = @Original_Item_Parent_Description)) AND ([Id_Lookup_Vault_ISU_Revenu] = @Original_Id_Lookup_Vault_ISU_Revenu))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Division" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Division" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Division" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Division" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Division_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Division_Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Division_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Division_Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RATE_CAT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RATE_CAT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RATE_CAT" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RATE_CAT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RATE_CAT_DESC" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RATE_CAT_DESC" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RATE_CAT_DESC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RATE_CAT_DESC" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Item_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Item_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Item_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Item_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Item_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Item_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Item_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Item_Contra_Parent_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Item_Contra_Parent_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Item_Contra_Parent_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item_Contra_Parent_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Item_Contra_Parent_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Item_Contra_Parent_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Item_Contra_Parent_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Item_Contra_Parent_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Revenue_GL" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Revenue_GL" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Revenue_GL" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Revenue_GL" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Project_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Project_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Project_Guid" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Project_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Project_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Project_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Project_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Project_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MSC" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MSC" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MSC" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MSC" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Function_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Function_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Function_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Function_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Function_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Function_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Function_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Function_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fund_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fund_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Fund_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Fund_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fund_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fund_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Fund_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Fund_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Region_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Region_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Region_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Region_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Region_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Region_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Region_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Region_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Costing_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Costing_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Costing_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Costing_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Costing_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Costing_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Costing_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Costing_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Item_Parent_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Item_Parent_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Item_Parent_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item_Parent_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Item_Parent_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Item_Parent_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Item_Parent_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Item_Parent_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Lookup_Vault_ISU_Revenu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Lookup_Vault_ISU_Revenu" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Lookup_Vault_ISU_Revenue] ([Division], [Division_Name], [RATE_CAT], [RATE_CAT_DESC], [Item_Guid], [Item_Description], [Item_Contra_Parent_Guid], [Item_Contra_Parent_Description], [Revenue_GL], [Project_Guid], [Project_Description], [MSC], [Function_Guid], [Function_Description], [Fund_Guid], [Fund_Description], [Region_Guid], [Region_Description], [Costing_Guid], [Costing_Description], [Item_Parent_Guid], [Item_Parent_Description]) VALUES (@Division, @Division_Name, @RATE_CAT, @RATE_CAT_DESC, @Item_Guid, @Item_Description, @Item_Contra_Parent_Guid, @Item_Contra_Parent_Description, @Revenue_GL, @Project_Guid, @Project_Description, @MSC, @Function_Guid, @Function_Description, @Fund_Guid, @Fund_Description, @Region_Guid, @Region_Description, @Costing_Guid, @Costing_Description, @Item_Parent_Guid, @Item_Parent_Description);
+SELECT Division, Division_Name, RATE_CAT, RATE_CAT_DESC, Item_Guid, Item_Description, Item_Contra_Parent_Guid, Item_Contra_Parent_Description, Revenue_GL, Project_Guid, Project_Description, MSC, Function_Guid, Function_Description, Fund_Guid, Fund_Description, Region_Guid, Region_Description, Costing_Guid, Costing_Description, Item_Parent_Guid, Item_Parent_Description, Id_Lookup_Vault_ISU_Revenu FROM Lookup_Vault_ISU_Revenue WHERE (Id_Lookup_Vault_ISU_Revenu = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Division" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Division" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Division_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Division_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RATE_CAT" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RATE_CAT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RATE_CAT_DESC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RATE_CAT_DESC" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Item_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Item_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Item_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Item_Contra_Parent_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item_Contra_Parent_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Item_Contra_Parent_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Item_Contra_Parent_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Revenue_GL" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Revenue_GL" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Project_Guid" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Project_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Project_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Project_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MSC" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MSC" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Function_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Function_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Function_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Function_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Fund_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Fund_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Fund_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Fund_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Region_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Region_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Region_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Region_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Costing_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Costing_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Costing_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Costing_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Item_Parent_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item_Parent_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Item_Parent_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Item_Parent_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Division, Division_Name, RATE_CAT, RATE_CAT_DESC, Item_Guid, Item_Description, Item_Contra_Parent_Guid, Item_Contra_Parent_Description, Revenue_GL, Project_Guid, Project_Description, MSC, Function_Guid, Function_Description, Fund_Guid, Fund_Description, Region_Guid, Region_Description, Costing_Guid, Costing_Description, Item_Parent_Guid, Item_Parent_Description, Id_Lookup_Vault_ISU_Revenu FROM dbo.Lookup_Vault_ISU_Revenue</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Lookup_Vault_ISU_Revenue] SET [Division] = @Division, [Division_Name] = @Division_Name, [RATE_CAT] = @RATE_CAT, [RATE_CAT_DESC] = @RATE_CAT_DESC, [Item_Guid] = @Item_Guid, [Item_Description] = @Item_Description, [Item_Contra_Parent_Guid] = @Item_Contra_Parent_Guid, [Item_Contra_Parent_Description] = @Item_Contra_Parent_Description, [Revenue_GL] = @Revenue_GL, [Project_Guid] = @Project_Guid, [Project_Description] = @Project_Description, [MSC] = @MSC, [Function_Guid] = @Function_Guid, [Function_Description] = @Function_Description, [Fund_Guid] = @Fund_Guid, [Fund_Description] = @Fund_Description, [Region_Guid] = @Region_Guid, [Region_Description] = @Region_Description, [Costing_Guid] = @Costing_Guid, [Costing_Description] = @Costing_Description, [Item_Parent_Guid] = @Item_Parent_Guid, [Item_Parent_Description] = @Item_Parent_Description WHERE (((@IsNull_Division = 1 AND [Division] IS NULL) OR ([Division] = @Original_Division)) AND ((@IsNull_Division_Name = 1 AND [Division_Name] IS NULL) OR ([Division_Name] = @Original_Division_Name)) AND ((@IsNull_RATE_CAT = 1 AND [RATE_CAT] IS NULL) OR ([RATE_CAT] = @Original_RATE_CAT)) AND ((@IsNull_RATE_CAT_DESC = 1 AND [RATE_CAT_DESC] IS NULL) OR ([RATE_CAT_DESC] = @Original_RATE_CAT_DESC)) AND ((@IsNull_Item_Guid = 1 AND [Item_Guid] IS NULL) OR ([Item_Guid] = @Original_Item_Guid)) AND ((@IsNull_Item_Description = 1 AND [Item_Description] IS NULL) OR ([Item_Description] = @Original_Item_Description)) AND ((@IsNull_Item_Contra_Parent_Guid = 1 AND [Item_Contra_Parent_Guid] IS NULL) OR ([Item_Contra_Parent_Guid] = @Original_Item_Contra_Parent_Guid)) AND ((@IsNull_Item_Contra_Parent_Description = 1 AND [Item_Contra_Parent_Description] IS NULL) OR ([Item_Contra_Parent_Description] = @Original_Item_Contra_Parent_Description)) AND ((@IsNull_Revenue_GL = 1 AND [Revenue_GL] IS NULL) OR ([Revenue_GL] = @Original_Revenue_GL)) AND ((@IsNull_Project_Guid = 1 AND [Project_Guid] IS NULL) OR ([Project_Guid] = @Original_Project_Guid)) AND ((@IsNull_Project_Description = 1 AND [Project_Description] IS NULL) OR ([Project_Description] = @Original_Project_Description)) AND ((@IsNull_MSC = 1 AND [MSC] IS NULL) OR ([MSC] = @Original_MSC)) AND ((@IsNull_Function_Guid = 1 AND [Function_Guid] IS NULL) OR ([Function_Guid] = @Original_Function_Guid)) AND ((@IsNull_Function_Description = 1 AND [Function_Description] IS NULL) OR ([Function_Description] = @Original_Function_Description)) AND ((@IsNull_Fund_Guid = 1 AND [Fund_Guid] IS NULL) OR ([Fund_Guid] = @Original_Fund_Guid)) AND ((@IsNull_Fund_Description = 1 AND [Fund_Description] IS NULL) OR ([Fund_Description] = @Original_Fund_Description)) AND ((@IsNull_Region_Guid = 1 AND [Region_Guid] IS NULL) OR ([Region_Guid] = @Original_Region_Guid)) AND ((@IsNull_Region_Description = 1 AND [Region_Description] IS NULL) OR ([Region_Description] = @Original_Region_Description)) AND ((@IsNull_Costing_Guid = 1 AND [Costing_Guid] IS NULL) OR ([Costing_Guid] = @Original_Costing_Guid)) AND ((@IsNull_Costing_Description = 1 AND [Costing_Description] IS NULL) OR ([Costing_Description] = @Original_Costing_Description)) AND ((@IsNull_Item_Parent_Guid = 1 AND [Item_Parent_Guid] IS NULL) OR ([Item_Parent_Guid] = @Original_Item_Parent_Guid)) AND ((@IsNull_Item_Parent_Description = 1 AND [Item_Parent_Description] IS NULL) OR ([Item_Parent_Description] = @Original_Item_Parent_Description)) AND ([Id_Lookup_Vault_ISU_Revenu] = @Original_Id_Lookup_Vault_ISU_Revenu));
+SELECT Division, Division_Name, RATE_CAT, RATE_CAT_DESC, Item_Guid, Item_Description, Item_Contra_Parent_Guid, Item_Contra_Parent_Description, Revenue_GL, Project_Guid, Project_Description, MSC, Function_Guid, Function_Description, Fund_Guid, Fund_Description, Region_Guid, Region_Description, Costing_Guid, Costing_Description, Item_Parent_Guid, Item_Parent_Description, Id_Lookup_Vault_ISU_Revenu FROM Lookup_Vault_ISU_Revenue WHERE (Id_Lookup_Vault_ISU_Revenu = @Id_Lookup_Vault_ISU_Revenu)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Division" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Division" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Division_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Division_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RATE_CAT" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RATE_CAT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RATE_CAT_DESC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RATE_CAT_DESC" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Item_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Item_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Item_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Item_Contra_Parent_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item_Contra_Parent_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Item_Contra_Parent_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Item_Contra_Parent_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Revenue_GL" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Revenue_GL" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Project_Guid" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Project_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Project_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Project_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MSC" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MSC" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Function_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Function_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Function_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Function_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Fund_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Fund_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Fund_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Fund_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Region_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Region_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Region_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Region_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Costing_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Costing_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Costing_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Costing_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Item_Parent_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item_Parent_Guid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Item_Parent_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Item_Parent_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Division" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Division" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Division" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Division" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Division_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Division_Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Division_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Division_Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RATE_CAT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RATE_CAT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RATE_CAT" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RATE_CAT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RATE_CAT_DESC" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RATE_CAT_DESC" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RATE_CAT_DESC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RATE_CAT_DESC" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Item_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Item_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Item_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Item_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Item_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Item_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Item_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Item_Contra_Parent_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Item_Contra_Parent_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Item_Contra_Parent_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item_Contra_Parent_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Item_Contra_Parent_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Item_Contra_Parent_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Item_Contra_Parent_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Item_Contra_Parent_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Revenue_GL" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Revenue_GL" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Revenue_GL" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Revenue_GL" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Project_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Project_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Project_Guid" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Project_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Project_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Project_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Project_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Project_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MSC" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MSC" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MSC" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MSC" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Function_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Function_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Function_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Function_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Function_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Function_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Function_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Function_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fund_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fund_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Fund_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Fund_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fund_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fund_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Fund_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Fund_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Region_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Region_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Region_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Region_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Region_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Region_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Region_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Region_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Costing_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Costing_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Costing_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Costing_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Costing_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Costing_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Costing_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Costing_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Item_Parent_Guid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Item_Parent_Guid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Item_Parent_Guid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item_Parent_Guid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Item_Parent_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Item_Parent_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Item_Parent_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Item_Parent_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Lookup_Vault_ISU_Revenu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Lookup_Vault_ISU_Revenu" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id_Lookup_Vault_ISU_Revenu" ColumnName="Id_Lookup_Vault_ISU_Revenu" DataSourceName="mSCOA_Vault.dbo.Lookup_Vault_ISU_Revenue" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id_Lookup_Vault_ISU_Revenu" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id_Lookup_Vault_ISU_Revenu" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Division" DataSetColumn="Division" />
+              <Mapping SourceColumn="Division_Name" DataSetColumn="Division_Name" />
+              <Mapping SourceColumn="RATE_CAT" DataSetColumn="RATE_CAT" />
+              <Mapping SourceColumn="RATE_CAT_DESC" DataSetColumn="RATE_CAT_DESC" />
+              <Mapping SourceColumn="Item_Guid" DataSetColumn="Item_Guid" />
+              <Mapping SourceColumn="Item_Description" DataSetColumn="Item_Description" />
+              <Mapping SourceColumn="Item_Contra_Parent_Guid" DataSetColumn="Item_Contra_Parent_Guid" />
+              <Mapping SourceColumn="Item_Contra_Parent_Description" DataSetColumn="Item_Contra_Parent_Description" />
+              <Mapping SourceColumn="Revenue_GL" DataSetColumn="Revenue_GL" />
+              <Mapping SourceColumn="Project_Guid" DataSetColumn="Project_Guid" />
+              <Mapping SourceColumn="Project_Description" DataSetColumn="Project_Description" />
+              <Mapping SourceColumn="MSC" DataSetColumn="MSC" />
+              <Mapping SourceColumn="Function_Guid" DataSetColumn="Function_Guid" />
+              <Mapping SourceColumn="Function_Description" DataSetColumn="Function_Description" />
+              <Mapping SourceColumn="Fund_Guid" DataSetColumn="Fund_Guid" />
+              <Mapping SourceColumn="Fund_Description" DataSetColumn="Fund_Description" />
+              <Mapping SourceColumn="Region_Guid" DataSetColumn="Region_Guid" />
+              <Mapping SourceColumn="Region_Description" DataSetColumn="Region_Description" />
+              <Mapping SourceColumn="Costing_Guid" DataSetColumn="Costing_Guid" />
+              <Mapping SourceColumn="Costing_Description" DataSetColumn="Costing_Description" />
+              <Mapping SourceColumn="Item_Parent_Guid" DataSetColumn="Item_Parent_Guid" />
+              <Mapping SourceColumn="Item_Parent_Description" DataSetColumn="Item_Parent_Description" />
+              <Mapping SourceColumn="Id_Lookup_Vault_ISU_Revenu" DataSetColumn="Id_Lookup_Vault_ISU_Revenu" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="mSCOA_VaultDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="mSCOA_VaultDataSet2" msprop:Generator_UserDSName="mSCOA_VaultDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Lookup_Vault_ISU_Revenue" msprop:Generator_TableClassName="Lookup_Vault_ISU_RevenueDataTable" msprop:Generator_TableVarName="tableLookup_Vault_ISU_Revenue" msprop:Generator_TablePropName="Lookup_Vault_ISU_Revenue" msprop:Generator_RowDeletingName="Lookup_Vault_ISU_RevenueRowDeleting" msprop:Generator_RowChangingName="Lookup_Vault_ISU_RevenueRowChanging" msprop:Generator_RowEvHandlerName="Lookup_Vault_ISU_RevenueRowChangeEventHandler" msprop:Generator_RowDeletedName="Lookup_Vault_ISU_RevenueRowDeleted" msprop:Generator_UserTableName="Lookup_Vault_ISU_Revenue" msprop:Generator_RowChangedName="Lookup_Vault_ISU_RevenueRowChanged" msprop:Generator_RowEvArgName="Lookup_Vault_ISU_RevenueRowChangeEvent" msprop:Generator_RowClassName="Lookup_Vault_ISU_RevenueRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Division" msprop:Generator_ColumnVarNameInTable="columnDivision" msprop:Generator_ColumnPropNameInRow="Division" msprop:Generator_ColumnPropNameInTable="DivisionColumn" msprop:Generator_UserColumnName="Division" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Division_Name" msprop:Generator_ColumnVarNameInTable="columnDivision_Name" msprop:Generator_ColumnPropNameInRow="Division_Name" msprop:Generator_ColumnPropNameInTable="Division_NameColumn" msprop:Generator_UserColumnName="Division_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RATE_CAT" msprop:Generator_ColumnVarNameInTable="columnRATE_CAT" msprop:Generator_ColumnPropNameInRow="RATE_CAT" msprop:Generator_ColumnPropNameInTable="RATE_CATColumn" msprop:Generator_UserColumnName="RATE_CAT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RATE_CAT_DESC" msprop:Generator_ColumnVarNameInTable="columnRATE_CAT_DESC" msprop:Generator_ColumnPropNameInRow="RATE_CAT_DESC" msprop:Generator_ColumnPropNameInTable="RATE_CAT_DESCColumn" msprop:Generator_UserColumnName="RATE_CAT_DESC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Item_Guid" msprop:Generator_ColumnVarNameInTable="columnItem_Guid" msprop:Generator_ColumnPropNameInRow="Item_Guid" msprop:Generator_ColumnPropNameInTable="Item_GuidColumn" msprop:Generator_UserColumnName="Item_Guid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Item_Description" msprop:Generator_ColumnVarNameInTable="columnItem_Description" msprop:Generator_ColumnPropNameInRow="Item_Description" msprop:Generator_ColumnPropNameInTable="Item_DescriptionColumn" msprop:Generator_UserColumnName="Item_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="210" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Item_Contra_Parent_Guid" msprop:Generator_ColumnVarNameInTable="columnItem_Contra_Parent_Guid" msprop:Generator_ColumnPropNameInRow="Item_Contra_Parent_Guid" msprop:Generator_ColumnPropNameInTable="Item_Contra_Parent_GuidColumn" msprop:Generator_UserColumnName="Item_Contra_Parent_Guid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Item_Contra_Parent_Description" msprop:Generator_ColumnVarNameInTable="columnItem_Contra_Parent_Description" msprop:Generator_ColumnPropNameInRow="Item_Contra_Parent_Description" msprop:Generator_ColumnPropNameInTable="Item_Contra_Parent_DescriptionColumn" msprop:Generator_UserColumnName="Item_Contra_Parent_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="210" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Revenue_GL" msprop:Generator_ColumnVarNameInTable="columnRevenue_GL" msprop:Generator_ColumnPropNameInRow="Revenue_GL" msprop:Generator_ColumnPropNameInTable="Revenue_GLColumn" msprop:Generator_UserColumnName="Revenue_GL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Project_Guid" msprop:Generator_ColumnVarNameInTable="columnProject_Guid" msprop:Generator_ColumnPropNameInRow="Project_Guid" msprop:Generator_ColumnPropNameInTable="Project_GuidColumn" msprop:Generator_UserColumnName="Project_Guid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Project_Description" msprop:Generator_ColumnVarNameInTable="columnProject_Description" msprop:Generator_ColumnPropNameInRow="Project_Description" msprop:Generator_ColumnPropNameInTable="Project_DescriptionColumn" msprop:Generator_UserColumnName="Project_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="210" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MSC" msprop:Generator_ColumnVarNameInTable="columnMSC" msprop:Generator_ColumnPropNameInRow="MSC" msprop:Generator_ColumnPropNameInTable="MSCColumn" msprop:Generator_UserColumnName="MSC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Function_Guid" msprop:Generator_ColumnVarNameInTable="columnFunction_Guid" msprop:Generator_ColumnPropNameInRow="Function_Guid" msprop:Generator_ColumnPropNameInTable="Function_GuidColumn" msprop:Generator_UserColumnName="Function_Guid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Function_Description" msprop:Generator_ColumnVarNameInTable="columnFunction_Description" msprop:Generator_ColumnPropNameInRow="Function_Description" msprop:Generator_ColumnPropNameInTable="Function_DescriptionColumn" msprop:Generator_UserColumnName="Function_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="210" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fund_Guid" msprop:Generator_ColumnVarNameInTable="columnFund_Guid" msprop:Generator_ColumnPropNameInRow="Fund_Guid" msprop:Generator_ColumnPropNameInTable="Fund_GuidColumn" msprop:Generator_UserColumnName="Fund_Guid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fund_Description" msprop:Generator_ColumnVarNameInTable="columnFund_Description" msprop:Generator_ColumnPropNameInRow="Fund_Description" msprop:Generator_ColumnPropNameInTable="Fund_DescriptionColumn" msprop:Generator_UserColumnName="Fund_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="210" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Region_Guid" msprop:Generator_ColumnVarNameInTable="columnRegion_Guid" msprop:Generator_ColumnPropNameInRow="Region_Guid" msprop:Generator_ColumnPropNameInTable="Region_GuidColumn" msprop:Generator_UserColumnName="Region_Guid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Region_Description" msprop:Generator_ColumnVarNameInTable="columnRegion_Description" msprop:Generator_ColumnPropNameInRow="Region_Description" msprop:Generator_ColumnPropNameInTable="Region_DescriptionColumn" msprop:Generator_UserColumnName="Region_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="210" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Costing_Guid" msprop:Generator_ColumnVarNameInTable="columnCosting_Guid" msprop:Generator_ColumnPropNameInRow="Costing_Guid" msprop:Generator_ColumnPropNameInTable="Costing_GuidColumn" msprop:Generator_UserColumnName="Costing_Guid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Costing_Description" msprop:Generator_ColumnVarNameInTable="columnCosting_Description" msprop:Generator_ColumnPropNameInRow="Costing_Description" msprop:Generator_ColumnPropNameInTable="Costing_DescriptionColumn" msprop:Generator_UserColumnName="Costing_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="210" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Item_Parent_Guid" msprop:Generator_ColumnVarNameInTable="columnItem_Parent_Guid" msprop:Generator_ColumnPropNameInRow="Item_Parent_Guid" msprop:Generator_ColumnPropNameInTable="Item_Parent_GuidColumn" msprop:Generator_UserColumnName="Item_Parent_Guid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Item_Parent_Description" msprop:Generator_ColumnVarNameInTable="columnItem_Parent_Description" msprop:Generator_ColumnPropNameInRow="Item_Parent_Description" msprop:Generator_ColumnPropNameInTable="Item_Parent_DescriptionColumn" msprop:Generator_UserColumnName="Item_Parent_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="210" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id_Lookup_Vault_ISU_Revenu" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_Lookup_Vault_ISU_Revenu" msprop:Generator_ColumnPropNameInRow="Id_Lookup_Vault_ISU_Revenu" msprop:Generator_ColumnPropNameInTable="Id_Lookup_Vault_ISU_RevenuColumn" msprop:Generator_UserColumnName="Id_Lookup_Vault_ISU_Revenu" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Lookup_Vault_ISU_Revenue" />
+      <xs:field xpath="mstns:Id_Lookup_Vault_ISU_Revenu" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

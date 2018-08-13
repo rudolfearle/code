@@ -42,6 +42,8 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mSCOA_VaultDataSet2.Lookup_Vault_ISU_Revenue' table. You can move, or remove it, as needed.
+            this.lookup_Vault_ISU_RevenueTableAdapter.Fill(this.mSCOA_VaultDataSet2.Lookup_Vault_ISU_Revenue);
             SCOATYPE = "IR";
             LoadOnce = false;
             toolTip1 = new ToolTip();

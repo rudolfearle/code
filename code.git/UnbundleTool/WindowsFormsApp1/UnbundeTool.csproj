@@ -98,6 +98,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>mSCOA_VaultDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="mSCOA_VaultDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mSCOA_VaultDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Budget_2Segment.resx">
@@ -148,6 +153,17 @@
     </None>
     <None Include="mSCOA_VaultDataSet1.xss">
       <DependentUpon>mSCOA_VaultDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="mSCOA_VaultDataSet2.xsc">
+      <DependentUpon>mSCOA_VaultDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="mSCOA_VaultDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mSCOA_VaultDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mSCOA_VaultDataSet2.xss">
+      <DependentUpon>mSCOA_VaultDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
