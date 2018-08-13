@@ -12148,23 +12148,12 @@ SELECT Division, Division_Name, RATE_CAT, RATE_CAT_DESC, Item_Guid, Item_Descrip
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"UPDATE [dbo].[Lookup_Vault_ISU_Revenue] SET 
-
-    Item_Guid = @Recommended_Invoice_Guid, 
-                 
-                    Function_Guid = @Function_GUID ,Project_Guid = @Project_Guid, Fund_Guid = @Fund_Guid,
- Region_Guid = @Region_Guid,costing_GUID= @Costing_GUID
-
-
-
-WHERE (Id_Lookup_Vault_ISU_Revenu = @Id_Lookup_Vault_ISU_Revenu)";
+            this._commandCollection[1].CommandText = "UPDATE [dbo].[Lookup_Vault_ISU_Revenue] SET \r\n\r\n    Item_Guid = @Recommended_Invo" +
+                "ice_Guid, \r\n                 Item_Contra_Parent_Guid = @Contra_Guid\r\n\r\nWHERE (Id" +
+                "_Lookup_Vault_ISU_Revenu = @Id_Lookup_Vault_ISU_Revenu)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Recommended_Invoice_Guid", global::System.Data.SqlDbType.NVarChar, 36, global::System.Data.ParameterDirection.Input, 0, 0, "Item_Guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Function_GUID", global::System.Data.SqlDbType.NVarChar, 36, global::System.Data.ParameterDirection.Input, 0, 0, "Function_Guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Project_Guid", global::System.Data.SqlDbType.VarChar, 36, global::System.Data.ParameterDirection.Input, 0, 0, "Project_Guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fund_Guid", global::System.Data.SqlDbType.NVarChar, 36, global::System.Data.ParameterDirection.Input, 0, 0, "Fund_Guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Region_Guid", global::System.Data.SqlDbType.NVarChar, 36, global::System.Data.ParameterDirection.Input, 0, 0, "Region_Guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Costing_GUID", global::System.Data.SqlDbType.NVarChar, 36, global::System.Data.ParameterDirection.Input, 0, 0, "Costing_Guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contra_Guid", global::System.Data.SqlDbType.NVarChar, 36, global::System.Data.ParameterDirection.Input, 0, 0, "Item_Contra_Parent_Guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Lookup_Vault_ISU_Revenu", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Lookup_Vault_ISU_Revenu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -13051,7 +13040,7 @@ WHERE (Id_Lookup_Vault_ISU_Revenu = @Id_Lookup_Vault_ISU_Revenu)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateQuery(string Recommended_Invoice_Guid, string Function_GUID, string Project_Guid, string Fund_Guid, string Region_Guid, string Costing_GUID, int Id_Lookup_Vault_ISU_Revenu) {
+        public virtual int UpdateQuery(string Recommended_Invoice_Guid, string Contra_Guid, int Id_Lookup_Vault_ISU_Revenu) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((Recommended_Invoice_Guid == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -13059,37 +13048,13 @@ WHERE (Id_Lookup_Vault_ISU_Revenu = @Id_Lookup_Vault_ISU_Revenu)";
             else {
                 command.Parameters[0].Value = ((string)(Recommended_Invoice_Guid));
             }
-            if ((Function_GUID == null)) {
+            if ((Contra_Guid == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[1].Value = ((string)(Function_GUID));
+                command.Parameters[1].Value = ((string)(Contra_Guid));
             }
-            if ((Project_Guid == null)) {
-                command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[2].Value = ((string)(Project_Guid));
-            }
-            if ((Fund_Guid == null)) {
-                command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[3].Value = ((string)(Fund_Guid));
-            }
-            if ((Region_Guid == null)) {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[4].Value = ((string)(Region_Guid));
-            }
-            if ((Costing_GUID == null)) {
-                command.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[5].Value = ((string)(Costing_GUID));
-            }
-            command.Parameters[6].Value = ((int)(Id_Lookup_Vault_ISU_Revenu));
+            command.Parameters[2].Value = ((int)(Id_Lookup_Vault_ISU_Revenu));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

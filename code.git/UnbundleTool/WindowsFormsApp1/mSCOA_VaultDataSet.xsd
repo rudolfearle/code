@@ -372,6 +372,16 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="mSCOA_VaultConnectionString (Settings)" DbObjectName="mSCOA_Vault.dbo.Cons_Vault" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByContraParent" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByContraParent" GeneratorSourceName="FillByContraParent" GetMethodModifier="Public" GetMethodName="GetDataByContraParent" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByContraParent" UserSourceName="FillByContraParent">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT distinct Account_Number_LongCode, GUID, Posting_Allowed, Account_Name FROM [mSCOA_Vault].[dbo].[Cons_Vault]
+  where  substring(Account_Number_LongCode,1,2) in ('IA','IL') and Posting_Allowed = 'N'
+   order by Account_Name</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="mSCOA_VaultConnectionString (Settings)" DbObjectName="mSCOA_Vault.dbo.Cons_Vault" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByCosting" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCosting" GeneratorSourceName="FillByCosting" GetMethodModifier="Public" GetMethodName="GetDataByCosting" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCosting" UserSourceName="FillByCosting">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
@@ -445,7 +455,7 @@
   <xs:element name="mSCOA_VaultDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="mSCOA_VaultDataSet" msprop:Generator_UserDSName="mSCOA_VaultDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Reporting" msprop:Generator_TableClassName="ReportingDataTable" msprop:Generator_TableVarName="tableReporting" msprop:Generator_TablePropName="Reporting" msprop:Generator_RowDeletingName="ReportingRowDeleting" msprop:Generator_RowChangingName="ReportingRowChanging" msprop:Generator_RowEvHandlerName="ReportingRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportingRowDeleted" msprop:Generator_UserTableName="Reporting" msprop:Generator_RowChangedName="ReportingRowChanged" msprop:Generator_RowEvArgName="ReportingRowChangeEvent" msprop:Generator_RowClassName="ReportingRow">
+        <xs:element name="Reporting" msprop:Generator_TableClassName="ReportingDataTable" msprop:Generator_TableVarName="tableReporting" msprop:Generator_RowChangedName="ReportingRowChanged" msprop:Generator_TablePropName="Reporting" msprop:Generator_RowDeletingName="ReportingRowDeleting" msprop:Generator_RowChangingName="ReportingRowChanging" msprop:Generator_RowEvHandlerName="ReportingRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportingRowDeleted" msprop:Generator_RowClassName="ReportingRow" msprop:Generator_UserTableName="Reporting" msprop:Generator_RowEvArgName="ReportingRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FINYEAR" msprop:Generator_ColumnVarNameInTable="columnFINYEAR" msprop:Generator_ColumnPropNameInRow="FINYEAR" msprop:Generator_ColumnPropNameInTable="FINYEARColumn" msprop:Generator_UserColumnName="FINYEAR" minOccurs="0">
@@ -1077,7 +1087,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Cons_Vault" msprop:Generator_TableClassName="Cons_VaultDataTable" msprop:Generator_TableVarName="tableCons_Vault" msprop:Generator_RowChangedName="Cons_VaultRowChanged" msprop:Generator_TablePropName="Cons_Vault" msprop:Generator_RowDeletingName="Cons_VaultRowDeleting" msprop:Generator_RowChangingName="Cons_VaultRowChanging" msprop:Generator_RowEvHandlerName="Cons_VaultRowChangeEventHandler" msprop:Generator_RowDeletedName="Cons_VaultRowDeleted" msprop:Generator_RowClassName="Cons_VaultRow" msprop:Generator_UserTableName="Cons_Vault" msprop:Generator_RowEvArgName="Cons_VaultRowChangeEvent">
+        <xs:element name="Cons_Vault" msprop:Generator_TableClassName="Cons_VaultDataTable" msprop:Generator_TableVarName="tableCons_Vault" msprop:Generator_TablePropName="Cons_Vault" msprop:Generator_RowDeletingName="Cons_VaultRowDeleting" msprop:Generator_RowChangingName="Cons_VaultRowChanging" msprop:Generator_RowEvHandlerName="Cons_VaultRowChangeEventHandler" msprop:Generator_RowDeletedName="Cons_VaultRowDeleted" msprop:Generator_UserTableName="Cons_Vault" msprop:Generator_RowChangedName="Cons_VaultRowChanged" msprop:Generator_RowEvArgName="Cons_VaultRowChangeEvent" msprop:Generator_RowClassName="Cons_VaultRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Account_Number_LongCode" msprop:Generator_ColumnVarNameInTable="columnAccount_Number_LongCode" msprop:Generator_ColumnPropNameInRow="Account_Number_LongCode" msprop:Generator_ColumnPropNameInTable="Account_Number_LongCodeColumn" msprop:Generator_UserColumnName="Account_Number_LongCode" minOccurs="0">

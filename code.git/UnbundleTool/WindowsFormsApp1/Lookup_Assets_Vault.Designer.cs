@@ -40,28 +40,6 @@
             this.consVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lookupISUVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.mSCOA_VaultDataSet1 = new WindowsFormsApp1.mSCOA_VaultDataSet1();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboDirect = new System.Windows.Forms.ComboBox();
-            this.cboContra = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cboFunction = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cboFund = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cboRegion = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cboCosting = new System.Windows.Forms.ComboBox();
-            this.cboProject = new System.Windows.Forms.ComboBox();
-            this.lookupISUVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lookup_ISU_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters.Lookup_ISU_VaultTableAdapter();
-            this.mSCOA_VaultDataSet2 = new WindowsFormsApp1.mSCOA_VaultDataSet2();
-            this.lookupVaultISURevenueBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lookup_Vault_ISU_RevenueTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSet2TableAdapters.Lookup_Vault_ISU_RevenueTableAdapter();
             this.divisionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
             this.divisionNameDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
             this.rATECATDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
@@ -85,6 +63,28 @@
             this.itemParentGuidDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
             this.itemParentDescriptionDataGridViewTextBoxColumn = new DataGridViewAutoFilter.DataGridViewAutoFilterTextBoxColumn();
             this.idLookupVaultISURevenuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lookupVaultISURevenueBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mSCOA_VaultDataSet2 = new WindowsFormsApp1.mSCOA_VaultDataSet2();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboDirect = new System.Windows.Forms.ComboBox();
+            this.cboContra = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboFunction = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cboFund = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboRegion = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cboCosting = new System.Windows.Forms.ComboBox();
+            this.cboProject = new System.Windows.Forms.ComboBox();
+            this.lookupISUVaultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mSCOA_VaultDataSet1 = new WindowsFormsApp1.mSCOA_VaultDataSet1();
+            this.lookupISUVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lookup_ISU_VaultTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSet1TableAdapters.Lookup_ISU_VaultTableAdapter();
+            this.lookup_Vault_ISU_RevenueTableAdapter = new WindowsFormsApp1.mSCOA_VaultDataSet2TableAdapters.Lookup_Vault_ISU_RevenueTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consVaultBindingSource1)).BeginInit();
@@ -93,11 +93,11 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookupVaultISURevenueBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookupVaultISURevenueBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -253,191 +253,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1010, 225);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // lookupISUVaultBindingSource1
-            // 
-            this.lookupISUVaultBindingSource1.DataMember = "Lookup_ISU_Vault";
-            this.lookupISUVaultBindingSource1.DataSource = this.mSCOA_VaultDataSet1;
-            // 
-            // mSCOA_VaultDataSet1
-            // 
-            this.mSCOA_VaultDataSet1.DataSetName = "mSCOA_VaultDataSet1";
-            this.mSCOA_VaultDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(37, 325);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
-            this.label8.TabIndex = 79;
-            this.label8.Text = "Project";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(392, 369);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 69;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 174);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 68;
-            this.label2.Text = "Contra";
-            this.label2.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 147);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 67;
-            this.label1.Text = "Direct";
-            // 
-            // cboDirect
-            // 
-            this.cboDirect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboDirect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboDirect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDirect.FormattingEnabled = true;
-            this.cboDirect.Location = new System.Drawing.Point(97, 144);
-            this.cboDirect.Name = "cboDirect";
-            this.cboDirect.Size = new System.Drawing.Size(796, 21);
-            this.cboDirect.TabIndex = 66;
-            // 
-            // cboContra
-            // 
-            this.cboContra.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboContra.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboContra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboContra.FormattingEnabled = true;
-            this.cboContra.Location = new System.Drawing.Point(97, 174);
-            this.cboContra.Name = "cboContra";
-            this.cboContra.Size = new System.Drawing.Size(796, 21);
-            this.cboContra.TabIndex = 65;
-            this.cboContra.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 210);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 71;
-            this.label4.Text = "Function";
-            // 
-            // cboFunction
-            // 
-            this.cboFunction.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboFunction.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboFunction.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboFunction.FormattingEnabled = true;
-            this.cboFunction.Location = new System.Drawing.Point(97, 207);
-            this.cboFunction.Name = "cboFunction";
-            this.cboFunction.Size = new System.Drawing.Size(796, 21);
-            this.cboFunction.TabIndex = 70;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(37, 298);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
-            this.label7.TabIndex = 77;
-            this.label7.Text = "Fund";
-            // 
-            // cboFund
-            // 
-            this.cboFund.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboFund.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboFund.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboFund.FormattingEnabled = true;
-            this.cboFund.Location = new System.Drawing.Point(97, 298);
-            this.cboFund.Name = "cboFund";
-            this.cboFund.Size = new System.Drawing.Size(796, 21);
-            this.cboFund.TabIndex = 76;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 274);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 13);
-            this.label6.TabIndex = 75;
-            this.label6.Text = "Region";
-            // 
-            // cboRegion
-            // 
-            this.cboRegion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboRegion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRegion.FormattingEnabled = true;
-            this.cboRegion.Location = new System.Drawing.Point(97, 271);
-            this.cboRegion.Name = "cboRegion";
-            this.cboRegion.Size = new System.Drawing.Size(796, 21);
-            this.cboRegion.TabIndex = 74;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 240);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
-            this.label5.TabIndex = 73;
-            this.label5.Text = "Costing";
-            // 
-            // cboCosting
-            // 
-            this.cboCosting.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboCosting.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboCosting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCosting.FormattingEnabled = true;
-            this.cboCosting.Location = new System.Drawing.Point(97, 240);
-            this.cboCosting.Name = "cboCosting";
-            this.cboCosting.Size = new System.Drawing.Size(796, 21);
-            this.cboCosting.TabIndex = 72;
-            // 
-            // cboProject
-            // 
-            this.cboProject.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboProject.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboProject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboProject.FormattingEnabled = true;
-            this.cboProject.Location = new System.Drawing.Point(97, 325);
-            this.cboProject.Name = "cboProject";
-            this.cboProject.Size = new System.Drawing.Size(796, 21);
-            this.cboProject.TabIndex = 78;
-            // 
-            // lookupISUVaultBindingSource
-            // 
-            this.lookupISUVaultBindingSource.DataMember = "Lookup_ISU_Vault";
-            this.lookupISUVaultBindingSource.DataSource = this.mSCOA_VaultDataSet1;
-            // 
-            // lookup_ISU_VaultTableAdapter
-            // 
-            this.lookup_ISU_VaultTableAdapter.ClearBeforeFill = true;
-            // 
-            // mSCOA_VaultDataSet2
-            // 
-            this.mSCOA_VaultDataSet2.DataSetName = "mSCOA_VaultDataSet2";
-            this.mSCOA_VaultDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lookupVaultISURevenueBindingSource
-            // 
-            this.lookupVaultISURevenueBindingSource.DataMember = "Lookup_Vault_ISU_Revenue";
-            this.lookupVaultISURevenueBindingSource.DataSource = this.mSCOA_VaultDataSet2;
-            // 
-            // lookup_Vault_ISU_RevenueTableAdapter
-            // 
-            this.lookup_Vault_ISU_RevenueTableAdapter.ClearBeforeFill = true;
             // 
             // divisionDataGridViewTextBoxColumn
             // 
@@ -620,6 +435,199 @@
             this.idLookupVaultISURevenuDataGridViewTextBoxColumn.ReadOnly = true;
             this.idLookupVaultISURevenuDataGridViewTextBoxColumn.Visible = false;
             // 
+            // lookupVaultISURevenueBindingSource
+            // 
+            this.lookupVaultISURevenueBindingSource.DataMember = "Lookup_Vault_ISU_Revenue";
+            this.lookupVaultISURevenueBindingSource.DataSource = this.mSCOA_VaultDataSet2;
+            // 
+            // mSCOA_VaultDataSet2
+            // 
+            this.mSCOA_VaultDataSet2.DataSetName = "mSCOA_VaultDataSet2";
+            this.mSCOA_VaultDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(37, 325);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 13);
+            this.label8.TabIndex = 79;
+            this.label8.Text = "Project";
+            this.label8.Visible = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(397, 352);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 69;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 174);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 68;
+            this.label2.Text = "Contra Parent ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(49, 147);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "Direct";
+            // 
+            // cboDirect
+            // 
+            this.cboDirect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboDirect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboDirect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDirect.FormattingEnabled = true;
+            this.cboDirect.Location = new System.Drawing.Point(97, 144);
+            this.cboDirect.Name = "cboDirect";
+            this.cboDirect.Size = new System.Drawing.Size(796, 21);
+            this.cboDirect.TabIndex = 66;
+            // 
+            // cboContra
+            // 
+            this.cboContra.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboContra.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboContra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboContra.FormattingEnabled = true;
+            this.cboContra.Location = new System.Drawing.Point(97, 174);
+            this.cboContra.Name = "cboContra";
+            this.cboContra.Size = new System.Drawing.Size(796, 21);
+            this.cboContra.TabIndex = 65;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(37, 210);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 71;
+            this.label4.Text = "Function";
+            this.label4.Visible = false;
+            // 
+            // cboFunction
+            // 
+            this.cboFunction.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboFunction.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboFunction.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFunction.FormattingEnabled = true;
+            this.cboFunction.Location = new System.Drawing.Point(97, 207);
+            this.cboFunction.Name = "cboFunction";
+            this.cboFunction.Size = new System.Drawing.Size(796, 21);
+            this.cboFunction.TabIndex = 70;
+            this.cboFunction.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(37, 298);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 77;
+            this.label7.Text = "Fund";
+            this.label7.Visible = false;
+            // 
+            // cboFund
+            // 
+            this.cboFund.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboFund.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboFund.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFund.FormattingEnabled = true;
+            this.cboFund.Location = new System.Drawing.Point(97, 298);
+            this.cboFund.Name = "cboFund";
+            this.cboFund.Size = new System.Drawing.Size(796, 21);
+            this.cboFund.TabIndex = 76;
+            this.cboFund.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(36, 274);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 13);
+            this.label6.TabIndex = 75;
+            this.label6.Text = "Region";
+            this.label6.Visible = false;
+            // 
+            // cboRegion
+            // 
+            this.cboRegion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboRegion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboRegion.FormattingEnabled = true;
+            this.cboRegion.Location = new System.Drawing.Point(97, 271);
+            this.cboRegion.Name = "cboRegion";
+            this.cboRegion.Size = new System.Drawing.Size(796, 21);
+            this.cboRegion.TabIndex = 74;
+            this.cboRegion.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(35, 240);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "Costing";
+            this.label5.Visible = false;
+            // 
+            // cboCosting
+            // 
+            this.cboCosting.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboCosting.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboCosting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCosting.FormattingEnabled = true;
+            this.cboCosting.Location = new System.Drawing.Point(97, 240);
+            this.cboCosting.Name = "cboCosting";
+            this.cboCosting.Size = new System.Drawing.Size(796, 21);
+            this.cboCosting.TabIndex = 72;
+            this.cboCosting.Visible = false;
+            // 
+            // cboProject
+            // 
+            this.cboProject.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboProject.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboProject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboProject.FormattingEnabled = true;
+            this.cboProject.Location = new System.Drawing.Point(97, 325);
+            this.cboProject.Name = "cboProject";
+            this.cboProject.Size = new System.Drawing.Size(796, 21);
+            this.cboProject.TabIndex = 78;
+            this.cboProject.Visible = false;
+            // 
+            // lookupISUVaultBindingSource1
+            // 
+            this.lookupISUVaultBindingSource1.DataMember = "Lookup_ISU_Vault";
+            this.lookupISUVaultBindingSource1.DataSource = this.mSCOA_VaultDataSet1;
+            // 
+            // mSCOA_VaultDataSet1
+            // 
+            this.mSCOA_VaultDataSet1.DataSetName = "mSCOA_VaultDataSet1";
+            this.mSCOA_VaultDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lookupISUVaultBindingSource
+            // 
+            this.lookupISUVaultBindingSource.DataMember = "Lookup_ISU_Vault";
+            this.lookupISUVaultBindingSource.DataSource = this.mSCOA_VaultDataSet1;
+            // 
+            // lookup_ISU_VaultTableAdapter
+            // 
+            this.lookup_ISU_VaultTableAdapter.ClearBeforeFill = true;
+            // 
+            // lookup_Vault_ISU_RevenueTableAdapter
+            // 
+            this.lookup_Vault_ISU_RevenueTableAdapter.ClearBeforeFill = true;
+            // 
             // Lookup_Assets_Vault
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -638,11 +646,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookupVaultISURevenueBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookupISUVaultBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mSCOA_VaultDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookupVaultISURevenueBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

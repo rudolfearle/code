@@ -25,12 +25,12 @@ namespace WindowsFormsApp1
         //PROJECT
         private mSCOA_VaultDataSet.Cons_VaultDataTable objTableDirect;
         private mSCOA_VaultDataSet.Cons_VaultDataTable objTableContra;
-        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableFunction;
+        //private mSCOA_VaultDataSet.Cons_VaultDataTable objTableFunction;
 
-        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableCosting;
-        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableRegional;
-        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableFund;
-        private mSCOA_VaultDataSet.Cons_VaultDataTable objTableProject;
+        //private mSCOA_VaultDataSet.Cons_VaultDataTable objTableCosting;
+        //private mSCOA_VaultDataSet.Cons_VaultDataTable objTableRegional;
+        //private mSCOA_VaultDataSet.Cons_VaultDataTable objTableFund;
+        //private mSCOA_VaultDataSet.Cons_VaultDataTable objTableProject;
 
 
         private ToolTip toolTip1;
@@ -85,14 +85,14 @@ namespace WindowsFormsApp1
             RefreshGrid();
             if (LoadOnce == false)
             {
-              //  LoadContra();
+                LoadContra();
                 LoadDirect();
                 
-                LoadFunction();
-                LoadCosting();
-                LoadFund();
-                LoadProject();
-                LoadRegion();
+                //LoadFunction();
+                //LoadCosting();
+                //LoadFund();
+                //LoadProject();
+                //LoadRegion();
 
             }
         }
@@ -104,13 +104,13 @@ namespace WindowsFormsApp1
             {
 
                 General.Utilities.LoadSCOACombobox(cboDirect, objTableDirect);
-                //General.Utilities.LoadSCOACombobox(cboContra, objTableContra);
-                General.Utilities.LoadSCOACombobox(cboFunction, objTableFunction);
+                General.Utilities.LoadSCOACombobox(cboContra, objTableContra);
+                //General.Utilities.LoadSCOACombobox(cboFunction, objTableFunction);
 
-                General.Utilities.LoadSCOACombobox(cboCosting, objTableCosting);
-                General.Utilities.LoadSCOACombobox(cboRegion, objTableRegional);
-                General.Utilities.LoadSCOACombobox(cboFund, objTableFund);
-                General.Utilities.LoadSCOACombobox(cboProject, objTableProject);
+                //General.Utilities.LoadSCOACombobox(cboCosting, objTableCosting);
+                //General.Utilities.LoadSCOACombobox(cboRegion, objTableRegional);
+                //General.Utilities.LoadSCOACombobox(cboFund, objTableFund);
+                //General.Utilities.LoadSCOACombobox(cboProject, objTableProject);
 
                 LoadOnce = true;
             }
@@ -209,7 +209,7 @@ namespace WindowsFormsApp1
                 using (mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter ta = new mSCOA_VaultDataSetTableAdapters.Cons_VaultTableAdapter())
                 {
                     mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
-                    ta.FillByContra(Tbl);
+                    ta.FillByContraParent(Tbl);
                     objTableContra = Tbl;
                 }
             }
@@ -228,7 +228,7 @@ namespace WindowsFormsApp1
                 {
                     mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
                     ta.FillByFunction(Tbl);
-                    objTableFunction = Tbl;
+                  //  objTableFunction = Tbl;
                 }
             }
             catch (Exception ex)
@@ -246,7 +246,7 @@ namespace WindowsFormsApp1
                 {
                     mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
                     ta.FillByCosting(Tbl);
-                    objTableCosting = Tbl;
+                  //  objTableCosting = Tbl;
                 }
             }
             catch (Exception ex)
@@ -264,7 +264,7 @@ namespace WindowsFormsApp1
                 {
                     mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
                     ta.FillByRegion(Tbl);
-                    objTableRegional = Tbl;
+                   // objTableRegional = Tbl;
                 }
             }
             catch (Exception ex)
@@ -283,7 +283,7 @@ namespace WindowsFormsApp1
                 {
                     mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
                     ta.FillByFund(Tbl);
-                    objTableFund = Tbl;
+                   // objTableFund = Tbl;
                 }
             }
             catch (Exception ex)
@@ -301,7 +301,7 @@ namespace WindowsFormsApp1
                 {
                     mSCOA_VaultDataSet.Cons_VaultDataTable Tbl = new mSCOA_VaultDataSet.Cons_VaultDataTable();
                     ta.FillByProject(Tbl);
-                    objTableProject = Tbl;
+                   // objTableProject = Tbl;
                 }
             }
             catch (Exception ex)
@@ -323,16 +323,16 @@ namespace WindowsFormsApp1
                         int nID = Convert.ToInt32(row.Cells[row.Cells.Count - 1].Value);
                         //int nID = Convert.ToInt32(row.Cells["Id_ISU_Vault"].Value);
                         string sDirectGUID = cboDirect.SelectedValue.ToString();
-                       // string sContraGUID = cboContra.SelectedValue.ToString();
-                        string sFunctionGUID = cboFunction.SelectedValue.ToString();
+                        string sContraGUID = cboContra.SelectedValue.ToString();
+                        //string sFunctionGUID = cboFunction.SelectedValue.ToString();
                         
-                        string sCostingGUID = cboCosting.SelectedValue.ToString();
-                        string sFundGUID = cboFund.SelectedValue.ToString();
-                        string sProjectGUID = cboProject.SelectedValue.ToString();
-                        string sRegionGUID = cboRegion.SelectedValue.ToString();
+                        //string sCostingGUID = cboCosting.SelectedValue.ToString();
+                        //string sFundGUID = cboFund.SelectedValue.ToString();
+                        //string sProjectGUID = cboProject.SelectedValue.ToString();
+                        //string sRegionGUID = cboRegion.SelectedValue.ToString();
                         using (Lookup_Vault_ISU_RevenueTableAdapter ta = new Lookup_Vault_ISU_RevenueTableAdapter())
                         {
-                            ta.UpdateQuery(sDirectGUID, sFunctionGUID,sProjectGUID ,sFundGUID,sRegionGUID ,sCostingGUID, nID);
+                            ta.UpdateQuery(sDirectGUID, sContraGUID,  nID);
                         }
                     }
                 }
