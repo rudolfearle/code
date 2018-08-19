@@ -56,6 +56,7 @@ namespace ReportTool.ReportTypes
 
         void workerLoad_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            UseWaitCursor = false;
             lblSavedFile.Text = sReturnFile;
             Cursor.Current = Cursors.Default;
         }
@@ -72,7 +73,7 @@ namespace ReportTool.ReportTypes
 
         void workerLoad_DoWork(object sender, DoWorkEventArgs e)
         {
-           
+            UseWaitCursor = true;
             string _templatePath = AppDomain.CurrentDomain.BaseDirectory + "Template";
 
             string sFile = _templatePath + "\\" + System.Configuration.ConfigurationManager.AppSettings.Get("C1Template").ToString();
