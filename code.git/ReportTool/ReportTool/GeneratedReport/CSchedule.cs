@@ -288,7 +288,7 @@ namespace ReportTool.GeneratedReport
                         FieldVal[2] = row["Adjusted Budget"].ToString() + "|E";
                         FieldVal[3] = row[inputMonth].ToString() + "|F";
                         FieldVal[4] = CalcYTD(row) + "|G";
-                        FieldVal[5] = GetYTDValue(row["YearTDBudget"].ToString(), inputMonth) + "|H";
+                        FieldVal[5] = row["YearTDBudget"].ToString() + "|H"; //GetYTDValue(row["YearTDBudget"].ToString(), inputMonth) + "|H";
                         //FieldVal[6] = row["Full Year Forecast"].ToString() + "|K";
                         FindExcelField("C4-FinPerf RE", index, FieldVal, rowCount);
                     }
@@ -917,17 +917,18 @@ namespace ReportTool.GeneratedReport
 
         private string GetYTDValue(string value, string month)
         {
-            decimal val = 0;
-            decimal.TryParse(value, out val);
-            if (val != 0)
-            {
-                int m = Convert.ToInt32(month.Substring(1, 2));
-                val = val / 12 * m;
+            //decimal val = 0;
+            //decimal.TryParse(value, out val);
+            //if (val != 0)
+            //{
+            //    int m = Convert.ToInt32(month.Substring(1, 2));
+            //    val = val / 12 * m;
 
 
-            }
+            //}
 
-            return val.ToString();
+            //return val.ToString();
+            return value;
         }
 
         private void PopulateContactInformation()
