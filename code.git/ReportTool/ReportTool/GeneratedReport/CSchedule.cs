@@ -769,7 +769,7 @@ namespace ReportTool.GeneratedReport
 
                         FieldVal[0] = row["AuditOutcome_1"].ToString() + "|C";
                         FieldVal[1] = row["Original Budget"].ToString() + "|D";
-                        FieldVal[2] = row["CurrentYearAjustment"].ToString() + "|E";
+                        FieldVal[2] = row["Adjusted Budget"].ToString() + "|E";
                         FieldVal[3] = row[inputMonth].ToString() + "|F";
                         FieldVal[4] = CalcYTD(row) + "|G";
                         FieldVal[5] = GetYTDValue(row["YearTDBudget"].ToString(), inputMonth) + "|H";
