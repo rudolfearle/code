@@ -47,7 +47,12 @@ namespace ReportTool
                     obj3.Show();
                     break;
                 case 4: //demarcation reporting
-
+                    GenarateDemarcation OBJ4 = new GenarateDemarcation();
+                    OBJ4.TopLevel = false;
+                    splitContainer1.Panel2.Controls.Add(OBJ4);
+                    OBJ4.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                    OBJ4.Dock = DockStyle.Fill;
+                    OBJ4.Show();
                     break;
             }
         }

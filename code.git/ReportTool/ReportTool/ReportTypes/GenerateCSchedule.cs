@@ -17,6 +17,7 @@ namespace ReportTool.ReportTypes
         string sReturnFile = string.Empty;
 
         private string _Month = string.Empty;
+        private string _RegionIdentifier = string.Empty; 
 
         public GenerateCSchedule()
         {
@@ -62,17 +63,20 @@ namespace ReportTool.ReportTypes
         private void btnGenerate_Click_1(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
+            
+            _Month = cboMonth.SelectedValue.ToString();
+            _RegionIdentifier = txtMuniciplaIdentifier.Text.ToString();
             workerLoad.RunWorkerAsync();
 
         }
 
         void workerLoad_DoWork(object sender, DoWorkEventArgs e)
         {
-            _Month = cboMonth.SelectedValue.ToString();
+           
             string _templatePath = AppDomain.CurrentDomain.BaseDirectory + "Template";
 
             string sFile = _templatePath + "\\" + System.Configuration.ConfigurationManager.AppSettings.Get("C1Template").ToString();
-            using (CSchedule objSheet = new CSchedule(sFile, _Month,txtMuniciplaIdentifier.Text.ToString()))
+            using (CSchedule objSheet = new CSchedule(sFile, _Month, _RegionIdentifier))
             {
                 sReturnFile = objSheet.RunPopulation();
             }
